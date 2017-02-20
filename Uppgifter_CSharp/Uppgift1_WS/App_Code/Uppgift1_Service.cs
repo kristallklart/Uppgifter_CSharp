@@ -24,26 +24,26 @@ public class Uppgift1_Service : System.Web.Services.WebService
     {
         String returnContent;
         //DotNetRevanths exempel på felhantering skapar en egen klass: https://www.youtube.com/watch?v=T4ndBlCpzdk
-        using (StreamReader streamReader = new StreamReader(s))
+        try
         {
-            try
+            using (StreamReader streamReader = new StreamReader(s))
             {
                 returnContent = streamReader.ReadToEnd();
             }
-            catch (FileNotFoundException)
-            {
-                returnContent = "ERROR: File not found!";
-            }
-            catch (OutOfMemoryException)
-            {
-                returnContent = "ERROR: Out of memory!";
-            }
-            catch (Exception)
-            {
-                //Exception ex = exp.InnerException;
-                returnContent = "ERROR: Unknown error, the file could not be read!";
-            }
-            return returnContent;
         }
+        catch (FileNotFoundException)
+        {
+            returnContent = "ERROR: File not found!";
+        }
+        catch (OutOfMemoryException)
+        {
+            returnContent = "ERROR: Out of memory!";
+        }
+        catch (Exception)
+        {
+            //Exception ex = exp.InnerException;
+            returnContent = "ERROR: Unknown error, the file could not be read!";
+        }
+        return returnContent;
     }
 }
