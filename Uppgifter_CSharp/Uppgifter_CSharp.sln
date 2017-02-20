@@ -1,9 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1_Konsol", "Uppgift1_Konsole\Uppgift1_Konsol.csproj", "{976B0BDB-E905-4167-A2E4-5DE09646EDAC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Uppgift1_WS", "http://localhost:51873", "{0B96F8D7-0ECE-4F70-858D-CA4243E797C1}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51873"
+		Debug.AspNetCompiler.PhysicalPath = "Uppgift1_WS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51873\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51873"
+		Release.AspNetCompiler.PhysicalPath = "Uppgift1_WS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51873\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Uppgift1_WS\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +37,10 @@ Global
 		{976B0BDB-E905-4167-A2E4-5DE09646EDAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{976B0BDB-E905-4167-A2E4-5DE09646EDAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{976B0BDB-E905-4167-A2E4-5DE09646EDAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B96F8D7-0ECE-4F70-858D-CA4243E797C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B96F8D7-0ECE-4F70-858D-CA4243E797C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B96F8D7-0ECE-4F70-858D-CA4243E797C1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B96F8D7-0ECE-4F70-858D-CA4243E797C1}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
