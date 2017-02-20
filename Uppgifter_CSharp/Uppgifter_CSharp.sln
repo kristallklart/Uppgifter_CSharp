@@ -51,7 +51,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Uppgift2_WS", "http://local
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift2_Forms", "Uppgift2_Forms\Uppgift2_Forms.csproj", "{8C4BFAD5-D294-4A23-A0EE-0E667C491991}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestaWSGUI", "..\..\..\..\Documents\Visual Studio 2013\Projects\WebSite1\TestaWSGUI\TestaWSGUI.csproj", "{CB6A3926-B9C3-44A8-8100-29AE695A4B6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1_Forms", "Uppgift1_Forms\Uppgift1_Forms.csproj", "{D7948FEC-83AC-466A-B158-580BC7A879D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,10 +75,10 @@ Global
 		{8C4BFAD5-D294-4A23-A0EE-0E667C491991}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C4BFAD5-D294-4A23-A0EE-0E667C491991}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C4BFAD5-D294-4A23-A0EE-0E667C491991}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB6A3926-B9C3-44A8-8100-29AE695A4B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB6A3926-B9C3-44A8-8100-29AE695A4B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB6A3926-B9C3-44A8-8100-29AE695A4B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB6A3926-B9C3-44A8-8100-29AE695A4B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7948FEC-83AC-466A-B158-580BC7A879D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7948FEC-83AC-466A-B158-580BC7A879D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7948FEC-83AC-466A-B158-580BC7A879D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7948FEC-83AC-466A-B158-580BC7A879D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
