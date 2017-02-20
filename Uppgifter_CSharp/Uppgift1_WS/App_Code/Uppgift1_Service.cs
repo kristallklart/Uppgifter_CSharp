@@ -38,7 +38,7 @@ public class Uppgift1_Service : System.Web.Services.WebService
             {
                 returnContent = "ERROR: Out of memory!";
             }
-            catch (Exception exp)
+            catch (Exception)
             {
                 //Exception ex = exp.InnerException;
                 returnContent = "ERROR: Unknown error, the file could not be read!";
