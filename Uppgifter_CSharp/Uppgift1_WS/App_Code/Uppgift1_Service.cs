@@ -22,7 +22,7 @@ public class Uppgift1_Service : System.Web.Services.WebService
     [WebMethod]
     public string OpenFile(string s)
     {
-        String returnContent;
+        string returnContent;
         //DotNetRevanths exempel på felhantering skapar en egen klass: https://www.youtube.com/watch?v=T4ndBlCpzdk
         try
         {
