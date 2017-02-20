@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1_Konsol", "Uppgift1_Konsole\Uppgift1_Konsol.csproj", "{976B0BDB-E905-4167-A2E4-5DE09646EDAC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0B96F8D7-0ECE-4F70-858D-CA4243E797C1} = {0B96F8D7-0ECE-4F70-858D-CA4243E797C1}
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Uppgift1_WS", "http://localhost:51873", "{0B96F8D7-0ECE-4F70-858D-CA4243E797C1}"
 	ProjectSection(WebsiteProperties) = preProject

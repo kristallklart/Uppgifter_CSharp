@@ -22,15 +22,15 @@ namespace Uppgift1_Konsol
 
                 Console.WriteLine("\nThank you! Processing request...\n");
 
-                //OBS ServiceSoapClient proxy = new ServiceSoapClient(); //Skapandet av en ny SOAP-klient
-                //OBS string fileContent;
-                //OBS fileContent = proxy.OpenFile(fileToOpen); //Skicka ett filnamn eller dess absoluta sökväg till web servicen som returnerar dess innehåll.
+                string fileContent;
+                Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient proxy = new Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient(); //Skapandet av en ny SOAP-klient
+                fileContent = proxy.OpenFile(fileToOpen); //Skicka ett filnamn eller dess absoluta sökväg till web servicen som returnerar dess innehåll.
 
                 //Anrop till Web Services verkar kunna kasta SOAP-exceptions. Kolla upp det!
 
                 Console.WriteLine("File content");
                 Console.WriteLine("------------");
-                //OBS Console.WriteLine(fileContent + "\n");
+                Console.WriteLine(fileContent + "\n");
                 //Console.ReadKey();
                 cont_WrongInput = true;
 

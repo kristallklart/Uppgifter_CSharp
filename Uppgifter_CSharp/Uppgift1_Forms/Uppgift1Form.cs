@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Uppgift1_Forms
 {
-    public partial class Form1 : Form
+    public partial class Uppgift1Form : Form
     {
         private OpenFileDialog openFile = new OpenFileDialog();
         private Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient proxy = new Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient(); //Skapar en ny proxy-referens
 
-        public Form1()
+        public Uppgift1Form()
         {
             InitializeComponent();
             openFile.Filter = "Text Files|*.txt"; // Gör att openFile enbart filtrerar på textfiler.
