@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1_Konsol", "Uppgift1_Konsole\Uppgift1_Konsol.csproj", "{976B0BDB-E905-4167-A2E4-5DE09646EDAC}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -59,6 +59,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1_Forms", "Uppgift1_
 		{0B96F8D7-0ECE-4F70-858D-CA4243E797C1} = {0B96F8D7-0ECE-4F70-858D-CA4243E797C1}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift2_Konsol", "Uppgift2_Konsol\Uppgift2_Konsol.csproj", "{DABBE05A-A122-4C42-999B-3DADA91BC566}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44F82B5D-6A74-4059-80CE-7B7936C7831E} = {44F82B5D-6A74-4059-80CE-7B7936C7831E}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +90,10 @@ Global
 		{D7948FEC-83AC-466A-B158-580BC7A879D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7948FEC-83AC-466A-B158-580BC7A879D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7948FEC-83AC-466A-B158-580BC7A879D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABBE05A-A122-4C42-999B-3DADA91BC566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABBE05A-A122-4C42-999B-3DADA91BC566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABBE05A-A122-4C42-999B-3DADA91BC566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABBE05A-A122-4C42-999B-3DADA91BC566}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
