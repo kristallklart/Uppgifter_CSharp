@@ -24,6 +24,86 @@
           <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUsersResult" type="tns:ArrayOfUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Picture" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Profession" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="About" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Industry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldOfProfession" type="tns:FieldOfProfession" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FieldOfProfession">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Industry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Users" type="tns:ArrayOfUser" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUserLocationPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserLocationPurpose" nillable="true" type="tns:UserLocationPurpose" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserLocationPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="tns:User" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="tns:Location" />
+          <s:element minOccurs="0" maxOccurs="1" name="Purpose" type="tns:Purpose" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Purposetype" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToDate" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Location">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Purpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PurposeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPurposes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPurposesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPurposesResult" type="tns:ArrayOfPurpose" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Purpose" nillable="true" type="tns:Purpose" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetAllPersonsSoapIn">
@@ -32,10 +112,30 @@
   <wsdl:message name="GetAllPersonsSoapOut">
     <wsdl:part name="parameters" element="tns:GetAllPersonsResponse" />
   </wsdl:message>
+  <wsdl:message name="GetUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPurposesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPurposes" />
+  </wsdl:message>
+  <wsdl:message name="GetPurposesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPurposesResponse" />
+  </wsdl:message>
   <wsdl:portType name="Uppgift2_ServiceSoap">
     <wsdl:operation name="GetAllPersons">
       <wsdl:input message="tns:GetAllPersonsSoapIn" />
       <wsdl:output message="tns:GetAllPersonsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input message="tns:GetUsersSoapIn" />
+      <wsdl:output message="tns:GetUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPurposes">
+      <wsdl:input message="tns:GetPurposesSoapIn" />
+      <wsdl:output message="tns:GetPurposesSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="Uppgift2_ServiceSoap" type="tns:Uppgift2_ServiceSoap">
@@ -49,11 +149,47 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="Grupp7/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurposes">
+      <soap:operation soapAction="Grupp7/GetPurposes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="Uppgift2_ServiceSoap12" type="tns:Uppgift2_ServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAllPersons">
       <soap12:operation soapAction="Grupp7/GetAllPersons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap12:operation soapAction="Grupp7/GetUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPurposes">
+      <soap12:operation soapAction="Grupp7/GetPurposes" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
