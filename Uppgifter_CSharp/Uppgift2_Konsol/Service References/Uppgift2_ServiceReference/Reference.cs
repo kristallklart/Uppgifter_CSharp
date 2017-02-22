@@ -73,6 +73,548 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        private System.DateTime BirthDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] PictureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProfessionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AboutField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IndustryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession FieldOfProfessionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public System.DateTime BirthDate {
+            get {
+                return this.BirthDateField;
+            }
+            set {
+                if ((this.BirthDateField.Equals(value) != true)) {
+                    this.BirthDateField = value;
+                    this.RaisePropertyChanged("BirthDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public byte[] Picture {
+            get {
+                return this.PictureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PictureField, value) != true)) {
+                    this.PictureField = value;
+                    this.RaisePropertyChanged("Picture");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Profession {
+            get {
+                return this.ProfessionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProfessionField, value) != true)) {
+                    this.ProfessionField = value;
+                    this.RaisePropertyChanged("Profession");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string About {
+            get {
+                return this.AboutField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AboutField, value) != true)) {
+                    this.AboutField = value;
+                    this.RaisePropertyChanged("About");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Industry {
+            get {
+                return this.IndustryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IndustryField, value) != true)) {
+                    this.IndustryField = value;
+                    this.RaisePropertyChanged("Industry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession FieldOfProfession {
+            get {
+                return this.FieldOfProfessionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FieldOfProfessionField, value) != true)) {
+                    this.FieldOfProfessionField = value;
+                    this.RaisePropertyChanged("FieldOfProfession");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposes {
+            get {
+                return this.UserLocationPurposesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserLocationPurposesField, value) != true)) {
+                    this.UserLocationPurposesField = value;
+                    this.RaisePropertyChanged("UserLocationPurposes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FieldOfProfession", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class FieldOfProfession : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IndustryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.User[] UsersField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Industry {
+            get {
+                return this.IndustryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IndustryField, value) != true)) {
+                    this.IndustryField = value;
+                    this.RaisePropertyChanged("Industry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.User[] Users {
+            get {
+                return this.UsersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsersField, value) != true)) {
+                    this.UsersField = value;
+                    this.RaisePropertyChanged("Users");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserLocationPurpose", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class UserLocationPurpose : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.User UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.Location LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose PurposeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PurposetypeField;
+        
+        private System.Nullable<System.DateTime> FromDateField;
+        
+        private System.Nullable<System.DateTime> ToDateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.User User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.Location Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose Purpose {
+            get {
+                return this.PurposeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PurposeField, value) != true)) {
+                    this.PurposeField = value;
+                    this.RaisePropertyChanged("Purpose");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string Purposetype {
+            get {
+                return this.PurposetypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PurposetypeField, value) != true)) {
+                    this.PurposetypeField = value;
+                    this.RaisePropertyChanged("Purposetype");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public System.Nullable<System.DateTime> FromDate {
+            get {
+                return this.FromDateField;
+            }
+            set {
+                if ((this.FromDateField.Equals(value) != true)) {
+                    this.FromDateField = value;
+                    this.RaisePropertyChanged("FromDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public System.Nullable<System.DateTime> ToDate {
+            get {
+                return this.ToDateField;
+            }
+            set {
+                if ((this.ToDateField.Equals(value) != true)) {
+                    this.ToDateField = value;
+                    this.RaisePropertyChanged("ToDate");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class Location : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposes {
+            get {
+                return this.UserLocationPurposesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserLocationPurposesField, value) != true)) {
+                    this.UserLocationPurposesField = value;
+                    this.RaisePropertyChanged("UserLocationPurposes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Purpose", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class Purpose : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PurposeTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string PurposeType {
+            get {
+                return this.PurposeTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PurposeTypeField, value) != true)) {
+                    this.PurposeTypeField = value;
+                    this.RaisePropertyChanged("PurposeType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposes {
+            get {
+                return this.UserLocationPurposesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserLocationPurposesField, value) != true)) {
+                    this.UserLocationPurposesField = value;
+                    this.RaisePropertyChanged("UserLocationPurposes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="Grupp7", ConfigurationName="Uppgift2_ServiceReference.Uppgift2_ServiceSoap")]
     public interface Uppgift2_ServiceSoap {
@@ -83,6 +625,20 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetAllPersons", ReplyAction="*")]
         System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllPersonsResponse> GetAllPersonsAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllPersonsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetUsersResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetUsers", ReplyAction="*")]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponse GetUsers(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetUsers", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponse> GetUsersAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetPurposesResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetPurposes", ReplyAction="*")]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse GetPurposes(Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetPurposes", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse> GetPurposesAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -146,6 +702,128 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetUsersRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUsers", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequestBody Body;
+        
+        public GetUsersRequest() {
+        }
+        
+        public GetUsersRequest(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetUsersRequestBody {
+        
+        public GetUsersRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetUsersResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUsersResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponseBody Body;
+        
+        public GetUsersResponse() {
+        }
+        
+        public GetUsersResponse(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetUsersResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.User[] GetUsersResult;
+        
+        public GetUsersResponseBody() {
+        }
+        
+        public GetUsersResponseBody(Uppgift2_Konsol.Uppgift2_ServiceReference.User[] GetUsersResult) {
+            this.GetUsersResult = GetUsersResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPurposesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPurposes", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequestBody Body;
+        
+        public GetPurposesRequest() {
+        }
+        
+        public GetPurposesRequest(Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetPurposesRequestBody {
+        
+        public GetPurposesRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPurposesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPurposesResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponseBody Body;
+        
+        public GetPurposesResponse() {
+        }
+        
+        public GetPurposesResponse(Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetPurposesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose[] GetPurposesResult;
+        
+        public GetPurposesResponseBody() {
+        }
+        
+        public GetPurposesResponseBody(Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose[] GetPurposesResult) {
+            this.GetPurposesResult = GetPurposesResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface Uppgift2_ServiceSoapChannel : Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -194,6 +872,52 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
             Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllPersonsRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllPersonsRequest();
             inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllPersonsRequestBody();
             return ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllPersonsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponse Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetUsers(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest request) {
+            return base.Channel.GetUsers(request);
+        }
+        
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.User[] GetUsers() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequestBody();
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponse retVal = ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetUsers(inValue);
+            return retVal.Body.GetUsersResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponse> Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetUsersAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest request) {
+            return base.Channel.GetUsersAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponse> GetUsersAsync() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersRequestBody();
+            return ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetUsersAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetPurposes(Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest request) {
+            return base.Channel.GetPurposes(request);
+        }
+        
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose[] GetPurposes() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequestBody();
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse retVal = ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetPurposes(inValue);
+            return retVal.Body.GetPurposesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse> Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetPurposesAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest request) {
+            return base.Channel.GetPurposesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse> GetPurposesAsync() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequestBody();
+            return ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetPurposesAsync(inValue);
         }
     }
 }
