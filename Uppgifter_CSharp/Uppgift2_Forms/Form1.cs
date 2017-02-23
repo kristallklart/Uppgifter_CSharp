@@ -30,8 +30,8 @@ namespace Uppgift2_Forms
         {
             if (cueComboBoxChooseTable.SelectedIndex >= 0)
             {
-                //metod ws
-
+                string selected = cueComboBoxChooseTable.SelectedText;
+                //dataGridView1.DataSource = //metod webservice(selected);
             }
         }
     }
