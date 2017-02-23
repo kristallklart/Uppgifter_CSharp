@@ -16,5 +16,23 @@ namespace Uppgift2_Forms
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cueComboBoxChooseTable.Items.Add("User");
+            cueComboBoxChooseTable.Items.Add("User_Location_Purpose");
+            cueComboBoxChooseTable.Items.Add("Location");
+            cueComboBoxChooseTable.Items.Add("FieldOfProfession");
+            cueComboBoxChooseTable.Items.Add("Purpose");
+        }
+
+        private void buttonShowTable_Click(object sender, EventArgs e)
+        {
+            if (cueComboBoxChooseTable.SelectedIndex >= 0)
+            {
+                //metod ws
+
+            }
+        }
     }
 }
