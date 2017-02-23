@@ -639,6 +639,27 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetPurposes", ReplyAction="*")]
         System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse> GetPurposesAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetLocationsResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetLocations", ReplyAction="*")]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponse GetLocations(Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetLocations", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponse> GetLocationsAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetUserLocationPurposesResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetUserLocationPurposes", ReplyAction="*")]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponse GetUserLocationPurposes(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetUserLocationPurposes", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponse> GetUserLocationPurposesAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetFieldOfProfessionsResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetFieldOfProfessions", ReplyAction="*")]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponse GetFieldOfProfessions(Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetFieldOfProfessions", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponse> GetFieldOfProfessionsAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -824,6 +845,189 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetLocationsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLocations", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequestBody Body;
+        
+        public GetLocationsRequest() {
+        }
+        
+        public GetLocationsRequest(Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetLocationsRequestBody {
+        
+        public GetLocationsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetLocationsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLocationsResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponseBody Body;
+        
+        public GetLocationsResponse() {
+        }
+        
+        public GetLocationsResponse(Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetLocationsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.Location[] GetLocationsResult;
+        
+        public GetLocationsResponseBody() {
+        }
+        
+        public GetLocationsResponseBody(Uppgift2_Konsol.Uppgift2_ServiceReference.Location[] GetLocationsResult) {
+            this.GetLocationsResult = GetLocationsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetUserLocationPurposesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUserLocationPurposes", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequestBody Body;
+        
+        public GetUserLocationPurposesRequest() {
+        }
+        
+        public GetUserLocationPurposesRequest(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetUserLocationPurposesRequestBody {
+        
+        public GetUserLocationPurposesRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetUserLocationPurposesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetUserLocationPurposesResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponseBody Body;
+        
+        public GetUserLocationPurposesResponse() {
+        }
+        
+        public GetUserLocationPurposesResponse(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetUserLocationPurposesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] GetUserLocationPurposesResult;
+        
+        public GetUserLocationPurposesResponseBody() {
+        }
+        
+        public GetUserLocationPurposesResponseBody(Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] GetUserLocationPurposesResult) {
+            this.GetUserLocationPurposesResult = GetUserLocationPurposesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetFieldOfProfessionsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetFieldOfProfessions", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequestBody Body;
+        
+        public GetFieldOfProfessionsRequest() {
+        }
+        
+        public GetFieldOfProfessionsRequest(Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetFieldOfProfessionsRequestBody {
+        
+        public GetFieldOfProfessionsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetFieldOfProfessionsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetFieldOfProfessionsResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponseBody Body;
+        
+        public GetFieldOfProfessionsResponse() {
+        }
+        
+        public GetFieldOfProfessionsResponse(Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetFieldOfProfessionsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession[] GetFieldOfProfessionsResult;
+        
+        public GetFieldOfProfessionsResponseBody() {
+        }
+        
+        public GetFieldOfProfessionsResponseBody(Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession[] GetFieldOfProfessionsResult) {
+            this.GetFieldOfProfessionsResult = GetFieldOfProfessionsResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface Uppgift2_ServiceSoapChannel : Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -918,6 +1122,75 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
             Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequest();
             inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesRequestBody();
             return ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetPurposesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponse Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetLocations(Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest request) {
+            return base.Channel.GetLocations(request);
+        }
+        
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.Location[] GetLocations() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequestBody();
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponse retVal = ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetLocations(inValue);
+            return retVal.Body.GetLocationsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponse> Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetLocationsAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest request) {
+            return base.Channel.GetLocationsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponse> GetLocationsAsync() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsRequestBody();
+            return ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetLocationsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponse Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetUserLocationPurposes(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest request) {
+            return base.Channel.GetUserLocationPurposes(request);
+        }
+        
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose[] GetUserLocationPurposes() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequestBody();
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponse retVal = ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetUserLocationPurposes(inValue);
+            return retVal.Body.GetUserLocationPurposesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponse> Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetUserLocationPurposesAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest request) {
+            return base.Channel.GetUserLocationPurposesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponse> GetUserLocationPurposesAsync() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesRequestBody();
+            return ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetUserLocationPurposesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponse Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetFieldOfProfessions(Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest request) {
+            return base.Channel.GetFieldOfProfessions(request);
+        }
+        
+        public Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession[] GetFieldOfProfessions() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequestBody();
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponse retVal = ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetFieldOfProfessions(inValue);
+            return retVal.Body.GetFieldOfProfessionsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponse> Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetFieldOfProfessionsAsync(Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest request) {
+            return base.Channel.GetFieldOfProfessionsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponse> GetFieldOfProfessionsAsync() {
+            Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest inValue = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequest();
+            inValue.Body = new Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsRequestBody();
+            return ((Uppgift2_Konsol.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetFieldOfProfessionsAsync(inValue);
         }
     }
 }

@@ -110,20 +110,96 @@ public static class Dal
         return null;
     }
 
-    //public static List<Location> GetLocations()
-    //{
+    public static List<Location> GetLocations()
+    {
+        try
+        {
+            OpenConnection();
+            string sqlString = "select * from Locations";
+            SqlCommand cmd = new SqlCommand(sqlString, connection);
+            dataReader = cmd.ExecuteReader();
 
-    //}
+            List<Location> locations = new List<Location>();
 
-    //public static List<UserLocationPurpose> GetUserLocationPurposes()
-    //{
+            while (dataReader.Read())
+            {
+                Location location = new Location();
+                location.City = dataReader["City"].ToString();
+                locations.Add(location);
+            }
+            return locations;
+        }
+        catch (Exception)
+        {
 
-    //}
+        }
+        finally
+        {
+            CloseConnection();
+        }
+        return null;
+    }
+
+    public static List<UserLocationPurpose> GetUserLocationPurposes()
+    {
+        try
+        {
+            OpenConnection();
+            string sqlString = "select * from User_Location_Purposes";
+            SqlCommand cmd = new SqlCommand(sqlString, connection);
+            dataReader = cmd.ExecuteReader();
+
+            List<UserLocationPurpose> userLocationPurposes = new List<UserLocationPurpose>();
+
+            while (dataReader.Read())
+            {
+                UserLocationPurpose userLocationPurpose = new UserLocationPurpose();
+                userLocationPurpose.City = dataReader["City"].ToString();
+                userLocationPurpose.Username = dataReader["Username"].ToString();
+                userLocationPurpose.Purposetype = dataReader["Purposetype"].ToString();
+            }
+            return userLocationPurposes;
+        }
+        catch(Exception)
+        {
+            
+        }
+        finally
+        {
+            CloseConnection();
+        }
+        return null;
+    }
     
-    //public static List<FieldOfProfession> GetFieldOfProfessions()
-    //{
+    public static List<FieldOfProfession> GetFieldOfProfessions()
+    {
+        try
+        {
+            OpenConnection();
+            string sqlString = "select * from FieldOfProfessions";
+            SqlCommand cmd = new SqlCommand(sqlString, connection);
+            dataReader = cmd.ExecuteReader();
 
-    //}
+            List<FieldOfProfession> fieldOfProfessions = new List<FieldOfProfession>();
+
+            while (dataReader.Read())
+            {
+                FieldOfProfession fieldOfProfession = new FieldOfProfession();
+                fieldOfProfession.Industry = dataReader["Industry"].ToString();
+                fieldOfProfessions.Add(fieldOfProfession);
+            }
+            return fieldOfProfessions;
+        }
+        catch(Exception)
+        {
+
+        }
+        finally
+        {
+            CloseConnection();
+        }
+        return null;
+    }
 
     //public static List<Message> GetMessages()
     //{
@@ -133,7 +209,14 @@ public static class Dal
     private static void OpenConnection()
     {
         connection = new SqlConnection(conStr);
-        connection.Open();
+        try
+        {
+            connection.Open();
+        }
+        catch(Exception)
+        {
+
+        }
     }
 
     private static void CloseConnection()
