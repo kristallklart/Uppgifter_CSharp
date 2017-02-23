@@ -28,7 +28,11 @@ namespace Uppgift2_Forms
 
         private void buttonShowTable_Click(object sender, EventArgs e)
         {
-            
+            if (cueComboBoxChooseTable.SelectedIndex >= 0)
+            {
+                //metod ws
+
+            }
         }
     }
 }

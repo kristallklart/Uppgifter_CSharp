@@ -57,6 +57,7 @@
             // cueComboBoxChooseTable
             // 
             this.cueComboBoxChooseTable.CueText = "Choose Table";
+            this.cueComboBoxChooseTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cueComboBoxChooseTable.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cueComboBoxChooseTable.FormattingEnabled = true;
             this.cueComboBoxChooseTable.Location = new System.Drawing.Point(12, 12);
