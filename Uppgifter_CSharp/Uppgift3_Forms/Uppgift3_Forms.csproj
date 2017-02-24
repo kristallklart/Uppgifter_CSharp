@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C4BFAD5-D294-4A23-A0EE-0E667C491991}</ProjectGuid>
+    <ProjectGuid>{E1E07CE4-8586-4C2D-A52A-E896DB1D8945}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Uppgift2_Forms</RootNamespace>
-    <AssemblyName>Uppgift2_Forms</AssemblyName>
+    <RootNamespace>Uppgift3_Forms</RootNamespace>
+    <AssemblyName>Uppgift3_Forms</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -41,24 +41,25 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerLayer\Controller.cs" />
-    <Compile Include="Uppgift2Form.cs">
+    <Compile Include="Uppgift3Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Uppgift2Form.Designer.cs">
-      <DependentUpon>Uppgift2Form.cs</DependentUpon>
+    <Compile Include="Uppgift3Form.Designer.cs">
+      <DependentUpon>Uppgift3Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\CueComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Uppgift2Form.resx">
-      <DependentUpon>Uppgift2Form.cs</DependentUpon>
+    <EmbeddedResource Include="Uppgift3Form.resx">
+      <DependentUpon>Uppgift3Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,9 +82,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

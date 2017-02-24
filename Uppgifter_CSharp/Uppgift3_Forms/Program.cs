@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Uppgift2_Forms
+namespace Uppgift3_Forms
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Uppgift2_Forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Uppgift2Form());
+            Application.Run(new Uppgift3Form());
         }
     }
 }
