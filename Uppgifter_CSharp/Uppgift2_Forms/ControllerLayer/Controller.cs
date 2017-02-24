@@ -8,33 +8,35 @@ namespace Uppgift2_Forms.ControllerLayer
 {
     public static class Controller
     {
-        public static Object[] GetAllUsers()
+        static Uppgift2_ServiceReference.Uppgift2_ServiceSoapClient proxy = new Uppgift2_ServiceReference.Uppgift2_ServiceSoapClient();
+        public static List<object> GetAllUsers()
         {
-            //kalla på proxy för getUsers
+            return proxy.GetAllUsers();
         }
-        public static Object[] GetAllLocations()
+        public static List<object> GetAllLocations()
         {
-            //kalla på proxy för get locations 
-        }
-        public static Object[] GetAllUserLocationPurposes()
-        {
-            // kalla på proxy för GetUserLocationPurposes
-        }
-        public static Object[] GetAllPurposes()
-        {
-            
-        }
-        public static Object[] GetAllFieldOfProfessions()
-        {
+            return proxy.GetAllLocations(); 
 
         }
-        public static Object[] GetAllMatches()
+        public static List<object> GetAllUserLocationPurposes()
         {
-
+            return proxy.GetAllUserLocationPurposes();
         }
-        public static Object[] GetAllMessages()
+        public static List<object> GetAllPurposes()
         {
-
+            return proxy.GetAllPurposes();  
+        }
+        public static List<object> GetAllFieldOfProfessions()
+        {
+            return proxy.GetAllFieldOfProfessions();
+        }
+        public static List<object> GetAllMatches()
+        {
+            return proxy.GetAllMatches();
+        }
+        public static List<object> GetAllMessages()
+        {
+            return proxy.GetAllMessages();
         }
     }
 }
