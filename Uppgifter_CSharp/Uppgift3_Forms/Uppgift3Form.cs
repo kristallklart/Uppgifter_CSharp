@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Uppgift3_Forms
 {
-    public partial class Form1 : Form
+    public partial class Uppgift3Form : Form
     {
-        public Form1()
+        public Uppgift3Form()
         {
             InitializeComponent();
             cueComboBoxShowTable.Items.Add("Employee");

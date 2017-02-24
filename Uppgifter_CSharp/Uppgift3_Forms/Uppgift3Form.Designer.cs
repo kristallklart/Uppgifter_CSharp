@@ -1,6 +1,6 @@
 ﻿namespace Uppgift3_Forms
 {
-    partial class Form1
+    partial class Uppgift3Form
     {
         /// <summary>
         /// Required designer variable.
