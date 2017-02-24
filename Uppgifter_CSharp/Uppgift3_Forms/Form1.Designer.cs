@@ -42,12 +42,13 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonAddEmployee = new System.Windows.Forms.Button();
-            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
-            this.labelEmployeeNo = new System.Windows.Forms.Label();
-            this.labelFirstName = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.labelEmployeeNo = new System.Windows.Forms.Label();
             this.buttonDeleteEmployee = new System.Windows.Forms.Button();
+            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
+            this.buttonAddEmployee = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxEmployeeAndRelatedTables.SuspendLayout();
             this.groupBoxShowMetadata.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -178,6 +179,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.labelLastName);
             this.groupBox1.Controls.Add(this.labelFirstName);
             this.groupBox1.Controls.Add(this.labelEmployeeNo);
@@ -194,15 +196,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update/Delete";
             // 
-            // buttonAddEmployee
+            // labelLastName
             // 
-            this.buttonAddEmployee.Location = new System.Drawing.Point(11, 202);
-            this.buttonAddEmployee.Name = "buttonAddEmployee";
-            this.buttonAddEmployee.Size = new System.Drawing.Size(99, 53);
-            this.buttonAddEmployee.TabIndex = 11;
-            this.buttonAddEmployee.Text = "Add Employee";
-            this.buttonAddEmployee.UseVisualStyleBackColor = true;
-            this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(11, 135);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(88, 20);
+            this.labelLastName.TabIndex = 16;
+            this.labelLastName.Text = "Last name:";
+            // 
+            // labelFirstName
+            // 
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Location = new System.Drawing.Point(11, 82);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(88, 20);
+            this.labelFirstName.TabIndex = 15;
+            this.labelFirstName.Text = "First name:";
+            // 
+            // labelEmployeeNo
+            // 
+            this.labelEmployeeNo.AutoSize = true;
+            this.labelEmployeeNo.Location = new System.Drawing.Point(11, 23);
+            this.labelEmployeeNo.Name = "labelEmployeeNo";
+            this.labelEmployeeNo.Size = new System.Drawing.Size(107, 20);
+            this.labelEmployeeNo.TabIndex = 14;
+            this.labelEmployeeNo.Text = "Employee No:";
+            // 
+            // buttonDeleteEmployee
+            // 
+            this.buttonDeleteEmployee.Location = new System.Drawing.Point(268, 202);
+            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 53);
+            this.buttonDeleteEmployee.TabIndex = 13;
+            this.buttonDeleteEmployee.Text = "Delete Employee";
+            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
             // 
             // buttonUpdateEmployee
             // 
@@ -214,42 +243,24 @@
             this.buttonUpdateEmployee.UseVisualStyleBackColor = true;
             this.buttonUpdateEmployee.Click += new System.EventHandler(this.buttonUpdateEmployee_Click);
             // 
-            // labelEmployeeNo
+            // buttonAddEmployee
             // 
-            this.labelEmployeeNo.AutoSize = true;
-            this.labelEmployeeNo.Location = new System.Drawing.Point(11, 23);
-            this.labelEmployeeNo.Name = "labelEmployeeNo";
-            this.labelEmployeeNo.Size = new System.Drawing.Size(107, 20);
-            this.labelEmployeeNo.TabIndex = 14;
-            this.labelEmployeeNo.Text = "Employee No:";
+            this.buttonAddEmployee.Location = new System.Drawing.Point(11, 202);
+            this.buttonAddEmployee.Name = "buttonAddEmployee";
+            this.buttonAddEmployee.Size = new System.Drawing.Size(99, 53);
+            this.buttonAddEmployee.TabIndex = 11;
+            this.buttonAddEmployee.Text = "Add Employee";
+            this.buttonAddEmployee.UseVisualStyleBackColor = true;
+            this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
             // 
-            // labelFirstName
+            // label1
             // 
-            this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(11, 82);
-            this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(88, 20);
-            this.labelFirstName.TabIndex = 15;
-            this.labelFirstName.Text = "First name:";
-            // 
-            // labelLastName
-            // 
-            this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(11, 135);
-            this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(88, 20);
-            this.labelLastName.TabIndex = 16;
-            this.labelLastName.Text = "Last name:";
-            // 
-            // buttonDeleteEmployee
-            // 
-            this.buttonDeleteEmployee.Location = new System.Drawing.Point(268, 202);
-            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
-            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 53);
-            this.buttonDeleteEmployee.TabIndex = 13;
-            this.buttonDeleteEmployee.Text = "Delete Employee";
-            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
-            this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(208, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = " * ";
             // 
             // Form1
             // 
@@ -297,6 +308,7 @@
         private System.Windows.Forms.Button buttonUpdateEmployee;
         private System.Windows.Forms.Button buttonAddEmployee;
         private System.Windows.Forms.Button buttonDeleteEmployee;
+        private System.Windows.Forms.Label label1;
     }
 }
 
