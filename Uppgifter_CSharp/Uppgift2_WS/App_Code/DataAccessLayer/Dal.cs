@@ -14,6 +14,12 @@ public static class Dal
     private static SqlConnection connection;
     private static SqlDataReader dataReader;
     private static string conStr;
+    private static List<object> allUsers;
+    private static List<object> allPurposes;
+    private static List<object> allLocations;
+    private static List<object> allUserLocationPurposes;
+    private static List<object> allFieldOfProfessions;
+    private static List<object> allMessages;
 
     //public SqlConnection Connection
     //{
@@ -37,22 +43,18 @@ public static class Dal
         //conStr = "server=localhost; Trusted_Connection=yes; database=FriendlyDB";
     }
 
-    public static List<User> GetUsers()
+    public static List<object> GetAllUsers()
     {
+        //return allUsers;
+
         try
         {
             OpenConnection();
-            //connection = null;
-            //dataReader = null;
-            //connection = new SqlConnection(conStr);
-            //connection.Open();
-            //string test = dataReader.GetName(5); //Används för att hämta ett namn på en given kolumn i tabellen.
-            
-            string sqlString = "select * from Users";
+
+            string sqlString = "select * from UsersERROR";
             SqlCommand cmd = new SqlCommand(sqlString, connection);
             dataReader = cmd.ExecuteReader();
-            
-            List<User> users = new List<User>();
+            allUsers = new List<object>();
 
             while (dataReader.Read())
             {
@@ -63,24 +65,33 @@ public static class Dal
                 aUser.About = dataReader["About"].ToString();
                 aUser.Profession = dataReader["Profession"].ToString();
                 aUser.Industry = dataReader["Industry"].ToString();
-                //aUser.BirthDate
-                //aUser.Password
-                users.Add(aUser);
+                allUsers.Add(aUser);
             }
-            return users;
-        }
-        catch (Exception)
-        {
 
+            return allUsers;
+        }
+        catch (SqlException e)
+        {
+            //int fel = e.ErrorCode;
+            //int fel2 = e.Number;
+            //e.ErrorCode
+            string errorMessage = ErrorHandler.HandleError(e);
+            List<object> allUsersAndMessage = new List<object>();
+            allUsersAndMessage.Add(errorMessage);
+            foreach (object o in allUsers)
+            {
+                allUsersAndMessage.Add(o);
+            }
+            return allUsersAndMessage;
         }
         finally
         {
             CloseConnection();
         }
-        return null;
+        //return null;
     }
 
-    public static List<Purpose> GetPurposes()
+    public static List<object> GetAllPurposes()
     {
         try
         {
@@ -89,28 +100,34 @@ public static class Dal
             SqlCommand cmd = new SqlCommand(sqlString, connection);
             dataReader = cmd.ExecuteReader();
 
-            List<Purpose> purposes = new List<Purpose>();
+            allPurposes = new List<object>();
 
             while (dataReader.Read())
             {
                 Purpose purpose = new Purpose();
                 purpose.PurposeType = dataReader["Purposetype"].ToString();
-                purposes.Add(purpose);
+                allPurposes.Add(purpose);
             }
-            return purposes;
+            return allPurposes;
         }
-        catch (Exception)
+        catch (SqlException e)
         {
-
+            string errorMessage = ErrorHandler.HandleError(e);
+            List<object> allPurposesAndMessage = new List<object>();
+            allPurposesAndMessage.Add(errorMessage);
+            foreach (object o in allUsers)
+            {
+                allPurposesAndMessage.Add(o);
+            }
+            return allPurposesAndMessage;
         }
         finally
         {
             CloseConnection();
         }
-        return null;
     }
 
-    public static List<Location> GetLocations()
+    public static List<object> GetAllLocations()
     {
         try
         {
@@ -119,28 +136,34 @@ public static class Dal
             SqlCommand cmd = new SqlCommand(sqlString, connection);
             dataReader = cmd.ExecuteReader();
 
-            List<Location> locations = new List<Location>();
+            allLocations = new List<object>();
 
             while (dataReader.Read())
             {
                 Location location = new Location();
                 location.City = dataReader["City"].ToString();
-                locations.Add(location);
+                allLocations.Add(location);
             }
-            return locations;
+            return allLocations;
         }
-        catch (Exception)
+        catch (SqlException e)
         {
-
+            string errorMessage = ErrorHandler.HandleError(e);
+            List<object> allLocationsAndMessage = new List<object>();
+            allLocationsAndMessage.Add(errorMessage);
+            foreach (object o in allUsers)
+            {
+                allLocationsAndMessage.Add(o);
+            }
+            return allLocationsAndMessage;
         }
         finally
         {
             CloseConnection();
         }
-        return null;
     }
 
-    public static List<UserLocationPurpose> GetUserLocationPurposes()
+    public static List<object> GetAllUserLocationPurposes()
     {
         try
         {
@@ -149,7 +172,7 @@ public static class Dal
             SqlCommand cmd = new SqlCommand(sqlString, connection);
             dataReader = cmd.ExecuteReader();
 
-            List<UserLocationPurpose> userLocationPurposes = new List<UserLocationPurpose>();
+            allUserLocationPurposes = new List<object>();
 
             while (dataReader.Read())
             {
@@ -158,20 +181,26 @@ public static class Dal
                 userLocationPurpose.Username = dataReader["Username"].ToString();
                 userLocationPurpose.Purposetype = dataReader["Purposetype"].ToString();
             }
-            return userLocationPurposes;
+            return allUserLocationPurposes;
         }
-        catch(Exception)
+        catch(SqlException e)
         {
-            
+            string errorMessage = ErrorHandler.HandleError(e);
+            List<object> allUserLocationPurposesAndMessage = new List<object>();
+            allUserLocationPurposesAndMessage.Add(errorMessage);
+            foreach (object o in allUsers)
+            {
+                allUserLocationPurposesAndMessage.Add(o);
+            }
+            return allUserLocationPurposesAndMessage;
         }
         finally
         {
             CloseConnection();
         }
-        return null;
     }
     
-    public static List<FieldOfProfession> GetFieldOfProfessions()
+    public static List<object> GetAllFieldOfProfessions()
     {
         try
         {
@@ -180,25 +209,31 @@ public static class Dal
             SqlCommand cmd = new SqlCommand(sqlString, connection);
             dataReader = cmd.ExecuteReader();
 
-            List<FieldOfProfession> fieldOfProfessions = new List<FieldOfProfession>();
+            allFieldOfProfessions = new List<object>();
 
             while (dataReader.Read())
             {
                 FieldOfProfession fieldOfProfession = new FieldOfProfession();
                 fieldOfProfession.Industry = dataReader["Industry"].ToString();
-                fieldOfProfessions.Add(fieldOfProfession);
+                allFieldOfProfessions.Add(fieldOfProfession);
             }
-            return fieldOfProfessions;
+            return allFieldOfProfessions;
         }
-        catch(Exception)
+        catch(SqlException e)
         {
-
+            string errorMessage = ErrorHandler.HandleError(e);
+            List<object> allFieldOfProfessionsAndMessage = new List<object>();
+            allFieldOfProfessionsAndMessage.Add(errorMessage);
+            foreach (object o in allFieldOfProfessionsAndMessage)
+            {
+                allFieldOfProfessionsAndMessage.Add(o);
+            }
+            return allFieldOfProfessionsAndMessage;
         }
         finally
         {
             CloseConnection();
         }
-        return null;
     }
 
     //public static List<Message> GetMessages()
@@ -213,9 +248,9 @@ public static class Dal
         {
             connection.Open();
         }
-        catch(Exception)
+        catch(SqlException e)
         {
-
+            ErrorHandler.HandleError(e);
         }
     }
 
