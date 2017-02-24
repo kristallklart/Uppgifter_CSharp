@@ -28,10 +28,26 @@ namespace Uppgift2_Forms
 
         private void buttonShowTable_Click(object sender, EventArgs e)
         {
-            if (cueComboBoxChooseTable.SelectedIndex >= 0)
+            switch (cueComboBoxChooseTable.SelectedIndex)
             {
-                string selected = cueComboBoxChooseTable.SelectedText;
-                //dataGridView1.DataSource = //metod webservice(selected);
+                case 0:
+                    //user
+                    break;
+                case 1:
+                    //UserLocationPurpose
+                    break;
+                case 2:
+                    //Location
+                    break;
+                case 3:
+                    //FieldOfProfession
+                    break;
+                case 4:
+                    //Purpose
+                    break;
+                default:
+                    labelRespons.Text = "Please choose table to show";
+                    break;
             }
         }
     }

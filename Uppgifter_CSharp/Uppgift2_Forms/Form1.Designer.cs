@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewShowTable = new System.Windows.Forms.DataGridView();
             this.buttonShowTable = new System.Windows.Forms.Button();
             this.cueComboBoxChooseTable = new Uppgift2_Forms.Utilities.CueComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.labelRespons = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowTable)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewShowTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1238, 587);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridViewShowTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewShowTable.Location = new System.Drawing.Point(12, 58);
+            this.dataGridViewShowTable.Name = "dataGridViewShowTable";
+            this.dataGridViewShowTable.ReadOnly = true;
+            this.dataGridViewShowTable.RowTemplate.Height = 28;
+            this.dataGridViewShowTable.Size = new System.Drawing.Size(1238, 569);
+            this.dataGridViewShowTable.TabIndex = 1;
             // 
             // buttonShowTable
             // 
@@ -65,26 +67,38 @@
             this.cueComboBoxChooseTable.Size = new System.Drawing.Size(256, 29);
             this.cueComboBoxChooseTable.TabIndex = 3;
             // 
+            // labelRespons
+            // 
+            this.labelRespons.AutoSize = true;
+            this.labelRespons.Location = new System.Drawing.Point(13, 634);
+            this.labelRespons.Name = "labelRespons";
+            this.labelRespons.Size = new System.Drawing.Size(106, 20);
+            this.labelRespons.TabIndex = 4;
+            this.labelRespons.Text = "labelRespons";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 661);
+            this.Controls.Add(this.labelRespons);
             this.Controls.Add(this.cueComboBoxChooseTable);
             this.Controls.Add(this.buttonShowTable);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewShowTable);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowTable)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewShowTable;
         private System.Windows.Forms.Button buttonShowTable;
         private Utilities.CueComboBox cueComboBoxChooseTable;
+        private System.Windows.Forms.Label labelRespons;
     }
 }
 
