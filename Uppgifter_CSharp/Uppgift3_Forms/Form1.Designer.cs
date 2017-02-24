@@ -29,18 +29,29 @@
         private void InitializeComponent()
         {
             this.groupBoxEmployeeAndRelatedTables = new System.Windows.Forms.GroupBox();
-            this.labelShowTable = new System.Windows.Forms.Label();
             this.buttonShowTable = new System.Windows.Forms.Button();
+            this.labelShowTable = new System.Windows.Forms.Label();
+            this.cueComboBoxShowTable = new Uppgift3_Forms.Utilities.CueComboBox();
             this.groupBoxShowMetadata = new System.Windows.Forms.GroupBox();
-            this.labelShowQuery = new System.Windows.Forms.Label();
             this.buttonShowMetadata = new System.Windows.Forms.Button();
+            this.labelShowQuery = new System.Windows.Forms.Label();
+            this.cueComboBoxShowMetadata = new Uppgift3_Forms.Utilities.CueComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelRespons = new System.Windows.Forms.Label();
-            this.cueComboBoxShowMetadata = new Uppgift3_Forms.Utilities.CueComboBox();
-            this.cueComboBoxShowTable = new Uppgift3_Forms.Utilities.CueComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonAddEmployee = new System.Windows.Forms.Button();
+            this.buttonUpdateEmployee = new System.Windows.Forms.Button();
+            this.labelEmployeeNo = new System.Windows.Forms.Label();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.buttonDeleteEmployee = new System.Windows.Forms.Button();
             this.groupBoxEmployeeAndRelatedTables.SuspendLayout();
             this.groupBoxShowMetadata.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxEmployeeAndRelatedTables
@@ -55,15 +66,6 @@
             this.groupBoxEmployeeAndRelatedTables.TabStop = false;
             this.groupBoxEmployeeAndRelatedTables.Text = "Show Employee and Related Tables";
             // 
-            // labelShowTable
-            // 
-            this.labelShowTable.AutoSize = true;
-            this.labelShowTable.Location = new System.Drawing.Point(18, 59);
-            this.labelShowTable.Name = "labelShowTable";
-            this.labelShowTable.Size = new System.Drawing.Size(92, 20);
-            this.labelShowTable.TabIndex = 1;
-            this.labelShowTable.Text = "Show Table";
-            // 
             // buttonShowTable
             // 
             this.buttonShowTable.Location = new System.Drawing.Point(291, 103);
@@ -73,6 +75,25 @@
             this.buttonShowTable.Text = "Show";
             this.buttonShowTable.UseVisualStyleBackColor = true;
             this.buttonShowTable.Click += new System.EventHandler(this.buttonShowTable_Click);
+            // 
+            // labelShowTable
+            // 
+            this.labelShowTable.AutoSize = true;
+            this.labelShowTable.Location = new System.Drawing.Point(18, 59);
+            this.labelShowTable.Name = "labelShowTable";
+            this.labelShowTable.Size = new System.Drawing.Size(92, 20);
+            this.labelShowTable.TabIndex = 1;
+            this.labelShowTable.Text = "Show Table";
+            // 
+            // cueComboBoxShowTable
+            // 
+            this.cueComboBoxShowTable.CueText = "Choose Table";
+            this.cueComboBoxShowTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cueComboBoxShowTable.FormattingEnabled = true;
+            this.cueComboBoxShowTable.Location = new System.Drawing.Point(130, 52);
+            this.cueComboBoxShowTable.Name = "cueComboBoxShowTable";
+            this.cueComboBoxShowTable.Size = new System.Drawing.Size(236, 28);
+            this.cueComboBoxShowTable.TabIndex = 0;
             // 
             // groupBoxShowMetadata
             // 
@@ -86,15 +107,6 @@
             this.groupBoxShowMetadata.TabStop = false;
             this.groupBoxShowMetadata.Text = "Show Metadata";
             // 
-            // labelShowQuery
-            // 
-            this.labelShowQuery.AutoSize = true;
-            this.labelShowQuery.Location = new System.Drawing.Point(18, 59);
-            this.labelShowQuery.Name = "labelShowQuery";
-            this.labelShowQuery.Size = new System.Drawing.Size(95, 20);
-            this.labelShowQuery.TabIndex = 2;
-            this.labelShowQuery.Text = "Show Query";
-            // 
             // buttonShowMetadata
             // 
             this.buttonShowMetadata.Location = new System.Drawing.Point(291, 108);
@@ -104,6 +116,25 @@
             this.buttonShowMetadata.Text = "Show";
             this.buttonShowMetadata.UseVisualStyleBackColor = true;
             this.buttonShowMetadata.Click += new System.EventHandler(this.buttonShowMetadata_Click);
+            // 
+            // labelShowQuery
+            // 
+            this.labelShowQuery.AutoSize = true;
+            this.labelShowQuery.Location = new System.Drawing.Point(18, 59);
+            this.labelShowQuery.Name = "labelShowQuery";
+            this.labelShowQuery.Size = new System.Drawing.Size(95, 20);
+            this.labelShowQuery.TabIndex = 2;
+            this.labelShowQuery.Text = "Show Query";
+            // 
+            // cueComboBoxShowMetadata
+            // 
+            this.cueComboBoxShowMetadata.CueText = "Choose Metadata";
+            this.cueComboBoxShowMetadata.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cueComboBoxShowMetadata.FormattingEnabled = true;
+            this.cueComboBoxShowMetadata.Location = new System.Drawing.Point(130, 56);
+            this.cueComboBoxShowMetadata.Name = "cueComboBoxShowMetadata";
+            this.cueComboBoxShowMetadata.Size = new System.Drawing.Size(236, 28);
+            this.cueComboBoxShowMetadata.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -124,31 +155,108 @@
             this.labelRespons.TabIndex = 5;
             this.labelRespons.Text = "labelRespons";
             // 
-            // cueComboBoxShowMetadata
+            // textBox1
             // 
-            this.cueComboBoxShowMetadata.CueText = "Choose Metadata";
-            this.cueComboBoxShowMetadata.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cueComboBoxShowMetadata.FormattingEnabled = true;
-            this.cueComboBoxShowMetadata.Location = new System.Drawing.Point(130, 56);
-            this.cueComboBoxShowMetadata.Name = "cueComboBoxShowMetadata";
-            this.cueComboBoxShowMetadata.Size = new System.Drawing.Size(236, 28);
-            this.cueComboBoxShowMetadata.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(11, 158);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(191, 26);
+            this.textBox1.TabIndex = 6;
             // 
-            // cueComboBoxShowTable
+            // textBox3
             // 
-            this.cueComboBoxShowTable.CueText = "Choose Table";
-            this.cueComboBoxShowTable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cueComboBoxShowTable.FormattingEnabled = true;
-            this.cueComboBoxShowTable.Location = new System.Drawing.Point(130, 52);
-            this.cueComboBoxShowTable.Name = "cueComboBoxShowTable";
-            this.cueComboBoxShowTable.Size = new System.Drawing.Size(236, 28);
-            this.cueComboBoxShowTable.TabIndex = 0;
+            this.textBox3.Location = new System.Drawing.Point(11, 49);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(191, 26);
+            this.textBox3.TabIndex = 8;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(11, 105);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(191, 26);
+            this.textBox4.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelLastName);
+            this.groupBox1.Controls.Add(this.labelFirstName);
+            this.groupBox1.Controls.Add(this.labelEmployeeNo);
+            this.groupBox1.Controls.Add(this.buttonDeleteEmployee);
+            this.groupBox1.Controls.Add(this.buttonUpdateEmployee);
+            this.groupBox1.Controls.Add(this.buttonAddEmployee);
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 376);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(395, 261);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Add/Update/Delete";
+            // 
+            // buttonAddEmployee
+            // 
+            this.buttonAddEmployee.Location = new System.Drawing.Point(11, 202);
+            this.buttonAddEmployee.Name = "buttonAddEmployee";
+            this.buttonAddEmployee.Size = new System.Drawing.Size(99, 53);
+            this.buttonAddEmployee.TabIndex = 11;
+            this.buttonAddEmployee.Text = "Add Employee";
+            this.buttonAddEmployee.UseVisualStyleBackColor = true;
+            this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
+            // 
+            // buttonUpdateEmployee
+            // 
+            this.buttonUpdateEmployee.Location = new System.Drawing.Point(130, 202);
+            this.buttonUpdateEmployee.Name = "buttonUpdateEmployee";
+            this.buttonUpdateEmployee.Size = new System.Drawing.Size(111, 53);
+            this.buttonUpdateEmployee.TabIndex = 12;
+            this.buttonUpdateEmployee.Text = "Update Employee";
+            this.buttonUpdateEmployee.UseVisualStyleBackColor = true;
+            this.buttonUpdateEmployee.Click += new System.EventHandler(this.buttonUpdateEmployee_Click);
+            // 
+            // labelEmployeeNo
+            // 
+            this.labelEmployeeNo.AutoSize = true;
+            this.labelEmployeeNo.Location = new System.Drawing.Point(11, 23);
+            this.labelEmployeeNo.Name = "labelEmployeeNo";
+            this.labelEmployeeNo.Size = new System.Drawing.Size(107, 20);
+            this.labelEmployeeNo.TabIndex = 14;
+            this.labelEmployeeNo.Text = "Employee No:";
+            // 
+            // labelFirstName
+            // 
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Location = new System.Drawing.Point(11, 82);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(88, 20);
+            this.labelFirstName.TabIndex = 15;
+            this.labelFirstName.Text = "First name:";
+            // 
+            // labelLastName
+            // 
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(11, 135);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(88, 20);
+            this.labelLastName.TabIndex = 16;
+            this.labelLastName.Text = "Last name:";
+            // 
+            // buttonDeleteEmployee
+            // 
+            this.buttonDeleteEmployee.Location = new System.Drawing.Point(268, 202);
+            this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
+            this.buttonDeleteEmployee.Size = new System.Drawing.Size(98, 53);
+            this.buttonDeleteEmployee.TabIndex = 13;
+            this.buttonDeleteEmployee.Text = "Delete Employee";
+            this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
+            this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1288, 696);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelRespons);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBoxShowMetadata);
@@ -160,6 +268,8 @@
             this.groupBoxShowMetadata.ResumeLayout(false);
             this.groupBoxShowMetadata.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +287,16 @@
         private System.Windows.Forms.Label labelShowQuery;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelRespons;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.Label labelFirstName;
+        private System.Windows.Forms.Label labelEmployeeNo;
+        private System.Windows.Forms.Button buttonUpdateEmployee;
+        private System.Windows.Forms.Button buttonAddEmployee;
+        private System.Windows.Forms.Button buttonDeleteEmployee;
     }
 }
 

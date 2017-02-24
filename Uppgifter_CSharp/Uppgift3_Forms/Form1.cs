@@ -81,5 +81,20 @@ namespace Uppgift3_Forms
                     break;
             }
         }
+
+        private void buttonDeleteEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAddEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonUpdateEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
