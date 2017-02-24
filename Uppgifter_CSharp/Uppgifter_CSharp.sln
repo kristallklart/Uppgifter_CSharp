@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1_Konsol", "Uppgift1_Konsole\Uppgift1_Konsol.csproj", "{976B0BDB-E905-4167-A2E4-5DE09646EDAC}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -53,6 +53,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Uppgift2_WS", "http://local
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift2_Forms", "Uppgift2_Forms\Uppgift2_Forms.csproj", "{8C4BFAD5-D294-4A23-A0EE-0E667C491991}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44F82B5D-6A74-4059-80CE-7B7936C7831E} = {44F82B5D-6A74-4059-80CE-7B7936C7831E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1_Forms", "Uppgift1_Forms\Uppgift1_Forms.csproj", "{D7948FEC-83AC-466A-B158-580BC7A879D8}"
 	ProjectSection(ProjectDependencies) = postProject
