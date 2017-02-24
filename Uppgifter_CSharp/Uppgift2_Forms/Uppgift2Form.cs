@@ -42,7 +42,7 @@ namespace Uppgift2_Forms
             switch (cueComboBoxChooseTable.SelectedIndex)
             {   
                 case 0:
-                    o =Controller.GetUsers();
+                    o =Controller.GetAllUsers();
                     if (CheckForError(o))
                     {
                         List<User> users = new List<User>();
@@ -59,7 +59,7 @@ namespace Uppgift2_Forms
                     }
                     break;
                 case 1:
-                    o = Controller.GetUserLocationPurposes();
+                    o = Controller.GetAllUserLocationPurposes();
                     if (CheckForError(o))
                     {
                         List<UserLocationPurpose> ulps = new List<UserLocationPurpose>();
@@ -76,7 +76,7 @@ namespace Uppgift2_Forms
                     }
                     break;
                 case 2:
-                    o = Controller.GetLocations();
+                    o = Controller.GetAllLocations();
                     if (CheckForError(o))
                     {
                         List<Location> loc = new List<Location>();
@@ -94,7 +94,7 @@ namespace Uppgift2_Forms
                     break;
                 case 3:
                     //FieldOfProfession
-                    o = Controller.GetFieldOfProfessions();
+                    o = Controller.GetAllFieldOfProfessions();
                     if (CheckForError(o))
                     {
                         List<FieldOfProfession> fops = new List<FieldOfProfession>();
@@ -112,7 +112,7 @@ namespace Uppgift2_Forms
                     break;
                 case 4:
                     //Purpose
-                    o = Controller.GetPurposes();
+                    o = Controller.GetAllPurposes();
                     if (CheckForError(o))
                     {
                         List<Purpose> pur = new List<Purpose>();
@@ -130,7 +130,7 @@ namespace Uppgift2_Forms
                     break;
                 case 5:
                     //Match
-                    o = Controller.GetMatches();
+                    o = Controller.GetAllMatches();
                     if (CheckForError(o))
                     {
                         List<Match> match = new List<Match>();
@@ -148,7 +148,7 @@ namespace Uppgift2_Forms
                     break;
                 case 6:
                     //Message
-                    o = Controller.GetMessages();
+                    o = Controller.GetAllMessages();
                     if (CheckForError(o))
                     {
                         List<Message> mess = new List<Message>();

@@ -8,31 +8,31 @@ namespace Uppgift2_Forms.ControllerLayer
 {
     public static class Controller
     {
-        public static Object[] GetUsers()
+        public static Object[] GetAllUsers()
         {
             //kalla på proxy för getUsers
         }
-        public static Object[] GetLocations()
+        public static Object[] GetAllLocations()
         {
             //kalla på proxy för get locations 
         }
-        public static Object[] GetUserLocationPurposes()
+        public static Object[] GetAllUserLocationPurposes()
         {
             // kalla på proxy för GetUserLocationPurposes
         }
-        public static Object[] GetPurposes()
+        public static Object[] GetAllPurposes()
         {
             
         }
-        public static Object[] GetFieldOfProfessions()
+        public static Object[] GetAllFieldOfProfessions()
         {
 
         }
-        public static Object[] GetMatches()
+        public static Object[] GetAllMatches()
         {
 
         }
-        public static Object[] GetMessages()
+        public static Object[] GetAllMessages()
         {
 
         }
