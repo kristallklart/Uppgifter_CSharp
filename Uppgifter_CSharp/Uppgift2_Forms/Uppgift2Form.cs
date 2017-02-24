@@ -62,10 +62,10 @@ namespace Uppgift2_Forms
                     o = Controller.GetAllUserLocationPurposes();
                     if (CheckForError(o))
                     {
-                        List<UserLocationPurpose> ulps = new List<UserLocationPurpose>();
+                        List<User_Location_Purpose> ulps = new List<UserLocationPurpose>();
                         foreach (Object obj in o)
                         {
-                            UserLocationPurpose ulp = obj as UserLocationPurpose;
+                            User_Location_Purpose ulp = obj as User_Location_Purpose;
                             ulps.Add(ulp);
                         }
                         dataGridViewShowTable.DataSource = ulps;
