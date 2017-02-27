@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Uppgift2_Forms.ControllerLayer;
 using Uppgift2_Forms.Uppgift2_ServiceReference;
+using System.Xml.Serialization;
 
 namespace Uppgift2_Forms
 {
