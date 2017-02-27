@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.Services;
 using System.Web.Services.Protocols;
 
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+
 [WebService(Namespace = "Grupp7",
             Description = "This web service has multiple web methods which all takes zero arguments and returns an object " +
                           "collection of all the entities in a given table in the Friendly Database if successful. If an error " +
@@ -44,7 +48,31 @@ public class Uppgift2_Service : System.Web.Services.WebService
         user2.FirstName = "Jake";
         users.Add(user);
         users.Add(user2);
-        return users;
+        //return users;
+        
+        string conStr = ConfigurationManager.ConnectionStrings["Databasen"].ConnectionString;
+        SqlConnection connection = new SqlConnection(conStr);
+        SqlDataReader dataReader;
+
+        List<User> allUsers = new List<User>();
+
+        connection.Open();
+        string sqlString = "select * from UsersERROR";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
+
+        while (dataReader.Read())
+        {
+            User aUser = new User();
+            aUser.UserName = dataReader["UserName"].ToString();
+            aUser.FirstName = dataReader["FirstName"].ToString();
+            aUser.LastName = dataReader["LastName"].ToString();
+            aUser.About = dataReader["About"].ToString();
+            aUser.Profession = dataReader["Profession"].ToString();
+            aUser.Industry = dataReader["Industry"].ToString();
+            allUsers.Add(aUser);
+        }
+        return allUsers;
     }
 
     [WebMethod]
@@ -54,7 +82,6 @@ public class Uppgift2_Service : System.Web.Services.WebService
         object o = new object();
         object o2 = new object();
         List<object> objects = new List<object>();
-        //string i = "röv";
         User user = new User();
 
         objects.Add(user);
