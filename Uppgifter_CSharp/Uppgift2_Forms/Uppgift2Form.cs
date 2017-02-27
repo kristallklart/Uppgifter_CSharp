@@ -39,9 +39,9 @@ namespace Uppgift2_Forms
             switch (cueComboBoxChooseTable.SelectedIndex)
             {   
                 case 0:
-                    try { 
-                                      
-                        dataGridViewShowTable.DataSource = Controller.GetAllUsers();
+                    try {
+                        List<User> u = Controller.GetAllUsers();              
+                        dataGridViewShowTable.DataSource = u;
                     }
                     catch(FaultException f)
                     {

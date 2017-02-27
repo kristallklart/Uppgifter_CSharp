@@ -15,13 +15,6 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfAnyType", Namespace="Grupp7", ItemName="anyType")]
-    [System.SerializableAttribute()]
-    public class ArrayOfAnyType : System.Collections.Generic.List<object> {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="Grupp7")]
     [System.SerializableAttribute()]
     public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -59,7 +52,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         private Uppgift2_Forms.Uppgift2_ServiceReference.FieldOfProfession FieldOfProfessionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposesField;
+        private System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -202,7 +195,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposes {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposes {
             get {
                 return this.UserLocationPurposesField;
             }
@@ -237,7 +230,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         private string IndustryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Forms.Uppgift2_ServiceReference.User[] UsersField;
+        private System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.User> UsersField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -263,7 +256,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.User[] Users {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.User> Users {
             get {
                 return this.UsersField;
             }
@@ -453,7 +446,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         private string CityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposesField;
+        private System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -479,7 +472,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposes {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposes {
             get {
                 return this.UserLocationPurposesField;
             }
@@ -514,7 +507,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         private string PurposeTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposesField;
+        private System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -540,7 +533,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose[] UserLocationPurposes {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposes {
             get {
                 return this.UserLocationPurposesField;
             }
@@ -653,12 +646,12 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
     public partial class GetAllUsersResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllUsersResult;
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.User> GetAllUsersResult;
         
         public GetAllUsersResponseBody() {
         }
         
-        public GetAllUsersResponseBody(Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllUsersResult) {
+        public GetAllUsersResponseBody(System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.User> GetAllUsersResult) {
             this.GetAllUsersResult = GetAllUsersResult;
         }
     }
@@ -714,12 +707,12 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
     public partial class GetAllPurposesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllPurposesResult;
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Purpose> GetAllPurposesResult;
         
         public GetAllPurposesResponseBody() {
         }
         
-        public GetAllPurposesResponseBody(Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllPurposesResult) {
+        public GetAllPurposesResponseBody(System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Purpose> GetAllPurposesResult) {
             this.GetAllPurposesResult = GetAllPurposesResult;
         }
     }
@@ -775,12 +768,12 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
     public partial class GetAllLocationsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllLocationsResult;
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Location> GetAllLocationsResult;
         
         public GetAllLocationsResponseBody() {
         }
         
-        public GetAllLocationsResponseBody(Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllLocationsResult) {
+        public GetAllLocationsResponseBody(System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Location> GetAllLocationsResult) {
             this.GetAllLocationsResult = GetAllLocationsResult;
         }
     }
@@ -836,12 +829,12 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
     public partial class GetAllUserLocationPurposesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllUserLocationPurposesResult;
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> GetAllUserLocationPurposesResult;
         
         public GetAllUserLocationPurposesResponseBody() {
         }
         
-        public GetAllUserLocationPurposesResponseBody(Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllUserLocationPurposesResult) {
+        public GetAllUserLocationPurposesResponseBody(System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> GetAllUserLocationPurposesResult) {
             this.GetAllUserLocationPurposesResult = GetAllUserLocationPurposesResult;
         }
     }
@@ -897,12 +890,12 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
     public partial class GetAllFieldOfProfessionsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllFieldOfProfessionsResult;
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.FieldOfProfession> GetAllFieldOfProfessionsResult;
         
         public GetAllFieldOfProfessionsResponseBody() {
         }
         
-        public GetAllFieldOfProfessionsResponseBody(Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllFieldOfProfessionsResult) {
+        public GetAllFieldOfProfessionsResponseBody(System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.FieldOfProfession> GetAllFieldOfProfessionsResult) {
             this.GetAllFieldOfProfessionsResult = GetAllFieldOfProfessionsResult;
         }
     }
@@ -939,7 +932,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
             return base.Channel.GetAllUsers(request);
         }
         
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllUsers() {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.User> GetAllUsers() {
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUsersRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUsersRequest();
             inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUsersRequestBody();
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUsersResponse retVal = ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllUsers(inValue);
@@ -962,7 +955,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
             return base.Channel.GetAllPurposes(request);
         }
         
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllPurposes() {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Purpose> GetAllPurposes() {
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllPurposesRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllPurposesRequest();
             inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllPurposesRequestBody();
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllPurposesResponse retVal = ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllPurposes(inValue);
@@ -985,7 +978,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
             return base.Channel.GetAllLocations(request);
         }
         
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllLocations() {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Location> GetAllLocations() {
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllLocationsRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllLocationsRequest();
             inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllLocationsRequestBody();
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllLocationsResponse retVal = ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllLocations(inValue);
@@ -1008,7 +1001,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
             return base.Channel.GetAllUserLocationPurposes(request);
         }
         
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllUserLocationPurposes() {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.UserLocationPurpose> GetAllUserLocationPurposes() {
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUserLocationPurposesRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUserLocationPurposesRequest();
             inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUserLocationPurposesRequestBody();
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUserLocationPurposesResponse retVal = ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllUserLocationPurposes(inValue);
@@ -1031,7 +1024,7 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
             return base.Channel.GetAllFieldOfProfessions(request);
         }
         
-        public Uppgift2_Forms.Uppgift2_ServiceReference.ArrayOfAnyType GetAllFieldOfProfessions() {
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.FieldOfProfession> GetAllFieldOfProfessions() {
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsRequest();
             inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsRequestBody();
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsResponse retVal = ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllFieldOfProfessions(inValue);
