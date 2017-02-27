@@ -34,7 +34,7 @@ public class Uppgift2_Service : System.Web.Services.WebService
         return user;
     }
 
-    [WebMethod]]
+    [WebMethod]
     public List<User> GetUsers()
     {
         List<User> users = new List<User>();
