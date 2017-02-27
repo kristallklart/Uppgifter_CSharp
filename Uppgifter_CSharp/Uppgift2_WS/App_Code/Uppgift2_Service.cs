@@ -39,7 +39,7 @@ public class Uppgift2_Service : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public List<User> GetUsers()
+    public void/*List<User>*/ GetUsers()
     {
         List<User> users = new List<User>();
         User user = new User();
@@ -52,27 +52,28 @@ public class Uppgift2_Service : System.Web.Services.WebService
         
         string conStr = ConfigurationManager.ConnectionStrings["Databasen"].ConnectionString;
         SqlConnection connection = new SqlConnection(conStr);
-        SqlDataReader dataReader;
+        //SqlDataReader dataReader;
 
         List<User> allUsers = new List<User>();
 
         connection.Open();
-        string sqlString = "select * from UsersERROR";
+        string sqlString = "insert into Users values ('Kalle', 'Kalle', 'Paulsson', '12-12-12', 'apa', 'apa')";
         SqlCommand cmd = new SqlCommand(sqlString, connection);
-        dataReader = cmd.ExecuteReader();
+        int i = cmd.ExecuteNonQuery();
+        //dataReader = cmd.ExecuteReader();
 
-        while (dataReader.Read())
-        {
-            User aUser = new User();
-            aUser.UserName = dataReader["UserName"].ToString();
-            aUser.FirstName = dataReader["FirstName"].ToString();
-            aUser.LastName = dataReader["LastName"].ToString();
-            aUser.About = dataReader["About"].ToString();
-            aUser.Profession = dataReader["Profession"].ToString();
-            aUser.Industry = dataReader["Industry"].ToString();
-            allUsers.Add(aUser);
-        }
-        return allUsers;
+        //while (dataReader.Read())
+        //{
+        //    User aUser = new User();
+        //    aUser.UserName = dataReader["UserName"].ToString();
+        //    aUser.FirstName = dataReader["FirstName"].ToString();
+        //    aUser.LastName = dataReader["LastName"].ToString();
+        //    aUser.About = dataReader["About"].ToString();
+        //    aUser.Profession = dataReader["Profession"].ToString();
+        //    aUser.Industry = dataReader["Industry"].ToString();
+        //    allUsers.Add(aUser);
+        //}
+        //return allUsers;
     }
 
     [WebMethod]
