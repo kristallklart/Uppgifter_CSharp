@@ -97,7 +97,7 @@ public static class Dal
         finally
         {
             CloseConnection();
-            result.Clear();
+            //result.Clear();
         }
     }
 

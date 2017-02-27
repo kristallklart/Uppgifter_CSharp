@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Web.Services.Protocols;
 
 [WebService(Namespace = "Grupp7",
             Description = "This web service has multiple web methods which all takes zero arguments and returns an object " +
@@ -15,7 +16,8 @@ using System.Web.Services;
 
 public class Uppgift2_Service : System.Web.Services.WebService
 {
-    public Uppgift2_Service () {
+    public Uppgift2_Service () 
+    {
 
         //Uncomment the following line if using designed components 
         //InitializeComponent(); 
@@ -25,6 +27,7 @@ public class Uppgift2_Service : System.Web.Services.WebService
     [System.Xml.Serialization.XmlInclude(typeof(User))] 
     public List<object> GetAllUsers()
     {
+        //SoapException e = new SoapException();
         return Dal.GetAllUsers();
     }
 
