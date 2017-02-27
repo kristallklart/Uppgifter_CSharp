@@ -53,9 +53,10 @@ public class Uppgift2_Service : System.Web.Services.WebService
         object o = new object();
         object o2 = new object();
         List<object> objects = new List<object>();
-        string i = "röv";
-        
-        objects.Add(i);
+        //string i = "röv";
+        User user = new User();
+
+        objects.Add(user);
         objects.Add(o2);
         return objects;
     }
