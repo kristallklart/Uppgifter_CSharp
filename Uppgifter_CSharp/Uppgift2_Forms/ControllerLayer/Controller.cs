@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Uppgift2_Forms.Uppgift2_ServiceReference;
 
 namespace Uppgift2_Forms.ControllerLayer
 {
     public static class Controller
     {
-        static Uppgift2_ServiceReference.Uppgift2_ServiceSoapClient proxy = new Uppgift2_ServiceReference.Uppgift2_ServiceSoapClient();
+        private static Uppgift2_ServiceSoapClient proxy = new Uppgift2_ServiceSoapClient();
+
         public static List<object> GetAllUsers()
         {
             return proxy.GetAllUsers();
@@ -30,13 +32,13 @@ namespace Uppgift2_Forms.ControllerLayer
         {
             return proxy.GetAllFieldOfProfessions();
         }
-        public static List<object> GetAllMatches()
-        {
-            return proxy.GetAllMatches();
-        }
-        public static List<object> GetAllMessages()
-        {
-            return proxy.GetAllMessages();
-        }
+        //public static List<object> GetAllMatches()
+        //{
+        //    return proxy.GetAllMatches();
+        //}
+        //public static List<object> GetAllMessages()
+        //{
+        //    return proxy.GetAllMessages();
+        //}
     }
 }
