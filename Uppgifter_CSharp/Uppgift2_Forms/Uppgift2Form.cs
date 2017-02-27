@@ -35,83 +35,42 @@ namespace Uppgift2_Forms
         
         private void buttonShowTable_Click(object sender, EventArgs e)
         {
-            
-            switch (cueComboBoxChooseTable.SelectedIndex)
-            {   
-                case 0:
-                    try {             
+            try
+            {
+                switch (cueComboBoxChooseTable.SelectedIndex)
+                {
+                    case 0:
                         dataGridViewShowTable.DataSource = Controller.GetAllUsers();
-                    }
-                    catch(FaultException f)
-                    {
-                        labelRespons.Text = "The table couldn´t be loaded";
-                    }
-                    break;
-                case 1:
-                    try
-                    {
+                        break;
+                    case 1:
                         dataGridViewShowTable.DataSource = Controller.GetAllUserLocationPurposes();
-                    }
-                    catch(FaultException f)
-                    {
-                        labelRespons.Text = "The table couldn´t be loaded";
-                    }
-                    break;
-                case 2:
-                    try
-                    {
-                      dataGridViewShowTable.DataSource = Controller.GetAllLocations();
-                    }
-                    catch (FaultException f)
-                    {
-                        labelRespons.Text = "The table couldn´t be loaded";
-                    }
-                    break;
-                case 3:
-                    try
-                    {
+                        break;
+                    case 2:
+                        dataGridViewShowTable.DataSource = Controller.GetAllLocations();
+                        break;
+                    case 3:
                         dataGridViewShowTable.DataSource = Controller.GetAllFieldOfProfessions();
-                    }
-                    catch(FaultException f)
-                    {
-                        labelRespons.Text = "The table couldn´t be loaded";
-                    }
-                    break;
-                case 4:
-                    try
-                    {
+                        break;
+                    case 4:
                         dataGridViewShowTable.DataSource = Controller.GetAllPurposes(); ;
-                    }
-                    catch(FaultException f)
-                    {
-                        labelRespons.Text = "The table couldn´t be loaded";
-                    }
-                    break;
-                //case 5:
-                //    try
-                //    {
-                //        dataGridViewShowTable.DataSource = Controller.GetAllMatches();;
-                //    }
-                //    catch (FaultException f)
-                //    {
-                //        labelRespons.Text = "The table couldn´t be loaded";
-                //    }
-                //    break;
-                //case 6:
-                //    try
-                //    {
-                //        dataGridViewShowTable.DataSource = Controller.GetAllMessages();
-                //    }
-                //    catch (FaultException f)
-                //    {
-                //        labelRespons.Text = "The table couldn´t be loaded";
-                //    }
-                //    break;
-                default:
-                    labelRespons.Text = "Please choose table to show";
-                    break;
-            } 
+                        break;
+                    //case 5:
+                    //    dataGridViewShowTable.DataSource = Controller.GetAllMatches();;
+                    //    break;
+                    //case 6:
+                    //    dataGridViewShowTable.DataSource = Controller.GetAllMessages();
+                    //    break;
+                    default:
+                        labelRespons.Text = "Please choose table to show";
+                        break;
+                }
+            }
+            catch (FaultException f)
+            {
+                labelRespons.Text = "The table couldn´t be loaded";
+            }
+        } 
         }     
     }
-}
+
 
