@@ -27,7 +27,7 @@ public class Uppgift2_Service : System.Web.Services.WebService
     /// </summary>
     /// <returns></returns>
     [WebMethod]
-    public static User GetUser()
+    public User GetUser()
     {
         User user = new User();
         user.FirstName = "Kalle";
