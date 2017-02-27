@@ -51,6 +51,7 @@ public static class Dal
     {
         try
         {
+            result.Clear();
             //result = new List<object>();
             OpenConnection();
 
@@ -96,7 +97,6 @@ public static class Dal
         finally
         {
             CloseConnection();
-            //result.Clear();
         }
     }
 
