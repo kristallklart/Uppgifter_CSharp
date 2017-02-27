@@ -66,6 +66,7 @@
             this.cueComboBoxChooseTable.Name = "cueComboBoxChooseTable";
             this.cueComboBoxChooseTable.Size = new System.Drawing.Size(256, 29);
             this.cueComboBoxChooseTable.TabIndex = 3;
+            this.cueComboBoxChooseTable.SelectedIndexChanged += new System.EventHandler(this.cueComboBoxChooseTable_SelectedIndexChanged);
             // 
             // labelRespons
             // 
@@ -76,7 +77,7 @@
             this.labelRespons.TabIndex = 4;
             this.labelRespons.Text = "labelRespons";
             // 
-            // Form1
+            // Uppgift2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,7 +86,7 @@
             this.Controls.Add(this.cueComboBoxChooseTable);
             this.Controls.Add(this.buttonShowTable);
             this.Controls.Add(this.dataGridViewShowTable);
-            this.Name = "Form1";
+            this.Name = "Uppgift2Form";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowTable)).EndInit();

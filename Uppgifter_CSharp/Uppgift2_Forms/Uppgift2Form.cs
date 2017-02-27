@@ -69,8 +69,13 @@ namespace Uppgift2_Forms
             {
                 labelRespons.Text = "The table couldn´t be loaded";
             }
-        } 
-        }     
+        }
+
+        private void cueComboBoxChooseTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelRespons.Text = "";
+        }
+    }     
     }
 
 
