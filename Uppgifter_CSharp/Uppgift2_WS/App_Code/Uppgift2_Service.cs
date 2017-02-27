@@ -34,6 +34,17 @@ public class Uppgift2_Service : System.Web.Services.WebService
         return user;
     }
 
+    [WebMethod]]
+    public List<User> GetUsers()
+    {
+        List<User> users = new List<User>();
+        User user = new User();
+        User user2 = new User();
+        user.FirstName = "Kalle";
+        user2.FirstName = "Jake";
+        return users;
+    }
+
     [WebMethod]
     [System.Xml.Serialization.XmlInclude(typeof(User))] 
     public List<object> GetAllUsers()
