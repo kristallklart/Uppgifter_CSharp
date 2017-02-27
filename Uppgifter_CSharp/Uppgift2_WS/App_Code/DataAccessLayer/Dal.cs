@@ -42,8 +42,8 @@ public static class Dal
 
 	static Dal()
 	{
-        //conStr = ConfigurationManager.ConnectionStrings["Databasen"].ConnectionString;
-        conStr = "server=localhost; Trusted_Connection=yes; database=FriendlyDB";
+        conStr = ConfigurationManager.ConnectionStrings["Databasen"].ConnectionString;
+        //conStr = "server=localhost; Trusted_Connection=yes; database=FriendlyDB";
     }
 
     public static List<User> GetAllUsers()
