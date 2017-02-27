@@ -13,9 +13,9 @@ namespace Uppgift2_Konsol
         {
           
             //        //Uppgift2_ServiceReference.Person[] persons = proxy.GetAllPersons();
-            //        //Uppgift2_ServiceReference.User aUser = proxy.getUser();
+            Uppgift2_ServiceSoapClient proxy = new Uppgift2_ServiceSoapClient();
 
-            //        //List<Uppgift2_ServiceReference.User> users = new List<Uppgift2_ServiceReference.User>(); 
+            List<User> users = new List<User>(); 
             //        Uppgift2_ServiceReference.User[] users = proxy.GetUsers();
             //        Uppgift2_ServiceReference.Purpose[] purposes = proxy.GetPurposes();
             //        Uppgift2_ServiceReference.FieldOfProfession[] fieldOfProfessions = proxy.GetFieldOfProfessions();
@@ -24,17 +24,18 @@ namespace Uppgift2_Konsol
 
             //        Console.WriteLine(users.Length);
             //        Console.ReadKey();
+            users = proxy.GetAllUsers();
 
-            //        for(int i = 0; i < users.Length; i++)
-            //        {
-            //            Console.WriteLine(users[i].UserName);
-            //            Console.WriteLine(users[i].FirstName);
-            //            Console.WriteLine(users[i].LastName);
-            //            Console.WriteLine(users[i].About);
-            //            Console.WriteLine(users[i].Profession);
-            //            Console.WriteLine(users[i].Industry);
-            //        }
-            //        Console.ReadKey();
+                    foreach(User i in users)
+                    {
+                        Console.WriteLine(i.UserName);
+                        Console.WriteLine(i.FirstName);
+                        Console.WriteLine(i.LastName);
+                        Console.WriteLine(i.About);
+                        Console.WriteLine(i.Profession);
+                        Console.WriteLine(i.Industry);
+                    }
+                    Console.ReadKey();
 
             //        for (int i = 0; i < purposes.Length; i++)
             //        {

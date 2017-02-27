@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.ArrayOfAnyType.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllFieldOfProfessionsResponse.datasource">
@@ -71,6 +71,18 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.Location.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Service.wsdl" />

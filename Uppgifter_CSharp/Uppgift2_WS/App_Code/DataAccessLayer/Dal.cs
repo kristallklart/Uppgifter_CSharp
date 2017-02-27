@@ -48,7 +48,6 @@ public static class Dal
 
     public static List<User> GetAllUsers()
     {
-        result.Clear();
         OpenConnection();
 
         string sqlString = "select * from Users";
@@ -66,7 +65,6 @@ public static class Dal
             aUser.Profession = dataReader["Profession"].ToString();
             aUser.Industry = dataReader["Industry"].ToString();
             allUsers.Add(aUser);
-            result.Add(aUser);
         }
         CloseConnection();
         return allUsers;
