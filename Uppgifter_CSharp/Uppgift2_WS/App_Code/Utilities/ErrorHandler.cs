@@ -22,23 +22,23 @@ public static class ErrorHandler
         if (e is SqlException)
         {
             SqlException newSql = e as SqlException;
-            int i = newSql.ErrorCode;
+            int i = newSql.Number;
             switch (i)
             {
-                case 2627:
-                    errorMessage = "User already exists.";
-                break;
-
-                case 40:
-                    errorMessage = "Could not open connection";
+                case 1449:
+                    errorMessage = "Could not connect to database. Invalid server connection string.";
                 break;
 
                 case 208:
-                    errorMessage = "Selected table does not exist";
+                    errorMessage = "Selected table does not exist.";
+                break;
+
+                case 1479: //Timeout från databasen
+                    errorMessage = "Could not connect to database. Check your network connection.";
                 break;
 
                 default:
-                errorMessage = "Some fucking shit happened.";
+                    errorMessage = "Unknown error.";
                 break;
             }
         }

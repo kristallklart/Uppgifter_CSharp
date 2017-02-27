@@ -22,30 +22,40 @@ public class Uppgift1_Service : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string OpenFile(string s)
+    public OpenFileResult OpenFile(string s)
     {
-        string returnContent;
+        OpenFileResult openFileResult = new OpenFileResult();
+        //string returnContent;
         //DotNetRevanths exempel på felhantering skapar en egen klass: https://www.youtube.com/watch?v=T4ndBlCpzdk
         try
         {
             using (StreamReader streamReader = new StreamReader(s))
             {
-                returnContent = streamReader.ReadToEnd();
+                openFileResult.fileContent = streamReader.ReadToEnd();
+                //returnContent = streamReader.ReadToEnd();
             }
         }
         catch (FileNotFoundException)
         {
-            returnContent = "ERROR: File not found!";
+            openFileResult.errorMessage = "File not found.";
+            //returnContent = "ERROR: File not found.";
+        }
+        catch (DirectoryNotFoundException)
+        {
+            openFileResult.errorMessage = "Directory not found.";
+            //returnContent = "ERROR: Directory not found.";
         }
         catch (OutOfMemoryException)
         {
-            returnContent = "ERROR: Out of memory!";
+            openFileResult.errorMessage = "Out of memory.";
+            //returnContent = "ERROR: Out of memory.";
         }
         catch (Exception)
         {
+            openFileResult.errorMessage = "The file could not be read.";
             //Exception ex = exp.InnerException;
-            returnContent = "ERROR: Unknown error, the file could not be read!";
+            //returnContent = "ERROR: Unknown error, the file could not be read.";
         }
-        return returnContent;
+        return openFileResult;
     }
 }

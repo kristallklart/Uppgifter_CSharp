@@ -58,6 +58,9 @@
     <None Include="Service References\Uppgift1_ServiceReference\Uppgift1_Konsol.Uppgift1_ServiceReference.OpenFileResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Uppgift1_ServiceReference\Uppgift1_Konsol.Uppgift1_ServiceReference.OpenFileResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Uppgift1_ServiceReference\Uppgift1_Service.wsdl" />
   </ItemGroup>
   <ItemGroup>

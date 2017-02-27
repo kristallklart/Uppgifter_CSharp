@@ -15,18 +15,6 @@ using System.Web.Services;
 
 public class Uppgift2_Service : System.Web.Services.WebService
 {
-    public class Person
-    {
-        public string name;
-        public int age;
-
-        //public Person(string name, int age)
-        //{
-        //    this.name = name;
-        //    this.age = age;
-        //}
-    }
-
     public Uppgift2_Service () {
 
         //Uncomment the following line if using designed components 
@@ -34,47 +22,35 @@ public class Uppgift2_Service : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public List<Person> GetAllPersons() {
-        List<Person> testLista = new List<Person>();
-        //Person p1 = new Person("Mannen", 34);
-        //Person p2 = new Person("Kvinnan", 43);
-        Person p1 = new Person();
-        Person p2 = new Person();
-        p1.name = "Mannen";
-        p1.age = 34;
-        p2.name = "Kvinnan";
-        p2.age = 43;
-
-        testLista.Add(p1);
-        testLista.Add(p2);
-        return testLista;
-    }
-
-    [WebMethod]
+    [System.Xml.Serialization.XmlInclude(typeof(User))] 
     public List<object> GetAllUsers()
     {
         return Dal.GetAllUsers();
     }
 
     [WebMethod]
+    [System.Xml.Serialization.XmlInclude(typeof(Purpose))]
     public List<object> GetAllPurposes()
     {
         return Dal.GetAllPurposes();
     }
 
     [WebMethod]
+    [System.Xml.Serialization.XmlInclude(typeof(Location))]
     public List<object> GetAllLocations()
     {
         return Dal.GetAllLocations();
     }
 
     [WebMethod]
+    [System.Xml.Serialization.XmlInclude(typeof(UserLocationPurpose))]
     public List<object> GetAllUserLocationPurposes()
     {
         return Dal.GetAllUserLocationPurposes();
     }
 
     [WebMethod]
+    [System.Xml.Serialization.XmlInclude(typeof(FieldOfProfession))]
     public List<object> GetAllFieldOfProfessions()
     {
         return Dal.GetAllFieldOfProfessions();
