@@ -15,7 +15,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("FriendlyDBModel", "FK_User_Location_User", "Users", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(FriendlyDBModel.User), "User_Location_Purpose", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(FriendlyDBModel.User_Location_Purpose))]
 
 // Original file name:
-// Generation date: 2017-02-21 13:36:14
+// Generation date: 2017-02-27 11:27:38
 namespace FriendlyDBModel
 {
     

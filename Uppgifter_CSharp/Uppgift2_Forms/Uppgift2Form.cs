@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Uppgift2_Forms.ControllerLayer;
 using Uppgift2_Forms.Uppgift2_ServiceReference;
 using System.Xml.Serialization;
+using System.ServiceModel;
 
 namespace Uppgift2_Forms
 {
@@ -30,140 +31,81 @@ namespace Uppgift2_Forms
             cueComboBoxChooseTable.Items.Add("Match");
             cueComboBoxChooseTable.Items.Add("Message");
         }
-        private static bool CheckForError(List<object> o)
-        {
-            if (o[0] is string)
-            {
-                return false;
-            }
-            return true;
-        }
+        
+        
         private void buttonShowTable_Click(object sender, EventArgs e)
         {
-            List<object> o = null;
+            
             switch (cueComboBoxChooseTable.SelectedIndex)
             {   
                 case 0:
-                    o = Controller.GetAllUsers();
-                    if (CheckForError(o))
-                    {
-                        List<User> users = new List<User>();
-                        foreach (object obj in o)
-                        {
-                            User u = obj as User;
-                            users.Add(u);                           
-                        }
-                        dataGridViewShowTable.DataSource = users;
+                    try { 
+                                      
+                        dataGridViewShowTable.DataSource = Controller.GetAllUsers();
                     }
-                    else
+                    catch(FaultException f)
                     {
-                        labelRespons.Text = o[0].ToString();
+                        labelRespons.Text = "The table couldn´t be loaded";
                     }
                     break;
                 case 1:
-                    o = Controller.GetAllUserLocationPurposes();
-                    if (CheckForError(o))
+                    try
                     {
-                        List<UserLocationPurpose> ulps = new List<UserLocationPurpose>();
-                        foreach (object obj in o)
-                        {
-                            UserLocationPurpose ulp = obj as UserLocationPurpose;
-                            ulps.Add(ulp);
-                        }
-                        dataGridViewShowTable.DataSource = ulps;
+                        dataGridViewShowTable.DataSource = Controller.GetAllUserLocationPurposes();
                     }
-                    else
+                    catch(FaultException f)
                     {
-                        labelRespons.Text = o[0].ToString();
+                        labelRespons.Text = "The table couldn´t be loaded";
                     }
                     break;
                 case 2:
-                    o = Controller.GetAllLocations();
-                    if (CheckForError(o))
+                    try
                     {
-                        List<Location> loc = new List<Location>();
-                        foreach (object obj in o)
-                        {
-                            Location l = obj as Location;
-                            loc.Add(l);
-                        }
-                        dataGridViewShowTable.DataSource = loc;
+                      dataGridViewShowTable.DataSource = Controller.GetAllLocations();
                     }
-                    else
+                    catch (FaultException f)
                     {
-                        labelRespons.Text = o[0].ToString();
+                        labelRespons.Text = "The table couldn´t be loaded";
                     }
                     break;
                 case 3:
-                    //FieldOfProfession
-                    o = Controller.GetAllFieldOfProfessions();
-                    if (CheckForError(o))
+                    try
                     {
-                        List<FieldOfProfession> fops = new List<FieldOfProfession>();
-                        foreach (object obj in o)
-                        {
-                            FieldOfProfession fop = obj as FieldOfProfession;
-                            fops.Add(fop);
-                        }
-                        dataGridViewShowTable.DataSource = fops;
+                        dataGridViewShowTable.DataSource = Controller.GetAllFieldOfProfessions();
                     }
-                    else
+                    catch(FaultException f)
                     {
-                        labelRespons.Text = o[0].ToString();
+                        labelRespons.Text = "The table couldn´t be loaded";
                     }
                     break;
                 case 4:
-                    //Purpose
-                    o = Controller.GetAllPurposes();
-                    if (CheckForError(o))
+                    try
                     {
-                        List<Purpose> pur = new List<Purpose>();
-                        foreach (object obj in o)
-                        {
-                            Purpose p = obj as Purpose;
-                            pur.Add(p);
-                        }
-                        dataGridViewShowTable.DataSource = pur;
+                        dataGridViewShowTable.DataSource = Controller.GetAllPurposes(); ;
                     }
-                    else
+                    catch(FaultException f)
                     {
-                        labelRespons.Text = o[0].ToString();
+                        labelRespons.Text = "The table couldn´t be loaded";
                     }
                     break;
                 //case 5:
-                //    //Match
-                //    o = Controller.GetAllMatches();
-                //    if (CheckForError(o))
+                //    try
                 //    {
-                //        List<Match> match = new List<Match>();
-                //        foreach (object obj in o)
-                //        {
-                //            Match m = obj as Match;
-                //            match.Add(m);
-                //        }
-                //        dataGridViewShowTable.DataSource = match;
+                //        dataGridViewShowTable.DataSource = Controller.GetAllMatches();;
                 //    }
-                //    else
+                //    catch (FaultException f)
                 //    {
-                //        labelRespons.Text = o[0].ToString();
+                //        labelRespons.Text = "The table couldn´t be loaded";
                 //    }
                 //    break;
                 //case 6:
-                //    //Message
-                //    o = Controller.GetAllMessages();
-                //    if (CheckForError(o))
+                //    try
                 //    {
-                //        List<Message> mess = new List<Message>();
-                //        foreach (object obj in o)
-                //        {
-                //            Message m = obj as Message;
-                //            mess.Add(m);
-                //        }
-                //        dataGridViewShowTable.DataSource = mess;
+                //        dataGridViewShowTable.DataSource = Controller.GetAllMessages();
                 //    }
-                //    else
+                //    catch (FaultException f)
                 //    {
-                //        labelRespons.Text = o[0].ToString();
+                //        labelRespons.Text = "The table couldn´t be loaded";
                 //    }
                 //    break;
                 default:

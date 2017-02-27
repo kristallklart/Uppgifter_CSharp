@@ -11,24 +11,24 @@ namespace Uppgift2_Forms.ControllerLayer
     {
         private static Uppgift2_ServiceSoapClient proxy = new Uppgift2_ServiceSoapClient();
 
-        public static List<object> GetAllUsers()
+        public static List<User> GetAllUsers()
         {
             return proxy.GetAllUsers();
         }
-        public static List<object> GetAllLocations()
+        public static List<Location> GetAllLocations()
         {
             return proxy.GetAllLocations(); 
 
         }
-        public static List<object> GetAllUserLocationPurposes()
+        public static List<UserLocationPurpose> GetAllUserLocationPurposes()
         {
             return proxy.GetAllUserLocationPurposes();
         }
-        public static List<object> GetAllPurposes()
+        public static List<Purpose> GetAllPurposes()
         {
             return proxy.GetAllPurposes();  
         }
-        public static List<object> GetAllFieldOfProfessions()
+        public static List<FieldOfProfession> GetAllFieldOfProfessions()
         {
             return proxy.GetAllFieldOfProfessions();
         }
