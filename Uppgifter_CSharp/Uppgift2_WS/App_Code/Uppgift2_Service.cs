@@ -22,7 +22,10 @@ public class Uppgift2_Service : System.Web.Services.WebService
         //Uncomment the following line if using designed components 
         //InitializeComponent(); 
     }
-
+    /// <summary>
+    /// sdfef
+    /// </summary>
+    /// <returns></returns>
     [WebMethod]
     public static User GetUser()
     {
