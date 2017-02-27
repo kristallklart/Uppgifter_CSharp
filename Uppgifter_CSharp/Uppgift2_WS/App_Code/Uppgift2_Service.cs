@@ -42,6 +42,8 @@ public class Uppgift2_Service : System.Web.Services.WebService
         User user2 = new User();
         user.FirstName = "Kalle";
         user2.FirstName = "Jake";
+        users.Add(user);
+        users.Add(user2);
         return users;
     }
 
