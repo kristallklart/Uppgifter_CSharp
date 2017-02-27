@@ -48,6 +48,17 @@ public class Uppgift2_Service : System.Web.Services.WebService
     }
 
     [WebMethod]
+    public List<object> GetObjects()
+    {
+        object o = new object();
+        object o2 = new object();
+        List<object> objects = new List<object>();
+        objects.Add(o);
+        objects.Add(o2);
+        return objects;
+    }
+
+    [WebMethod]
     [System.Xml.Serialization.XmlInclude(typeof(User))] 
     public List<object> GetAllUsers()
     {
