@@ -55,40 +55,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.ArrayOfAnyType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllPersonsResponse.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllFieldOfProfessionsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetFieldOfProfessionsResponse.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllLocationsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetLocationsResponse.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllPurposesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetPurposesResponse.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllUserLocationPurposesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetUserLocationPurposesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetUsersResponse1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.Location.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.Person.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.User.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Konsol.Uppgift2_ServiceReference.GetAllUsersResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Service.wsdl" />
