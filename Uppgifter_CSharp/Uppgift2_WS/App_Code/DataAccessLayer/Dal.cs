@@ -5,7 +5,7 @@ using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
-using FriendlyDBModel;
+//using FriendlyDBModel;
 
 /// <summary>
 /// Summary description for Dal
