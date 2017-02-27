@@ -35,7 +35,7 @@ public class Uppgift2_Service : System.Web.Services.WebService
     }
 
     [WebMethod]
-    //[System.Xml.Serialization.XmlInclude(typeof(User))] 
+    [System.Xml.Serialization.XmlInclude(typeof(User))] 
     public List<object> GetAllUsers()
     {
         //SoapException e = new SoapException();
