@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Uppgift2_Forms.ControllerLayer;
+using Uppgift2_Forms.Uppgift2_ServiceReference;
 
 namespace Uppgift2_Forms
 {
@@ -28,7 +29,7 @@ namespace Uppgift2_Forms
             cueComboBoxChooseTable.Items.Add("Match");
             cueComboBoxChooseTable.Items.Add("Message");
         }
-        private static bool CheckForError(object[] o)
+        private static bool CheckForError(List<object> o)
         {
             if (o[0] is string)
             {
@@ -38,17 +39,17 @@ namespace Uppgift2_Forms
         }
         private void buttonShowTable_Click(object sender, EventArgs e)
         {
-            object[] o = null;
+            List<object> o = null;
             switch (cueComboBoxChooseTable.SelectedIndex)
             {   
                 case 0:
                     o =Controller.GetAllUsers();
                     if (CheckForError(o))
                     {
-                        List<User> users = new List<User>();
-                        foreach (Object obj in o)
+                        List<Uppgift2_ServiceReference.User> users = new List<Uppgift2_ServiceReference.User>();
+                        foreach (object obj in o)
                         {
-                            User u = obj as User;
+                            Uppgift2_ServiceReference.User u = obj as Uppgift2_ServiceReference.User;
                             users.Add(u);                           
                         }
                         dataGridViewShowTable.DataSource = users;
@@ -62,10 +63,10 @@ namespace Uppgift2_Forms
                     o = Controller.GetAllUserLocationPurposes();
                     if (CheckForError(o))
                     {
-                        List<User_Location_Purpose> ulps = new List<UserLocationPurpose>();
+                        List<UserLocationPurpose> ulps = new List<UserLocationPurpose>();
                         foreach (Object obj in o)
                         {
-                            User_Location_Purpose ulp = obj as User_Location_Purpose;
+                            UserLocationPurpose ulp = obj as UserLocationPurpose;
                             ulps.Add(ulp);
                         }
                         dataGridViewShowTable.DataSource = ulps;

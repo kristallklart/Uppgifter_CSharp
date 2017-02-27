@@ -91,22 +91,16 @@
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllPersonsResponse.datasource">
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllLocationsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllPurposesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUserLocationPurposesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllUsersResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetLocationsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetUserLocationPurposesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.Person.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Service.wsdl" />
