@@ -15,16 +15,15 @@ public static class Dal
     private static SqlConnection connection;
     private static SqlDataReader dataReader;
     private static string conStr;
-    //private static List<object> allUsers;
-    //private static List<object> allPurposes;
-    //private static List<object> allLocations;
-    //private static List<object> allUserLocationPurposes;
-    //private static List<object> allFieldOfProfessions;
-    //private static List<object> allMessages;
-    //private static List<object> errorMessage;
-
+    private static List<User> allUsers;
+    private static List<Purpose> allPurposes;
+    private static List<Location> allLocations;
+    private static List<UserLocationPurpose> allUserLocationPurposes;
+    private static List<FieldOfProfession> allFieldOfProfessions;
+    private static List<Message> allMessages;
+    
+    private static List<object> errorMessage;
     private static List<object> result;
-
     //public SqlConnection Connection
     //{
     //    get { return connection; }
@@ -45,221 +44,111 @@ public static class Dal
 	{
         conStr = ConfigurationManager.ConnectionStrings["Databasen"].ConnectionString;
         //conStr = "server=localhost; Trusted_Connection=yes; database=FriendlyDB";
-        result = new List<object>();
     }
 
-    public static List<object> GetAllUsers()
+    public static List<User> GetAllUsers()
     {
-        try
+        result.Clear();
+        OpenConnection();
+
+        string sqlString = "select * from Users";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
+        allUsers = new List<User>();
+
+        while (dataReader.Read())
         {
-            result.Clear();
-            //result = new List<object>();
-            OpenConnection();
-
-            string sqlString = "select * from Users";
-            SqlCommand cmd = new SqlCommand(sqlString, connection);
-            dataReader = cmd.ExecuteReader();
-            //allUsers = new List<object>();
-
-            while (dataReader.Read())
-            {
-                User aUser = new User();
-                aUser.UserName = dataReader["UserName"].ToString();
-                aUser.FirstName = dataReader["FirstName"].ToString();
-                aUser.LastName = dataReader["LastName"].ToString();
-                aUser.About = dataReader["About"].ToString();
-                aUser.Profession = dataReader["Profession"].ToString();
-                aUser.Industry = dataReader["Industry"].ToString();
-                //allUsers.Add(aUser);
-                result.Add(aUser);
-            }
-
-            return result;
-            //return allUsers;
+            User aUser = new User();
+            aUser.UserName = dataReader["UserName"].ToString();
+            aUser.FirstName = dataReader["FirstName"].ToString();
+            aUser.LastName = dataReader["LastName"].ToString();
+            aUser.About = dataReader["About"].ToString();
+            aUser.Profession = dataReader["Profession"].ToString();
+            aUser.Industry = dataReader["Industry"].ToString();
+            allUsers.Add(aUser);
+            result.Add(aUser);
         }
-        catch (SqlException e)
-        {
-            return ReturnError(e);
-            //int fel = e.Number;
-            //string errorMessage = ErrorHandler.HandleError(e);
-            //result.Clear();
-            //result.Add(errorMessage);
-            
-            //List<object> allUsersAndMessage = new List<object>();
-            //allUsersAndMessage.Add(errorMessage);
-            //foreach (object o in allUsers)
-            //{
-            //    allUsersAndMessage.Add(o);
-            //}
-            //return allUsersAndMessage;
-
-            //return result;
-        }
-        finally
-        {
-            CloseConnection();
-        }
+        CloseConnection();
+        return allUsers;
     }
 
-    public static List<object> GetAllPurposes()
+    public static List<Purpose> GetAllPurposes()
     {
-        try
-        {
-            OpenConnection();
-            string sqlString = "select * from Purposes";
-            SqlCommand cmd = new SqlCommand(sqlString, connection);
-            dataReader = cmd.ExecuteReader();
+        OpenConnection();
+        string sqlString = "select * from Purposes";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
 
-            //allPurposes = new List<object>();
+        allPurposes = new List<Purpose>();
 
-            while (dataReader.Read())
-            {
-                Purpose purpose = new Purpose();
-                purpose.PurposeType = dataReader["Purposetype"].ToString();
-                //allPurposes.Add(purpose);
-                result.Add(purpose);
-            }
-            //return allPurposes;
-            return result;
-        }
-        catch (SqlException e)
+        while (dataReader.Read())
         {
-            //string errorMessage = ErrorHandler.HandleError(e);
-            //List<object> allPurposesAndMessage = new List<object>();
-            //allPurposesAndMessage.Add(errorMessage);
-            //foreach (object o in allUsers)
-            //{
-            //    allPurposesAndMessage.Add(o);
-            //}
-            //return allPurposesAndMessage;
-            return ReturnError(e);
+            Purpose purpose = new Purpose();
+            purpose.PurposeType = dataReader["Purposetype"].ToString();
+            allPurposes.Add(purpose);
         }
-        finally
-        {
-            CloseConnection();
-            result.Clear();
-        }
+        CloseConnection();
+        return allPurposes;
     }
 
-    public static List<object> GetAllLocations()
+    public static List<Location> GetAllLocations()
     {
-        try
-        {
-            OpenConnection();
-            string sqlString = "select * from Locations";
-            SqlCommand cmd = new SqlCommand(sqlString, connection);
-            dataReader = cmd.ExecuteReader();
+        OpenConnection();
+        string sqlString = "select * from Locations";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
 
-            //allLocations = new List<object>();
+        allLocations = new List<Location>();
 
-            while (dataReader.Read())
-            {
-                Location location = new Location();
-                location.City = dataReader["City"].ToString();
-                result.Add(location);
-                //allLocations.Add(location);
-            }
-            return result;
-            //return allLocations;
-        }
-        catch (SqlException e)
+        while (dataReader.Read())
         {
-            //string errorMessage = ErrorHandler.HandleError(e);
-            //List<object> allLocationsAndMessage = new List<object>();
-            //allLocationsAndMessage.Add(errorMessage);
-            //foreach (object o in allUsers)
-            //{
-            //    allLocationsAndMessage.Add(o);
-            //}
-            //return allLocationsAndMessage;
-            return ReturnError(e);
+            Location location = new Location();
+            location.City = dataReader["City"].ToString();
+            result.Add(location);
+            allLocations.Add(location);
         }
-        finally
-        {
-            CloseConnection();
-            result.Clear();
-        }
+        CloseConnection();
+        return allLocations;
     }
 
-    public static List<object> GetAllUserLocationPurposes()
+    public static List<UserLocationPurpose> GetAllUserLocationPurposes()
     {
-        try
-        {
-            OpenConnection();
-            string sqlString = "select * from User_Location_Purposes";
-            SqlCommand cmd = new SqlCommand(sqlString, connection);
-            dataReader = cmd.ExecuteReader();
+        OpenConnection();
+        string sqlString = "select * from User_Location_Purposes";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
 
-            //allUserLocationPurposes = new List<object>();
+        allUserLocationPurposes = new List<UserLocationPurpose>();
 
-            while (dataReader.Read())
-            {
-                UserLocationPurpose userLocationPurpose = new UserLocationPurpose();
-                userLocationPurpose.City = dataReader["City"].ToString();
-                userLocationPurpose.Username = dataReader["Username"].ToString();
-                userLocationPurpose.Purposetype = dataReader["Purposetype"].ToString();
-                result.Add(userLocationPurpose);
-            }
-            return result;
-            //return allUserLocationPurposes;
-        }
-        catch(SqlException e)
+        while (dataReader.Read())
         {
-            //string errorMessage = ErrorHandler.HandleError(e);
-            //List<object> allUserLocationPurposesAndMessage = new List<object>();
-            //allUserLocationPurposesAndMessage.Add(errorMessage);
-            //foreach (object o in allUsers)
-            //{
-            //    allUserLocationPurposesAndMessage.Add(o);
-            //}
-            //return allUserLocationPurposesAndMessage;
-            return ReturnError(e);
+            UserLocationPurpose userLocationPurpose = new UserLocationPurpose();
+            userLocationPurpose.City = dataReader["City"].ToString();
+            userLocationPurpose.Username = dataReader["Username"].ToString();
+            userLocationPurpose.Purposetype = dataReader["Purposetype"].ToString();
+            allUserLocationPurposes.Add(userLocationPurpose);
         }
-        finally
-        {
-            CloseConnection();
-            result.Clear();
-        }
+        CloseConnection();
+        return allUserLocationPurposes;
     }
     
-    public static List<object> GetAllFieldOfProfessions()
+    public static List<FieldOfProfession> GetAllFieldOfProfessions()
     {
-        try
-        {
-            OpenConnection();
-            string sqlString = "select * from FieldOfProfessions";
-            SqlCommand cmd = new SqlCommand(sqlString, connection);
-            dataReader = cmd.ExecuteReader();
+        OpenConnection();
+        string sqlString = "select * from FieldOfProfessions";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
 
-            //allFieldOfProfessions = new List<object>();
+        allFieldOfProfessions = new List<FieldOfProfession>();
 
-            while (dataReader.Read())
-            {
-                FieldOfProfession fieldOfProfession = new FieldOfProfession();
-                fieldOfProfession.Industry = dataReader["Industry"].ToString();
-                //allFieldOfProfessions.Add(fieldOfProfession);
-                result.Add(fieldOfProfession);
-            }
-            return result;
-            //return allFieldOfProfessions;
-        }
-        catch(SqlException e)
+        while (dataReader.Read())
         {
-            //string errorMessage = ErrorHandler.HandleError(e);
-            //List<object> allFieldOfProfessionsAndMessage = new List<object>();
-            //allFieldOfProfessionsAndMessage.Add(errorMessage);
-            //foreach (object o in allFieldOfProfessionsAndMessage)
-            //{
-            //    allFieldOfProfessionsAndMessage.Add(o);
-            //}
-            //return allFieldOfProfessionsAndMessage;
-            return ReturnError(e);
+            FieldOfProfession fieldOfProfession = new FieldOfProfession();
+            fieldOfProfession.Industry = dataReader["Industry"].ToString();
+            allFieldOfProfessions.Add(fieldOfProfession);
         }
-        finally
-        {
-            CloseConnection();
-            result.Clear();
-        }
+        CloseConnection();
+        return allFieldOfProfessions;
     }
 
     //public static List<Message> GetMessages()
@@ -270,14 +159,7 @@ public static class Dal
     private static void OpenConnection()
     {
         connection = new SqlConnection(conStr);
-        try
-        {
-            connection.Open();
-        }
-        catch(SqlException e)
-        {
-            ErrorHandler.HandleError(e);
-        }
+        connection.Open();
     }
 
     private static void CloseConnection()
@@ -290,12 +172,5 @@ public static class Dal
         {
             connection.Close();
         }
-    }
-    private static List<object> ReturnError(Exception e)
-    {
-        string errorMessage = ErrorHandler.HandleError(e);
-        result.Clear();
-        result.Add(errorMessage);
-        return result;
     }
 }
