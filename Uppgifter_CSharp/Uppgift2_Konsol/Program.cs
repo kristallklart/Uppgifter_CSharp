@@ -11,9 +11,7 @@ namespace Uppgift2_Konsol
     {
         static void Main(string[] args)
         {
-            Uppgift2_ServiceSoapClient proxy = new Uppgift2_ServiceSoapClient();
-            User test = proxy.
-
+          
             //        //Uppgift2_ServiceReference.Person[] persons = proxy.GetAllPersons();
             //        //Uppgift2_ServiceReference.User aUser = proxy.getUser();
 
