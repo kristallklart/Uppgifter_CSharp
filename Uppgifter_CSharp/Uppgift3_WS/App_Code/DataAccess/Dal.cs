@@ -25,7 +25,7 @@ public static class Dal
     public static List<Employee> GetEmployees()
     {
         OpenConnection();
-        string sqlString = "select [First Name], [Last Name], [Job Title], City from [CRONUS Sverige AB$Employee]";
+        string sqlString = "select [No_], [First Name], [Last Name], [Job Title], City from [CRONUS Sverige AB$Employee]";
         SqlCommand cmd = new SqlCommand(sqlString, connection);
         dataReader = cmd.ExecuteReader();
         allEmployees = new List<Employee>();
@@ -33,7 +33,7 @@ public static class Dal
         while (dataReader.Read())
         {
             Employee e = new Employee();
-           // e.EmployeeNumber = dataReader["Employee No_"].ToString();
+            e.EmployeeNumber = dataReader["No_"].ToString();
             e.FirstName = dataReader["First Name"].ToString();
             e.LastName = dataReader["Last Name"].ToString();
             e.Title = dataReader["Job Title"].ToString();
@@ -41,6 +41,7 @@ public static class Dal
             
             allEmployees.Add(e);
         }
+        CloseConnection();
         return allEmployees;
     }
 
@@ -60,6 +61,7 @@ public static class Dal
             relative.EmployeeNumber = dataReader["Employee No_"].ToString();
             allEmployeRelatives.Add(relative);
         }
+        CloseConnection();
         return allEmployeRelatives;
     }
 
