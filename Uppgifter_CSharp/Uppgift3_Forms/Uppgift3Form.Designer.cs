@@ -36,22 +36,22 @@
             this.buttonShowMetadata = new System.Windows.Forms.Button();
             this.labelShowQuery = new System.Windows.Forms.Label();
             this.cueComboBoxShowMetadata = new Uppgift3_Forms.Utilities.CueComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewShowTable = new System.Windows.Forms.DataGridView();
             this.labelRespons = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelLastName = new System.Windows.Forms.Label();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.labelEmployeeNo = new System.Windows.Forms.Label();
             this.buttonDeleteEmployee = new System.Windows.Forms.Button();
             this.buttonUpdateEmployee = new System.Windows.Forms.Button();
             this.buttonAddEmployee = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxEmployeeAndRelatedTables.SuspendLayout();
             this.groupBoxShowMetadata.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowTable)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,7 @@
             this.cueComboBoxShowTable.Name = "cueComboBoxShowTable";
             this.cueComboBoxShowTable.Size = new System.Drawing.Size(236, 28);
             this.cueComboBoxShowTable.TabIndex = 0;
+            this.cueComboBoxShowTable.SelectedIndexChanged += new System.EventHandler(this.cueComboBoxShowTable_SelectedIndexChanged);
             // 
             // groupBoxShowMetadata
             // 
@@ -136,16 +137,17 @@
             this.cueComboBoxShowMetadata.Name = "cueComboBoxShowMetadata";
             this.cueComboBoxShowMetadata.Size = new System.Drawing.Size(236, 28);
             this.cueComboBoxShowMetadata.TabIndex = 1;
+            this.cueComboBoxShowMetadata.SelectedIndexChanged += new System.EventHandler(this.cueComboBoxShowMetadata_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // dataGridViewShowTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(429, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 636);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridViewShowTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewShowTable.Location = new System.Drawing.Point(429, 12);
+            this.dataGridViewShowTable.Name = "dataGridViewShowTable";
+            this.dataGridViewShowTable.ReadOnly = true;
+            this.dataGridViewShowTable.RowTemplate.Height = 28;
+            this.dataGridViewShowTable.Size = new System.Drawing.Size(843, 636);
+            this.dataGridViewShowTable.TabIndex = 4;
             // 
             // labelRespons
             // 
@@ -195,6 +197,15 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Update/Delete";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(208, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = " * ";
             // 
             // labelLastName
             // 
@@ -253,32 +264,23 @@
             this.buttonAddEmployee.UseVisualStyleBackColor = true;
             this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = " * ";
-            // 
-            // Form1
+            // Uppgift3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1288, 696);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelRespons);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewShowTable);
             this.Controls.Add(this.groupBoxShowMetadata);
             this.Controls.Add(this.groupBoxEmployeeAndRelatedTables);
-            this.Name = "Form1";
+            this.Name = "Uppgift3Form";
             this.Text = "Form1";
             this.groupBoxEmployeeAndRelatedTables.ResumeLayout(false);
             this.groupBoxEmployeeAndRelatedTables.PerformLayout();
             this.groupBoxShowMetadata.ResumeLayout(false);
             this.groupBoxShowMetadata.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowTable)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -296,7 +298,7 @@
         private System.Windows.Forms.GroupBox groupBoxShowMetadata;
         private System.Windows.Forms.Button buttonShowMetadata;
         private System.Windows.Forms.Label labelShowQuery;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewShowTable;
         private System.Windows.Forms.Label labelRespons;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
