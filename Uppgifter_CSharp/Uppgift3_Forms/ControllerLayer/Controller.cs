@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Uppgift3_Forms.ControllerLayer
 {
-    class Controller
+    public static class Controller
     {
+       
     }
 }

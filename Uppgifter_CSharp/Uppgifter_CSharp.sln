@@ -68,6 +68,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift2_Konsol", "Uppgift2
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift3_Forms", "Uppgift3_Forms\Uppgift3_Forms.csproj", "{E1E07CE4-8586-4C2D-A52A-E896DB1D8945}"
+	ProjectSection(ProjectDependencies) = postProject
+		{240F8901-AC03-471A-A603-6676778FDC0E} = {240F8901-AC03-471A-A603-6676778FDC0E}
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Uppgift3_WS", "Uppgift3_WS\", "{240F8901-AC03-471A-A603-6676778FDC0E}"
 	ProjectSection(WebsiteProperties) = preProject
