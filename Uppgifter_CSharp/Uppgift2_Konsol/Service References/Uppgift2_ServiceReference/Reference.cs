@@ -248,67 +248,6 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Purpose", Namespace="Grupp7")]
-    [System.SerializableAttribute()]
-    public partial class Purpose : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PurposeTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposesField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string PurposeType {
-            get {
-                return this.PurposeTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PurposeTypeField, value) != true)) {
-                    this.PurposeTypeField = value;
-                    this.RaisePropertyChanged("PurposeType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposes {
-            get {
-                return this.UserLocationPurposesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserLocationPurposesField, value) != true)) {
-                    this.UserLocationPurposesField = value;
-                    this.RaisePropertyChanged("UserLocationPurposes");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="UserLocationPurpose", Namespace="Grupp7")]
     [System.SerializableAttribute()]
     public partial class UserLocationPurpose : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
