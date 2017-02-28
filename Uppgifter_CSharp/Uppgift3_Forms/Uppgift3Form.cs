@@ -8,6 +8,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Uppgift3_Forms.ControllerLayer;
 
 namespace Uppgift3_Forms
 {
@@ -38,11 +39,11 @@ namespace Uppgift3_Forms
                 {
                     case 0:
                         //Employee
-                        //dataGridViewShowTable.DataSource = ;
+                        dataGridViewShowTable.DataSource = Controller.GetEmployees();
                         break;
                     case 1:
                         //Relatives
-                        //dataGridViewShowTable.DataSource = ;
+                        dataGridViewShowTable.DataSource = Controller.GetEmployeeRelatives();
                         break;
                     case 2:
                         //sickleave 2004
