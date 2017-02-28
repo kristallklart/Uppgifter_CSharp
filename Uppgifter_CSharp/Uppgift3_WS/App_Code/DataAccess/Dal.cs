@@ -16,6 +16,7 @@ public static class Dal
     private static string conStr;
     private static List<Employee> allEmployees;
     private static List<EmployeeRelative> allEmployeRelatives;
+    //asdasdasd
 
     static Dal()
     {
