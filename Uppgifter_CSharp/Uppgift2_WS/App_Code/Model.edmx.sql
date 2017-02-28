@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 02/21/2017 13:36:48
--- Generated from EDMX file: C:\Users\Kalle\git\Uppgifter_CSharp\Uppgifter_CSharp\Uppgift2_WS\App_Code\Model.edmx
+-- Date Created: 02/22/2017 09:45:50
+-- Generated from EDMX file: C:\Users\Ann-Kathrine\Source\Repos\Friendly\Friendly\Friendly\Model\Model.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -23,11 +23,11 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_User_Location_Location]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[User_Location_Purpose] DROP CONSTRAINT [FK_User_Location_Location];
 GO
-IF OBJECT_ID(N'[dbo].[FK_User_Location_User]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[User_Location_Purpose] DROP CONSTRAINT [FK_User_Location_User];
-GO
 IF OBJECT_ID(N'[dbo].[FK_User_LocationPurpose]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[User_Location_Purpose] DROP CONSTRAINT [FK_User_LocationPurpose];
+GO
+IF OBJECT_ID(N'[dbo].[FK_User_Location_User]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[User_Location_Purpose] DROP CONSTRAINT [FK_User_Location_User];
 GO
 
 -- --------------------------------------------------
@@ -77,8 +77,8 @@ CREATE TABLE [dbo].[User_Location_Purpose] (
     [City] nvarchar(50)  NOT NULL,
     [Username] nvarchar(50)  NOT NULL,
     [Purposetype] nvarchar(50)  NOT NULL,
-    [FromDate] datetime  NULL,
-    [ToDate] datetime  NULL
+    [FromDate] datetime  NOT NULL,
+    [ToDate] datetime  NOT NULL
 );
 GO
 
@@ -87,12 +87,12 @@ CREATE TABLE [dbo].[Users] (
     [Username] nvarchar(50)  NOT NULL,
     [FirstName] nvarchar(50)  NOT NULL,
     [LastName] nvarchar(50)  NOT NULL,
-    [Birthdate] datetime  NULL,
+    [Birthdate] datetime  NOT NULL,
     [Picture] varbinary(max)  NULL,
     [Profession] nvarchar(50)  NULL,
     [Password] nvarchar(max)  NOT NULL,
     [About] nvarchar(max)  NULL,
-    [FieldOfProfession_Industry] nvarchar(50)  NULL
+    [Industry] nvarchar(50)  NULL
 );
 GO
 
@@ -118,10 +118,10 @@ ADD CONSTRAINT [PK_Purposes]
     PRIMARY KEY CLUSTERED ([Purposetype] ASC);
 GO
 
--- Creating primary key on [City], [Username], [Purposetype] in table 'User_Location_Purpose'
+-- Creating primary key on [City], [Username], [Purposetype], [FromDate], [ToDate] in table 'User_Location_Purpose'
 ALTER TABLE [dbo].[User_Location_Purpose]
 ADD CONSTRAINT [PK_User_Location_Purpose]
-    PRIMARY KEY CLUSTERED ([City], [Username], [Purposetype] ASC);
+    PRIMARY KEY CLUSTERED ([City], [Username], [Purposetype], [FromDate], [ToDate] ASC);
 GO
 
 -- Creating primary key on [Username] in table 'Users'
@@ -134,10 +134,10 @@ GO
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
 
--- Creating foreign key on [FieldOfProfession_Industry] in table 'Users'
+-- Creating foreign key on [Industry] in table 'Users'
 ALTER TABLE [dbo].[Users]
 ADD CONSTRAINT [FK_FieldOfProfessionUser]
-    FOREIGN KEY ([FieldOfProfession_Industry])
+    FOREIGN KEY ([Industry])
     REFERENCES [dbo].[FieldOfProfessions]
         ([Industry])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -146,7 +146,7 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_FieldOfProfessionUser'
 CREATE INDEX [IX_FK_FieldOfProfessionUser]
 ON [dbo].[Users]
-    ([FieldOfProfession_Industry]);
+    ([Industry]);
 GO
 
 -- Creating foreign key on [City] in table 'User_Location_Purpose'
