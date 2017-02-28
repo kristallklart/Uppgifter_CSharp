@@ -61,9 +61,16 @@ public static class Dal
             aUser.UserName = dataReader["UserName"].ToString();
             aUser.FirstName = dataReader["FirstName"].ToString();
             aUser.LastName = dataReader["LastName"].ToString();
-            aUser.About = dataReader["About"].ToString();
+            
+            DateTime dateTime;
+            if(DateTime.TryParse(dataReader["BirthDate"].ToString(), out dateTime))
+                aUser.BirthDate = dateTime;
+            
             aUser.Profession = dataReader["Profession"].ToString();
+            aUser.Password = "Encrypted"; //We do not present the password, picture or UserLocationPurpose
+            aUser.About = dataReader["About"].ToString();
             aUser.Industry = dataReader["Industry"].ToString();
+
             allUsers.Add(aUser);
         }
         CloseConnection();
