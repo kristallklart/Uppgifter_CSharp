@@ -18,7 +18,6 @@ namespace Uppgift2_Konsol.ControllerLayer
         public static List<Location> GetAllLocations()
         {
             return proxy.GetAllLocations();
-
         }
         public static List<UserLocationPurpose> GetAllUserLocationPurposes()
         {

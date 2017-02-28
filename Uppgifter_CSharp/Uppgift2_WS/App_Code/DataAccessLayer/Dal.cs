@@ -23,7 +23,6 @@ public static class Dal
     private static List<Message> allMessages;
     
     private static List<object> errorMessage;
-    private static List<object> result;
     //public SqlConnection Connection
     //{
     //    get { return connection; }
@@ -109,7 +108,6 @@ public static class Dal
         {
             Location location = new Location();
             location.City = dataReader["City"].ToString();
-            result.Add(location);
             allLocations.Add(location);
         }
         CloseConnection();
