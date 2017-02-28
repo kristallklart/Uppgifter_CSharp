@@ -48,9 +48,6 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IndustryField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession FieldOfProfessionField;
-        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -178,19 +175,6 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public Uppgift2_Konsol.Uppgift2_ServiceReference.FieldOfProfession FieldOfProfession {
-            get {
-                return this.FieldOfProfessionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FieldOfProfessionField, value) != true)) {
-                    this.FieldOfProfessionField = value;
-                    this.RaisePropertyChanged("FieldOfProfession");
-                }
-            }
-        }
-        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -203,18 +187,18 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FieldOfProfession", Namespace="Grupp7")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Purpose", Namespace="Grupp7")]
     [System.SerializableAttribute()]
-    public partial class FieldOfProfession : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Purpose : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IndustryField;
+        private string PurposeTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.User> UsersField;
+        private System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposesField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -227,27 +211,27 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Industry {
+        public string PurposeType {
             get {
-                return this.IndustryField;
+                return this.PurposeTypeField;
             }
             set {
-                if ((object.ReferenceEquals(this.IndustryField, value) != true)) {
-                    this.IndustryField = value;
-                    this.RaisePropertyChanged("Industry");
+                if ((object.ReferenceEquals(this.PurposeTypeField, value) != true)) {
+                    this.PurposeTypeField = value;
+                    this.RaisePropertyChanged("PurposeType");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.User> Users {
+        public System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.UserLocationPurpose> UserLocationPurposes {
             get {
-                return this.UsersField;
+                return this.UserLocationPurposesField;
             }
             set {
-                if ((object.ReferenceEquals(this.UsersField, value) != true)) {
-                    this.UsersField = value;
-                    this.RaisePropertyChanged("Users");
+                if ((object.ReferenceEquals(this.UserLocationPurposesField, value) != true)) {
+                    this.UserLocationPurposesField = value;
+                    this.RaisePropertyChanged("UserLocationPurposes");
                 }
             }
         }
@@ -333,15 +317,6 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Konsol.Uppgift2_ServiceReference.User UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Konsol.Uppgift2_ServiceReference.Location LocationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose PurposeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -350,9 +325,9 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PurposetypeField;
         
-        private System.Nullable<System.DateTime> FromDateField;
+        private System.DateTime FromDateField;
         
-        private System.Nullable<System.DateTime> ToDateField;
+        private System.DateTime ToDateField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -365,45 +340,6 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public Uppgift2_Konsol.Uppgift2_ServiceReference.User User {
-            get {
-                return this.UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserField, value) != true)) {
-                    this.UserField = value;
-                    this.RaisePropertyChanged("User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public Uppgift2_Konsol.Uppgift2_ServiceReference.Location Location {
-            get {
-                return this.LocationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
-                    this.LocationField = value;
-                    this.RaisePropertyChanged("Location");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public Uppgift2_Konsol.Uppgift2_ServiceReference.Purpose Purpose {
-            get {
-                return this.PurposeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PurposeField, value) != true)) {
-                    this.PurposeField = value;
-                    this.RaisePropertyChanged("Purpose");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string City {
             get {
                 return this.CityField;
@@ -416,7 +352,7 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string Username {
             get {
                 return this.UsernameField;
@@ -429,7 +365,7 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
         public string Purposetype {
             get {
                 return this.PurposetypeField;
@@ -442,8 +378,8 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
-        public System.Nullable<System.DateTime> FromDate {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public System.DateTime FromDate {
             get {
                 return this.FromDateField;
             }
@@ -455,8 +391,8 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public System.Nullable<System.DateTime> ToDate {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public System.DateTime ToDate {
             get {
                 return this.ToDateField;
             }
@@ -525,6 +461,67 @@ namespace Uppgift2_Konsol.Uppgift2_ServiceReference {
                 if ((object.ReferenceEquals(this.UserLocationPurposesField, value) != true)) {
                     this.UserLocationPurposesField = value;
                     this.RaisePropertyChanged("UserLocationPurposes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FieldOfProfession", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class FieldOfProfession : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IndustryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.User> UsersField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Industry {
+            get {
+                return this.IndustryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IndustryField, value) != true)) {
+                    this.IndustryField = value;
+                    this.RaisePropertyChanged("Industry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Collections.Generic.List<Uppgift2_Konsol.Uppgift2_ServiceReference.User> Users {
+            get {
+                return this.UsersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsersField, value) != true)) {
+                    this.UsersField = value;
+                    this.RaisePropertyChanged("Users");
                 }
             }
         }

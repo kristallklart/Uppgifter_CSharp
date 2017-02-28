@@ -8,16 +8,16 @@ using System.Web;
 /// </summary>
 public class UserLocationPurpose
 {
-    public User User { get; set; }
-    public Location Location { get; set; }
-    public Purpose Purpose { get; set; }
+    //public User User { get; set; }
+    //public Location Location { get; set; }
+    //public Purpose Purpose { get; set; }
 
     public string City { get; set; }
     public string Username { get; set; }
     public string Purposetype { get; set; }
 
-    public Nullable<System.DateTime> FromDate { get; set; }
-    public Nullable<System.DateTime> ToDate { get; set; }
+    public DateTime FromDate { get; set; }
+    public DateTime ToDate { get; set; }
 
 	public UserLocationPurpose()
 	{
