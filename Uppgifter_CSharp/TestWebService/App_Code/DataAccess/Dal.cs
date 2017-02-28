@@ -15,7 +15,6 @@ public static class Dal
     private static SqlDataReader dataReader;
     private static string conStr;
     private static List<Employee> allEmployees;
-    private static List<EmployeeRelative> allEmployeRelatives;
 
     static Dal()
     {
@@ -33,7 +32,7 @@ public static class Dal
         while (dataReader.Read())
         {
             Employee e = new Employee();
-           // e.EmployeeNumber = dataReader["Employee No_"].ToString();
+            e.EmployeeNumber = dataReader["Employee No_"].ToString();
             e.FirstName = dataReader["First Name"].ToString();
             e.LastName = dataReader["Last Name"].ToString();
             e.Title = dataReader["Job Title"].ToString();
@@ -43,26 +42,6 @@ public static class Dal
         }
         return allEmployees;
     }
-
-    public static List<EmployeeRelative> GetEmployeeRelatives()
-    {       
-        OpenConnection();
-        string sqlString = "select [Employee No_] , [First Name], [Last Name], [Relative Code] from [CRONUS Sverige AB$Employee Relative]";
-        SqlCommand cmd = new SqlCommand(sqlString, connection);
-        dataReader = cmd.ExecuteReader();
-        allEmployeRelatives = new List<EmployeeRelative>();
-
-        while (dataReader.Read())
-        {
-            EmployeeRelative relative = new EmployeeRelative();
-            relative.FirstName = dataReader["First Name"].ToString();
-            relative.LastName = dataReader["Last Name"].ToString();
-            relative.EmployeeNumber = dataReader["Employee No_"].ToString();
-            allEmployeRelatives.Add(relative);
-        }
-        return allEmployeRelatives;
-    }
-
     private static void OpenConnection()
     {
         connection = new SqlConnection(conStr);

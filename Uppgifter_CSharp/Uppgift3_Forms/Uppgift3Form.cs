@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Uppgift3_Forms.ControllerLayer;
 
 namespace Uppgift3_Forms
 {
@@ -31,54 +33,79 @@ namespace Uppgift3_Forms
 
         private void buttonShowTable_Click(object sender, EventArgs e)
         {
-            switch (cueComboBoxShowTable.SelectedIndex)
+            try
             {
-                case 0:
-                    //Employee
-                    break;
-                case 1:
-                    //Relatives
-                    break;
-                case 2:
-                    //sickleave 2004
-                    break;
-                case 3:
-                    //most sick
-                    break;
-                default:
-                    labelRespons.Text = "Please choose a table to show";
-                    break;
+                switch (cueComboBoxShowTable.SelectedIndex)
+                {
+                    case 0:
+                        //Employee
+                        dataGridViewShowTable.DataSource = Controller.GetEmployees();
+                        break;
+                    case 1:
+                        //Relatives
+                        dataGridViewShowTable.DataSource = Controller.GetEmployeeRelatives();
+                        break;
+                    case 2:
+                        //sickleave 2004
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    case 3:
+                        //most sick
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    default:
+                        labelRespons.Text = "Please choose a table to show";
+                        break;
+                }
+            }
+            catch (FaultException)
+            {
+                labelRespons.Text = "Couldn´t load the selected table";
             }
         }
 
         private void buttonShowMetadata_Click(object sender, EventArgs e)
         {
-            switch (cueComboBoxShowMetadata.SelectedIndex)
+            try
             {
-                case 0:
-                    //Keys
-                    break;
-                case 1:
-                    //Indexes
-                    break;
-                case 2:
-                    //table constraints
-                    break;
-                case 3:
-                    //All tables 1
-                    break;
-                case 4:
-                    //All tables 2
-                    break;
-                case 5:
-                    //columns employee 1
-                    break;
-                case 6:
-                    //columns employee 2
-                    break;
-                default:
-                    labelRespons.Text = "Please choose Metadata to show";
-                    break;
+                switch (cueComboBoxShowMetadata.SelectedIndex)
+                {
+                    case 0:
+                        //Keys
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    case 1:
+                        //Indexes
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    case 2:
+                        //table constraints
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    case 3:
+                        //All tables 1
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    case 4:
+                        //All tables 2
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    case 5:
+                        //columns employee 1
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    case 6:
+                        //columns employee 2
+                        //dataGridViewShowTable.DataSource = ;
+                        break;
+                    default:
+                        labelRespons.Text = "Please choose Metadata to show";
+                        break;
+                }
+            }
+            catch
+            {
+                labelRespons.Text = "Couldn´t load the selected data";
             }
         }
 
@@ -95,6 +122,16 @@ namespace Uppgift3_Forms
         private void buttonUpdateEmployee_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cueComboBoxShowTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelRespons.Text = "";
+        }
+
+        private void cueComboBoxShowMetadata_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelRespons.Text = "";
         }
     }
 }

@@ -21,17 +21,5 @@ public class Service : System.Web.Services.WebService
     public string HelloWorld() {
         return "Hello World";
     }
-
-    [WebMethod]
-    public List<Employee> GetEmployees()
-    {
-        return Dal.GetEmployees();
-    }
-
-    [WebMethod]
-    public List<EmployeeRelative> GetEmployeeRelatives()
-    {
-        return Dal.GetEmployeeRelatives();
-    }
     
 }
