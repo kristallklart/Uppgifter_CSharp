@@ -29,43 +29,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="About" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Industry" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="FieldOfProfession" type="tns:FieldOfProfession" />
-          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="FieldOfProfession">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="Industry" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Users" type="tns:ArrayOfUser" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="ArrayOfUserLocationPurpose">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="UserLocationPurpose" nillable="true" type="tns:UserLocationPurpose" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="UserLocationPurpose">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="User" type="tns:User" />
-          <s:element minOccurs="0" maxOccurs="1" name="Location" type="tns:Location" />
-          <s:element minOccurs="0" maxOccurs="1" name="Purpose" type="tns:Purpose" />
-          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Purposetype" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="FromDate" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="1" maxOccurs="1" name="ToDate" nillable="true" type="s:dateTime" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="Location">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="Purpose">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="PurposeType" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
         </s:sequence>
       </s:complexType>
       <s:element name="GetAllPurposes">
@@ -83,6 +46,26 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="Purpose" nillable="true" type="tns:Purpose" />
         </s:sequence>
       </s:complexType>
+      <s:complexType name="Purpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PurposeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfUserLocationPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserLocationPurpose" nillable="true" type="tns:UserLocationPurpose" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserLocationPurpose">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Purposetype" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
       <s:element name="GetAllLocations">
         <s:complexType />
       </s:element>
@@ -96,6 +79,12 @@
       <s:complexType name="ArrayOfLocation">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="unbounded" name="Location" nillable="true" type="tns:Location" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Location">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLocationPurposes" type="tns:ArrayOfUserLocationPurpose" />
         </s:sequence>
       </s:complexType>
       <s:element name="GetAllUserLocationPurposes">
@@ -121,6 +110,12 @@
       <s:complexType name="ArrayOfFieldOfProfession">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="unbounded" name="FieldOfProfession" nillable="true" type="tns:FieldOfProfession" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FieldOfProfession">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Industry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Users" type="tns:ArrayOfUser" />
         </s:sequence>
       </s:complexType>
     </s:schema>
