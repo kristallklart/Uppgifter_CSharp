@@ -23,7 +23,7 @@ namespace Uppgift2_Konsol
 
             while (on)
             {
-                Console.Write("Select table (1-8): ");
+                Console.Write("\nSelect table (1-8): ");
                 string x = Console.ReadLine();
                 try {
                     switch (x)
