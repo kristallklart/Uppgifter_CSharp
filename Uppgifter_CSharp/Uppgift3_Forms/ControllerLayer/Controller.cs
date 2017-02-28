@@ -9,8 +9,16 @@ namespace Uppgift3_Forms.ControllerLayer
 {
     public static class Controller
     {
-        
+        public static ServiceSoapClient proxy = new ServiceSoapClient();
 
+        public static List<Employee> GetEmployees()
+        {
+            return proxy.GetEmployees();
+        }
 
+        public static List<EmployeeRelative> GetEmployeeRelatives()
+        {
+            return proxy.GetEmployeeRelatives();
+        }
     }
 }

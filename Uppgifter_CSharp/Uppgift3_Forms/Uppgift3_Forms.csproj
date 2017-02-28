@@ -86,6 +86,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.EmployeeRelative.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeeRelativesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
