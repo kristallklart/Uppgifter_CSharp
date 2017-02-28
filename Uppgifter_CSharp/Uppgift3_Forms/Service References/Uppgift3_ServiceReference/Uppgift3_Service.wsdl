@@ -13,6 +13,51 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="GetEmployees">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Employee">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetEmployeeRelatives">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEmployeeRelativesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeRelativesResult" type="tns:ArrayOfEmployeeRelative" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployeeRelative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EmployeeRelative" nillable="true" type="tns:EmployeeRelative" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmployeeRelative">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EmployeeNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -21,10 +66,30 @@
   <wsdl:message name="HelloWorldSoapOut">
     <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
   </wsdl:message>
+  <wsdl:message name="GetEmployeesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployees" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelatives" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeRelativesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeRelativesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
       <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <wsdl:input message="tns:GetEmployeesSoapIn" />
+      <wsdl:output message="tns:GetEmployeesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelatives">
+      <wsdl:input message="tns:GetEmployeeRelativesSoapIn" />
+      <wsdl:output message="tns:GetEmployeeRelativesSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
@@ -38,11 +103,47 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <soap:operation soapAction="Grupp7/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelatives">
+      <soap:operation soapAction="Grupp7/GetEmployeeRelatives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
       <soap12:operation soapAction="Grupp7/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployees">
+      <soap12:operation soapAction="Grupp7/GetEmployees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeRelatives">
+      <soap12:operation soapAction="Grupp7/GetEmployeeRelatives" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
