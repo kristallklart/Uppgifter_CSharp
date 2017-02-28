@@ -37,6 +37,13 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CityField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AbsenceCauseField;
+        
+        private System.DateTime FromDateField;
+        
+        private int NumberOfSickDaysField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -108,6 +115,45 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
                 if ((object.ReferenceEquals(this.CityField, value) != true)) {
                     this.CityField = value;
                     this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string AbsenceCause {
+            get {
+                return this.AbsenceCauseField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AbsenceCauseField, value) != true)) {
+                    this.AbsenceCauseField = value;
+                    this.RaisePropertyChanged("AbsenceCause");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public System.DateTime FromDate {
+            get {
+                return this.FromDateField;
+            }
+            set {
+                if ((this.FromDateField.Equals(value) != true)) {
+                    this.FromDateField = value;
+                    this.RaisePropertyChanged("FromDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+        public int NumberOfSickDays {
+            get {
+                return this.NumberOfSickDaysField;
+            }
+            set {
+                if ((this.NumberOfSickDaysField.Equals(value) != true)) {
+                    this.NumberOfSickDaysField = value;
+                    this.RaisePropertyChanged("NumberOfSickDays");
                 }
             }
         }
@@ -199,6 +245,199 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfString", Namespace="Grupp7", ItemName="string")]
+    [System.SerializableAttribute()]
+    public class ArrayOfString : System.Collections.Generic.List<string> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Index", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class Index : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ObjectIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IndexIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeDescriptionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ObjectId {
+            get {
+                return this.ObjectIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ObjectIdField, value) != true)) {
+                    this.ObjectIdField = value;
+                    this.RaisePropertyChanged("ObjectId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string IndexId {
+            get {
+                return this.IndexIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IndexIdField, value) != true)) {
+                    this.IndexIdField = value;
+                    this.RaisePropertyChanged("IndexId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string TypeDescription {
+            get {
+                return this.TypeDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeDescriptionField, value) != true)) {
+                    this.TypeDescriptionField = value;
+                    this.RaisePropertyChanged("TypeDescription");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Constraint", Namespace="Grupp7")]
+    [System.SerializableAttribute()]
+    public partial class Constraint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ConstraintCatalogField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TableCatalogField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string ConstraintCatalog {
+            get {
+                return this.ConstraintCatalogField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ConstraintCatalogField, value) != true)) {
+                    this.ConstraintCatalogField = value;
+                    this.RaisePropertyChanged("ConstraintCatalog");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string TableCatalog {
+            get {
+                return this.TableCatalogField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TableCatalogField, value) != true)) {
+                    this.TableCatalogField = value;
+                    this.RaisePropertyChanged("TableCatalog");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="Grupp7", ConfigurationName="Uppgift3_ServiceReference.ServiceSoap")]
     public interface ServiceSoap {
@@ -223,6 +462,69 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetEmployeeRelatives", ReplyAction="*")]
         System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeeRelativesResponse> GetEmployeeRelativesAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeeRelativesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetSickleaveResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetSickleave", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponse GetSickleave(Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetSickleave", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponse> GetSickleaveAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetMostSickResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetMostSick", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponse GetMostSick(Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetMostSick", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponse> GetMostSickAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetKeysResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetKeys", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponse GetKeys(Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetKeys", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponse> GetKeysAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetIndicesResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetIndices", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponse GetIndices(Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetIndices", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponse> GetIndicesAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetConstraintsResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetConstraints", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse GetConstraints(Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetConstraints", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse> GetConstraintsAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetTablesOneResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetTablesOne", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponse GetTablesOne(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetTablesOne", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponse> GetTablesOneAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetTablesTwoResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetTablesTwo", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse GetTablesTwo(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetTablesTwo", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse> GetTablesTwoAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetColumnsOneResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetColumnsOne", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponse GetColumnsOne(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetColumnsOne", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponse> GetColumnsOneAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetColumnsTwoResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetColumnsTwo", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse GetColumnsTwo(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetColumnsTwo", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse> GetColumnsTwoAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -408,6 +710,555 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSickleaveRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSickleave", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequestBody Body;
+        
+        public GetSickleaveRequest() {
+        }
+        
+        public GetSickleaveRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetSickleaveRequestBody {
+        
+        public GetSickleaveRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetSickleaveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetSickleaveResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponseBody Body;
+        
+        public GetSickleaveResponse() {
+        }
+        
+        public GetSickleaveResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetSickleaveResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Employee> GetSickleaveResult;
+        
+        public GetSickleaveResponseBody() {
+        }
+        
+        public GetSickleaveResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Employee> GetSickleaveResult) {
+            this.GetSickleaveResult = GetSickleaveResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMostSickRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSick", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequestBody Body;
+        
+        public GetMostSickRequest() {
+        }
+        
+        public GetMostSickRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetMostSickRequestBody {
+        
+        public GetMostSickRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetMostSickResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetMostSickResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponseBody Body;
+        
+        public GetMostSickResponse() {
+        }
+        
+        public GetMostSickResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetMostSickResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Employee> GetMostSickResult;
+        
+        public GetMostSickResponseBody() {
+        }
+        
+        public GetMostSickResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Employee> GetMostSickResult) {
+            this.GetMostSickResult = GetMostSickResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetKeysRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetKeys", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequestBody Body;
+        
+        public GetKeysRequest() {
+        }
+        
+        public GetKeysRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetKeysRequestBody {
+        
+        public GetKeysRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetKeysResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetKeysResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponseBody Body;
+        
+        public GetKeysResponse() {
+        }
+        
+        public GetKeysResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetKeysResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetKeysResult;
+        
+        public GetKeysResponseBody() {
+        }
+        
+        public GetKeysResponseBody(Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetKeysResult) {
+            this.GetKeysResult = GetKeysResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetIndicesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetIndices", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequestBody Body;
+        
+        public GetIndicesRequest() {
+        }
+        
+        public GetIndicesRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetIndicesRequestBody {
+        
+        public GetIndicesRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetIndicesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetIndicesResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponseBody Body;
+        
+        public GetIndicesResponse() {
+        }
+        
+        public GetIndicesResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetIndicesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Index> GetIndicesResult;
+        
+        public GetIndicesResponseBody() {
+        }
+        
+        public GetIndicesResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Index> GetIndicesResult) {
+            this.GetIndicesResult = GetIndicesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetConstraintsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetConstraints", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequestBody Body;
+        
+        public GetConstraintsRequest() {
+        }
+        
+        public GetConstraintsRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetConstraintsRequestBody {
+        
+        public GetConstraintsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetConstraintsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetConstraintsResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponseBody Body;
+        
+        public GetConstraintsResponse() {
+        }
+        
+        public GetConstraintsResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetConstraintsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraintsResult;
+        
+        public GetConstraintsResponseBody() {
+        }
+        
+        public GetConstraintsResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraintsResult) {
+            this.GetConstraintsResult = GetConstraintsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTablesOneRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTablesOne", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequestBody Body;
+        
+        public GetTablesOneRequest() {
+        }
+        
+        public GetTablesOneRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetTablesOneRequestBody {
+        
+        public GetTablesOneRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTablesOneResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTablesOneResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponseBody Body;
+        
+        public GetTablesOneResponse() {
+        }
+        
+        public GetTablesOneResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetTablesOneResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetTablesOneResult;
+        
+        public GetTablesOneResponseBody() {
+        }
+        
+        public GetTablesOneResponseBody(Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetTablesOneResult) {
+            this.GetTablesOneResult = GetTablesOneResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTablesTwoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTablesTwo", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequestBody Body;
+        
+        public GetTablesTwoRequest() {
+        }
+        
+        public GetTablesTwoRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetTablesTwoRequestBody {
+        
+        public GetTablesTwoRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetTablesTwoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetTablesTwoResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponseBody Body;
+        
+        public GetTablesTwoResponse() {
+        }
+        
+        public GetTablesTwoResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetTablesTwoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetTablesTwoResult;
+        
+        public GetTablesTwoResponseBody() {
+        }
+        
+        public GetTablesTwoResponseBody(Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetTablesTwoResult) {
+            this.GetTablesTwoResult = GetTablesTwoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetColumnsOneRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetColumnsOne", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequestBody Body;
+        
+        public GetColumnsOneRequest() {
+        }
+        
+        public GetColumnsOneRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetColumnsOneRequestBody {
+        
+        public GetColumnsOneRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetColumnsOneResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetColumnsOneResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponseBody Body;
+        
+        public GetColumnsOneResponse() {
+        }
+        
+        public GetColumnsOneResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetColumnsOneResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetColumnsOneResult;
+        
+        public GetColumnsOneResponseBody() {
+        }
+        
+        public GetColumnsOneResponseBody(Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetColumnsOneResult) {
+            this.GetColumnsOneResult = GetColumnsOneResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetColumnsTwoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetColumnsTwo", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequestBody Body;
+        
+        public GetColumnsTwoRequest() {
+        }
+        
+        public GetColumnsTwoRequest(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetColumnsTwoRequestBody {
+        
+        public GetColumnsTwoRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetColumnsTwoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetColumnsTwoResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponseBody Body;
+        
+        public GetColumnsTwoResponse() {
+        }
+        
+        public GetColumnsTwoResponse(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetColumnsTwoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetColumnsTwoResult;
+        
+        public GetColumnsTwoResponseBody() {
+        }
+        
+        public GetColumnsTwoResponseBody(Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetColumnsTwoResult) {
+            this.GetColumnsTwoResult = GetColumnsTwoResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServiceSoapChannel : Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -502,6 +1353,213 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
             Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeeRelativesRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeeRelativesRequest();
             inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeeRelativesRequestBody();
             return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetEmployeeRelativesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetSickleave(Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest request) {
+            return base.Channel.GetSickleave(request);
+        }
+        
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Employee> GetSickleave() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetSickleave(inValue);
+            return retVal.Body.GetSickleaveResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetSickleaveAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest request) {
+            return base.Channel.GetSickleaveAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponse> GetSickleaveAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetSickleaveAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetMostSick(Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest request) {
+            return base.Channel.GetMostSick(request);
+        }
+        
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Employee> GetMostSick() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetMostSick(inValue);
+            return retVal.Body.GetMostSickResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetMostSickAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest request) {
+            return base.Channel.GetMostSickAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponse> GetMostSickAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetMostSickAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetKeys(Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest request) {
+            return base.Channel.GetKeys(request);
+        }
+        
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetKeys() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetKeys(inValue);
+            return retVal.Body.GetKeysResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetKeysAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest request) {
+            return base.Channel.GetKeysAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponse> GetKeysAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetKeysAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetIndices(Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest request) {
+            return base.Channel.GetIndices(request);
+        }
+        
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Index> GetIndices() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetIndices(inValue);
+            return retVal.Body.GetIndicesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetIndicesAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest request) {
+            return base.Channel.GetIndicesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponse> GetIndicesAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetIndicesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetConstraints(Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest request) {
+            return base.Channel.GetConstraints(request);
+        }
+        
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraints() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetConstraints(inValue);
+            return retVal.Body.GetConstraintsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetConstraintsAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest request) {
+            return base.Channel.GetConstraintsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse> GetConstraintsAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetConstraintsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetTablesOne(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest request) {
+            return base.Channel.GetTablesOne(request);
+        }
+        
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetTablesOne() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetTablesOne(inValue);
+            return retVal.Body.GetTablesOneResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetTablesOneAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest request) {
+            return base.Channel.GetTablesOneAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponse> GetTablesOneAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetTablesOneAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetTablesTwo(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest request) {
+            return base.Channel.GetTablesTwo(request);
+        }
+        
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetTablesTwo() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetTablesTwo(inValue);
+            return retVal.Body.GetTablesTwoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetTablesTwoAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest request) {
+            return base.Channel.GetTablesTwoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse> GetTablesTwoAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetTablesTwoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetColumnsOne(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest request) {
+            return base.Channel.GetColumnsOne(request);
+        }
+        
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetColumnsOne() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetColumnsOne(inValue);
+            return retVal.Body.GetColumnsOneResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetColumnsOneAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest request) {
+            return base.Channel.GetColumnsOneAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponse> GetColumnsOneAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetColumnsOneAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetColumnsTwo(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest request) {
+            return base.Channel.GetColumnsTwo(request);
+        }
+        
+        public Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString GetColumnsTwo() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequestBody();
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetColumnsTwo(inValue);
+            return retVal.Body.GetColumnsTwoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.GetColumnsTwoAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest request) {
+            return base.Channel.GetColumnsTwoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse> GetColumnsTwoAsync() {
+            Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequestBody();
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetColumnsTwoAsync(inValue);
         }
     }
 }
