@@ -109,7 +109,6 @@ public static class Dal
         {
             Location location = new Location();
             location.City = dataReader["City"].ToString();
-            result.Add(location);
             allLocations.Add(location);
         }
         CloseConnection();
@@ -119,7 +118,7 @@ public static class Dal
     public static List<UserLocationPurpose> GetAllUserLocationPurposes()
     {
         OpenConnection();
-        string sqlString = "select * from User_Location_Purposes";
+        string sqlString = "select * from User_Location_Purpose";
         SqlCommand cmd = new SqlCommand(sqlString, connection);
         dataReader = cmd.ExecuteReader();
 
@@ -131,6 +130,14 @@ public static class Dal
             userLocationPurpose.City = dataReader["City"].ToString();
             userLocationPurpose.Username = dataReader["Username"].ToString();
             userLocationPurpose.Purposetype = dataReader["Purposetype"].ToString();
+            
+            DateTime dateTime;
+            DateTime dateTime2;
+            if (DateTime.TryParse(dataReader["FromDate"].ToString(), out dateTime))
+                userLocationPurpose.FromDate = dateTime;
+            if (DateTime.TryParse(dataReader["ToDate"].ToString(), out dateTime2))
+                userLocationPurpose.ToDate = dateTime2;
+            
             allUserLocationPurposes.Add(userLocationPurpose);
         }
         CloseConnection();
