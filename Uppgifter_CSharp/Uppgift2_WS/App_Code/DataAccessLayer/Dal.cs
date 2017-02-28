@@ -42,7 +42,7 @@ public static class Dal
 
 	static Dal()
 	{
-        conStr = ConfigurationManager.ConnectionStrings["Databasen"].ConnectionString;
+        conStr = ConfigurationManager.ConnectionStrings["FriendlyDB"].ConnectionString;
         //conStr = "server=localhost; Trusted_Connection=yes; database=FriendlyDB";
     }
 
