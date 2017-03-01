@@ -127,18 +127,18 @@
       <s:element name="GetConstraintsResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetConstraintsResult" type="tns:ArrayOfConstraint" />
+            <s:element minOccurs="0" maxOccurs="1" name="GetConstraintsResult" type="tns:ArrayOfTableConstraint" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfConstraint">
+      <s:complexType name="ArrayOfTableConstraint">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Constraint" nillable="true" type="tns:Constraint" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TableConstraint" nillable="true" type="tns:TableConstraint" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Constraint">
+      <s:complexType name="TableConstraint">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="1" name="ConstraintCatalog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TableConstraintCatalog" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="TableCatalog" type="s:string" />
         </s:sequence>

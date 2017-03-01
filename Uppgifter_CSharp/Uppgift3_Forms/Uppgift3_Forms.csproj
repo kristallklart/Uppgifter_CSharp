@@ -92,9 +92,6 @@
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.Constraint.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -141,6 +138,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.Index.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.TableConstraint.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponse.datasource">

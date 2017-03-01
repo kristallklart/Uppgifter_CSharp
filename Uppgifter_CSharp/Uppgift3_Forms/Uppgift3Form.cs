@@ -153,6 +153,8 @@ namespace Uppgift3_Forms
             else
             {
                 errorProviderTextBoxes.SetError(textBoxNumber, "Please enter a employee number.");
+                errorProviderTextBoxes.SetError(textBoxFirstName, string.Empty);
+                errorProviderTextBoxes.SetError(textBoxLastName, string.Empty);
                 labelFeedback.Text = "Please enter an employee number to remove.";
             }
         }

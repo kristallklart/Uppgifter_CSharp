@@ -41,7 +41,7 @@ namespace Uppgift3_Forms.ControllerLayer
             return proxy.GetIndices();
         }
 
-        public static List<Constraint> GetConstraints()
+        public static List<TableConstraint> GetConstraints()
         {
             return proxy.GetConstraints();
         }

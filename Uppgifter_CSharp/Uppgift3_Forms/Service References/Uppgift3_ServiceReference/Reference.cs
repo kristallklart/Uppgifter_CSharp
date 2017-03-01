@@ -363,15 +363,15 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Constraint", Namespace="Grupp7")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TableConstraint", Namespace="Grupp7")]
     [System.SerializableAttribute()]
-    public partial class Constraint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class TableConstraint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ConstraintCatalogField;
+        private string TableConstraintCatalogField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -390,19 +390,19 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string ConstraintCatalog {
+        public string TableConstraintCatalog {
             get {
-                return this.ConstraintCatalogField;
+                return this.TableConstraintCatalogField;
             }
             set {
-                if ((object.ReferenceEquals(this.ConstraintCatalogField, value) != true)) {
-                    this.ConstraintCatalogField = value;
-                    this.RaisePropertyChanged("ConstraintCatalog");
+                if ((object.ReferenceEquals(this.TableConstraintCatalogField, value) != true)) {
+                    this.TableConstraintCatalogField = value;
+                    this.RaisePropertyChanged("TableConstraintCatalog");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
         public string Name {
             get {
                 return this.NameField;
@@ -415,7 +415,7 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
         public string TableCatalog {
             get {
                 return this.TableCatalogField;
@@ -1026,12 +1026,12 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
     public partial class GetConstraintsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraintsResult;
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.TableConstraint> GetConstraintsResult;
         
         public GetConstraintsResponseBody() {
         }
         
-        public GetConstraintsResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraintsResult) {
+        public GetConstraintsResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.TableConstraint> GetConstraintsResult) {
             this.GetConstraintsResult = GetConstraintsResult;
         }
     }
@@ -1693,7 +1693,7 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
             return base.Channel.GetConstraints(request);
         }
         
-        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraints() {
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.TableConstraint> GetConstraints() {
             Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest();
             inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequestBody();
             Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetConstraints(inValue);
