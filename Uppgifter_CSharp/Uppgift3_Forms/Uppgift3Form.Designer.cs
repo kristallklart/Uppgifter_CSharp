@@ -105,7 +105,6 @@
             this.cueComboBoxShowTable.Name = "cueComboBoxShowTable";
             this.cueComboBoxShowTable.Size = new System.Drawing.Size(159, 21);
             this.cueComboBoxShowTable.TabIndex = 0;
-            this.cueComboBoxShowTable.SelectedIndexChanged += new System.EventHandler(this.cueComboBoxShowTable_SelectedIndexChanged);
             // 
             // groupBoxShowMetadata
             // 
@@ -152,7 +151,6 @@
             this.cueComboBoxShowMetadata.Name = "cueComboBoxShowMetadata";
             this.cueComboBoxShowMetadata.Size = new System.Drawing.Size(159, 21);
             this.cueComboBoxShowMetadata.TabIndex = 1;
-            this.cueComboBoxShowMetadata.SelectedIndexChanged += new System.EventHandler(this.cueComboBoxShowMetadata_SelectedIndexChanged);
             // 
             // dataGridViewShowTable
             // 

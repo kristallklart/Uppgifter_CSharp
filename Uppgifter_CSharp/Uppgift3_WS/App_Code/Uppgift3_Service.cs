@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Web;
 using System.Web.Services;
 
@@ -79,5 +80,23 @@ public class Service : System.Web.Services.WebService
     public List<string> GetColumnsTwo()
     {
         return Dal.GetColumnsTwo();
+    }
+
+    [WebMethod]
+    public int UpdateEmployee(string employeeNumber, string firstname, string lastname)
+    {
+        return Dal.UpdateEmployee(employeeNumber, firstname, lastname);
+    }
+
+    [WebMethod]
+    public int AddEmployee(string employeeNumber, string firstname, string lastname)
+    {
+        return Dal.AddEmployee(employeeNumber, firstname, lastname);
+    }
+
+    [WebMethod]
+    public int DeleteEmployee(string employeeNumber)
+    {
+        return Dal.DeleteEmployee(employeeNumber);
     }
 }

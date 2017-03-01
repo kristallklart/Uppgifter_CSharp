@@ -63,5 +63,20 @@ namespace Uppgift3_Forms.ControllerLayer
         {
             return proxy.GetColumnsTwo();
         }
+
+        public static int UpdateEmployee(string employeeNumber, string firstname, string lastname)
+        {
+            return proxy.UpdateEmployee(employeeNumber, firstname, lastname);
+        }
+
+        public static int AddEmployee(string employeeNumber, string firstname, string lastname)
+        {
+            return proxy.AddEmployee(employeeNumber, firstname, lastname);
+        }
+
+        public static int DeleteEmployee(string employeeNumber)
+        {
+            return proxy.DeleteEmployee(employeeNumber);
+        }
     }
 }
