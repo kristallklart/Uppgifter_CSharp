@@ -19,8 +19,8 @@ public class User
     public string About { get; set; }
     public string Industry { get; set; }
 
-    //public FieldOfProfession FieldOfProfession { get; set; }
-    //public List<UserLocationPurpose> UserLocationPurposes { get; set; }
+    public FieldOfProfession FieldOfProfession { get; set; }
+    public List<UserLocationPurpose> UserLocationPurposes { get; set; }
 
 	public User()
 	{

@@ -130,12 +130,12 @@ public static class Dal
             userLocationPurpose.Username = dataReader["Username"].ToString();
             userLocationPurpose.Purposetype = dataReader["Purposetype"].ToString();
             
-            DateTime dateTime;
-            DateTime dateTime2;
-            if (DateTime.TryParse(dataReader["FromDate"].ToString(), out dateTime))
-                userLocationPurpose.FromDate = dateTime;
-            if (DateTime.TryParse(dataReader["ToDate"].ToString(), out dateTime2))
-                userLocationPurpose.ToDate = dateTime2;
+            DateTime fromDate;
+            DateTime toDate;
+            if (DateTime.TryParse(dataReader["FromDate"].ToString(), out fromDate))
+                userLocationPurpose.FromDate = fromDate;
+            if (DateTime.TryParse(dataReader["ToDate"].ToString(), out toDate))
+                userLocationPurpose.ToDate = toDate;
             
             allUserLocationPurposes.Add(userLocationPurpose);
         }
