@@ -6,7 +6,10 @@ using System.Web;
 using System.Web.Services;
 using DataAccessLayer;
 using Models;
-[WebService(Namespace = "Grupp7", Description = "bladflkjasdf")]
+[WebService(Namespace = "Grupp7", Description = "This web service has multiple web methods for retrieving data from the Cronus-database. " +
+                                                "The web service also has methods for inserting, deleting and updating data in the Employee table, these methods will " +
+                                                "return an int of value 1 if the query executed succesfully and 0 otherwise. If an error occurs the methods will throw a FaultException for .NET environments " +
+                                                "and a RemoteException for Java environments. These exceptions must be handled by the client.")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
 // [System.Web.Script.Services.ScriptService]
