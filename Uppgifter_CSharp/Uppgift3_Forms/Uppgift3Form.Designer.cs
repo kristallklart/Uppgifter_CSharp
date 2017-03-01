@@ -173,7 +173,6 @@
             this.labelFeedback.Name = "labelFeedback";
             this.labelFeedback.Size = new System.Drawing.Size(71, 13);
             this.labelFeedback.TabIndex = 5;
-            this.labelFeedback.Text = "labelRespons";
             // 
             // textBoxLastName
             // 

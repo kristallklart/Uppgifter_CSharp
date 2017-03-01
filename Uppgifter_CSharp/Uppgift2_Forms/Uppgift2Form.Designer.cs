@@ -75,7 +75,6 @@
             this.labelRespons.Name = "labelRespons";
             this.labelRespons.Size = new System.Drawing.Size(106, 20);
             this.labelRespons.TabIndex = 4;
-            this.labelRespons.Text = "labelRespons";
             // 
             // Uppgift2Form
             // 
