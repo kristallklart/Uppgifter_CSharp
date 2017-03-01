@@ -8,7 +8,11 @@ using System.Web;
 /// </summary>
 public class Message
 {
-    public string Message_ { get; set; }
+    public int Id { get; set; }
+    public string Sender { get; set; }
+    public string Reciever { get; set; }
+    public string Content { get; set; }
+    public User User { get; set; }
 
 	public Message()
 	{

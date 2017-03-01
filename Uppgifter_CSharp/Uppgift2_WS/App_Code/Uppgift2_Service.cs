@@ -54,4 +54,16 @@ public class Uppgift2_Service : System.Web.Services.WebService
     {
         return Dal.GetAllFieldOfProfessions();
     }
+
+    [WebMethod]
+    public List<Message> GetAllMessages()
+    {
+        return Dal.GetAllMessages();
+    }
+
+    [WebMethod]
+    public List<Match> GetAllMatches()
+    {
+        return Dal.GetAllMatches();
+    }
 }

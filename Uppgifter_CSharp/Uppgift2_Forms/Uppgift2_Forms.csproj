@@ -94,6 +94,12 @@
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllLocationsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.GetAllPurposesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -104,6 +110,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.Location.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.Match.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.Message.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift2_ServiceReference\Uppgift2_Forms.Uppgift2_ServiceReference.Purpose.datasource">
