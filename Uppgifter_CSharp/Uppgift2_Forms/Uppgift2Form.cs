@@ -41,9 +41,13 @@ namespace Uppgift2_Forms
                 {
                     case 0:
                         dataGridViewShowTable.DataSource = Controller.GetAllUsers();
+                        dataGridViewShowTable.Columns[9].Visible = false;
                         break;
                     case 1:
                         dataGridViewShowTable.DataSource = Controller.GetAllUserLocationPurposes();
+                        dataGridViewShowTable.Columns[0].Visible = false;
+                        dataGridViewShowTable.Columns[1].Visible = false;
+                        dataGridViewShowTable.Columns[2].Visible = false;
                         break;
                     case 2:
                         dataGridViewShowTable.DataSource = Controller.GetAllLocations();
