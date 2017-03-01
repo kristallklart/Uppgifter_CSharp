@@ -21,8 +21,8 @@ public static class Dal
     private static List<UserLocationPurpose> allUserLocationPurposes;
     private static List<FieldOfProfession> allFieldOfProfessions;
     private static List<Message> allMessages;
+    private static List<Match> allMatches;
     
-    private static List<object> errorMessage;
     //public SqlConnection Connection
     //{
     //    get { return connection; }
@@ -162,10 +162,47 @@ public static class Dal
         return allFieldOfProfessions;
     }
 
-    //public static List<Message> GetMessages()
-    //{
+    public static List<Message> GetAllMessages()
+    {
+        OpenConnection();
+        string sqlString = "select * from Messages";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
 
-    //}
+        allMessages = new List<Message>();
+
+        while (dataReader.Read())
+        {
+            Message message = new Message();
+            message.Id = Int32.Parse(dataReader["Id"].ToString());
+            message.Sender = dataReader["Sender"].ToString();
+            message.Reciever = dataReader["Reciever"].ToString();
+            message.Content = dataReader["Content"].ToString();
+            allMessages.Add(message);
+        }
+        CloseConnection();
+        return allMessages;
+    }
+
+    public static List<Match> GetAllMatches()
+    {
+        OpenConnection();
+        string sqlString = "select * from Match";
+        SqlCommand cmd = new SqlCommand(sqlString, connection);
+        dataReader = cmd.ExecuteReader();
+
+        allMatches = new List<Match>();
+
+        while (dataReader.Read())
+        {
+            Match match = new Match();
+            match.MatchUsername = dataReader["Matchusername"].ToString();
+            match.Username = dataReader["Username"].ToString();
+            allMatches.Add(match);
+        }
+        CloseConnection();
+        return allMatches;
+    }
 
     private static void OpenConnection()
     {
