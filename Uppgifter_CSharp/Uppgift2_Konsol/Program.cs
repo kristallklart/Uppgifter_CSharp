@@ -40,9 +40,9 @@ namespace Uppgift2_Konsol
                         case ("2"):
                             Console.WriteLine("\nLOCATION\n");
                             List<Location> l = Controller.GetAllLocations();
-                            foreach (Location lo in l)
+                            foreach (Location i in l)
                             {
-                                Console.WriteLine("{0}\n", lo.City);
+                                Console.WriteLine("{0}\n", i.City);
                             }
                             on = false;
                             break;
@@ -56,7 +56,12 @@ namespace Uppgift2_Konsol
                             on = false;
                             break;
                         case ("4"):
-                            Console.WriteLine("Knapp 4");
+                            Console.WriteLine("\nFIELD OF PROFESSION\n");
+                            List<FieldOfProfession> f = Controller.GetAllFieldOfProfessions();
+                            foreach (FieldOfProfession i in f)
+                            {
+                                Console.WriteLine("{0}\n", i.Industry);
+                            }
                             on = false;
                             break;
                         case ("5"):
@@ -68,11 +73,12 @@ namespace Uppgift2_Konsol
                             on = false;
                             break;
                         case ("7"):
-                            Console.WriteLine("Knapp 7");
-                            on = false;
-                            break;
-                        case ("8"):
-                            Console.WriteLine("Knapp 8");
+                            Console.WriteLine("\nPURPOSE\n");
+                            List<Purpose> p = Controller.GetAllPurposes();
+                            foreach (Purpose i in p)
+                            {
+                                Console.WriteLine("{0}\n", i.PurposeType);
+                            }
                             on = false;
                             break;
 
