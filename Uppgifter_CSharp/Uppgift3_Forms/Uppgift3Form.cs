@@ -17,6 +17,7 @@ namespace Uppgift3_Forms
         public Uppgift3Form()
         {
             InitializeComponent();
+            AutoValidate = AutoValidate.Disable;
             cueComboBoxShowTable.Items.Add("Employee");
             cueComboBoxShowTable.Items.Add("Relatives");
             cueComboBoxShowTable.Items.Add("Sickleave 2004");
@@ -72,7 +73,7 @@ namespace Uppgift3_Forms
             }
             catch (FaultException)
             {
-                labelFeedback.Text = "Couldn't load the selected table";
+                DisplayExceptionMessage();
             }
         }
 
@@ -122,36 +123,76 @@ namespace Uppgift3_Forms
             }
             catch
             {
-                labelFeedback.Text = "Couldn't load the selected data";
+                DisplayExceptionMessage();
             }
         }
 
         private void buttonDeleteEmployee_Click(object sender, EventArgs e)
         {
-
+            if (textBoxNumber.Text.Trim() != "")
+            {
+                try
+                {
+                    string employeeNumber = textBoxNumber.Text.Trim();
+                    int result = Controller.DeleteEmployee(employeeNumber);
+                    labelFeedback.Text = result.ToString();
+                    if (result > 0)
+                    {
+                        labelFeedback.Text = "Successfully removed employee with number " + employeeNumber + ".";
+                    }
+                    else
+                    {
+                        labelFeedback.Text = "Could't remove employee with number " + employeeNumber + ". Please make sure the number exists";
+                    }                   
+                }
+                catch (FaultException)
+                {
+                    DisplayExceptionMessage();
+                }
+            }
+            else
+            {
+                errorProviderTextBoxes.SetError(textBoxNumber, "Please enter a employee number.");
+                errorProviderTextBoxes.SetError(textBoxFirstName, string.Empty);
+                errorProviderTextBoxes.SetError(textBoxLastName, string.Empty);
+                labelFeedback.Text = "Please enter an employee number to remove.";
+            }
         }
 
         private void buttonAddEmployee_Click(object sender, EventArgs e)
         {
             if (this.ValidateChildren())
             {
-                
+                try
+                {
+                    string employeeNumber = textBoxNumber.Text.Trim();
+                    string firstname = textBoxFirstName.Text.Trim();
+                    string lastname = textBoxLastName.Text.Trim();
+                    Controller.AddEmployee(employeeNumber, firstname, lastname);
+                }
+                catch (FaultException)
+                {
+                    DisplayExceptionMessage();
+                }
             }
         }
 
         private void buttonUpdateEmployee_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void cueComboBoxShowTable_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            labelFeedback.Text = "";
-        }
-
-        private void cueComboBoxShowMetadata_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            labelFeedback.Text = "";
+            if (this.ValidateChildren())
+            {
+                try
+                {
+                    string employeeNumber = textBoxNumber.Text.Trim();
+                    string firstname = textBoxFirstName.Text.Trim();
+                    string lastname = textBoxLastName.Text.Trim();
+                    Controller.UpdateEmployee(employeeNumber, firstname, lastname);
+                }
+                catch (FaultException)
+                {
+                    DisplayExceptionMessage();
+                }
+            }
         }
 
         private void textBox_Validated(object sender, EventArgs e)
@@ -184,6 +225,11 @@ namespace Uppgift3_Forms
                 }
                 errorProviderTextBoxes.SetError(tempBox, errorMessage);
             }
+        }
+
+        private void DisplayExceptionMessage()
+        {
+            labelFeedback.Text = "Couldn't load table from database.";
         }
     }
 }

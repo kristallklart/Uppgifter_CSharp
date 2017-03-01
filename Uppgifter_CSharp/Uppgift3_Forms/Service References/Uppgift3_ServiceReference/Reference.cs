@@ -363,15 +363,15 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Constraint", Namespace="Grupp7")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TableConstraint", Namespace="Grupp7")]
     [System.SerializableAttribute()]
-    public partial class Constraint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class TableConstraint : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ConstraintCatalogField;
+        private string TableConstraintCatalogField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -390,19 +390,19 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string ConstraintCatalog {
+        public string TableConstraintCatalog {
             get {
-                return this.ConstraintCatalogField;
+                return this.TableConstraintCatalogField;
             }
             set {
-                if ((object.ReferenceEquals(this.ConstraintCatalogField, value) != true)) {
-                    this.ConstraintCatalogField = value;
-                    this.RaisePropertyChanged("ConstraintCatalog");
+                if ((object.ReferenceEquals(this.TableConstraintCatalogField, value) != true)) {
+                    this.TableConstraintCatalogField = value;
+                    this.RaisePropertyChanged("TableConstraintCatalog");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
         public string Name {
             get {
                 return this.NameField;
@@ -415,7 +415,7 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
         public string TableCatalog {
             get {
                 return this.TableCatalogField;
@@ -525,6 +525,27 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetColumnsTwo", ReplyAction="*")]
         System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse> GetColumnsTwoAsync(Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest request);
+        
+        // CODEGEN: Generating message contract since element name employeeNumber from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/UpdateEmployee", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponse UpdateEmployee(Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/UpdateEmployee", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponse> UpdateEmployeeAsync(Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest request);
+        
+        // CODEGEN: Generating message contract since element name employeeNumber from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/AddEmployee", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponse AddEmployee(Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/AddEmployee", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponse> AddEmployeeAsync(Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest request);
+        
+        // CODEGEN: Generating message contract since element name employeeNumber from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/DeleteEmployee", ReplyAction="*")]
+        Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponse DeleteEmployee(Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/DeleteEmployee", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponse> DeleteEmployeeAsync(Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1005,12 +1026,12 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
     public partial class GetConstraintsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraintsResult;
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.TableConstraint> GetConstraintsResult;
         
         public GetConstraintsResponseBody() {
         }
         
-        public GetConstraintsResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraintsResult) {
+        public GetConstraintsResponseBody(System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.TableConstraint> GetConstraintsResult) {
             this.GetConstraintsResult = GetConstraintsResult;
         }
     }
@@ -1259,6 +1280,226 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateEmployee", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequestBody Body;
+        
+        public UpdateEmployeeRequest() {
+        }
+        
+        public UpdateEmployeeRequest(Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class UpdateEmployeeRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string employeeNumber;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string firstname;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string lastname;
+        
+        public UpdateEmployeeRequestBody() {
+        }
+        
+        public UpdateEmployeeRequestBody(string employeeNumber, string firstname, string lastname) {
+            this.employeeNumber = employeeNumber;
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UpdateEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateEmployeeResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponseBody Body;
+        
+        public UpdateEmployeeResponse() {
+        }
+        
+        public UpdateEmployeeResponse(Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class UpdateEmployeeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int UpdateEmployeeResult;
+        
+        public UpdateEmployeeResponseBody() {
+        }
+        
+        public UpdateEmployeeResponseBody(int UpdateEmployeeResult) {
+            this.UpdateEmployeeResult = UpdateEmployeeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddEmployee", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequestBody Body;
+        
+        public AddEmployeeRequest() {
+        }
+        
+        public AddEmployeeRequest(Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class AddEmployeeRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string employeeNumber;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string firstname;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string lastname;
+        
+        public AddEmployeeRequestBody() {
+        }
+        
+        public AddEmployeeRequestBody(string employeeNumber, string firstname, string lastname) {
+            this.employeeNumber = employeeNumber;
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddEmployeeResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponseBody Body;
+        
+        public AddEmployeeResponse() {
+        }
+        
+        public AddEmployeeResponse(Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class AddEmployeeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int AddEmployeeResult;
+        
+        public AddEmployeeResponseBody() {
+        }
+        
+        public AddEmployeeResponseBody(int AddEmployeeResult) {
+            this.AddEmployeeResult = AddEmployeeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DeleteEmployeeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteEmployee", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequestBody Body;
+        
+        public DeleteEmployeeRequest() {
+        }
+        
+        public DeleteEmployeeRequest(Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class DeleteEmployeeRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string employeeNumber;
+        
+        public DeleteEmployeeRequestBody() {
+        }
+        
+        public DeleteEmployeeRequestBody(string employeeNumber) {
+            this.employeeNumber = employeeNumber;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DeleteEmployeeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteEmployeeResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponseBody Body;
+        
+        public DeleteEmployeeResponse() {
+        }
+        
+        public DeleteEmployeeResponse(Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class DeleteEmployeeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int DeleteEmployeeResult;
+        
+        public DeleteEmployeeResponseBody() {
+        }
+        
+        public DeleteEmployeeResponseBody(int DeleteEmployeeResult) {
+            this.DeleteEmployeeResult = DeleteEmployeeResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServiceSoapChannel : Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -1452,7 +1693,7 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
             return base.Channel.GetConstraints(request);
         }
         
-        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.Constraint> GetConstraints() {
+        public System.Collections.Generic.List<Uppgift3_Forms.Uppgift3_ServiceReference.TableConstraint> GetConstraints() {
             Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequest();
             inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsRequestBody();
             Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetConstraints(inValue);
@@ -1560,6 +1801,89 @@ namespace Uppgift3_Forms.Uppgift3_ServiceReference {
             Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequest();
             inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoRequestBody();
             return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).GetColumnsTwoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.UpdateEmployee(Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest request) {
+            return base.Channel.UpdateEmployee(request);
+        }
+        
+        public int UpdateEmployee(string employeeNumber, string firstname, string lastname) {
+            Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequestBody();
+            inValue.Body.employeeNumber = employeeNumber;
+            inValue.Body.firstname = firstname;
+            inValue.Body.lastname = lastname;
+            Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).UpdateEmployee(inValue);
+            return retVal.Body.UpdateEmployeeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.UpdateEmployeeAsync(Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest request) {
+            return base.Channel.UpdateEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeResponse> UpdateEmployeeAsync(string employeeNumber, string firstname, string lastname) {
+            Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.UpdateEmployeeRequestBody();
+            inValue.Body.employeeNumber = employeeNumber;
+            inValue.Body.firstname = firstname;
+            inValue.Body.lastname = lastname;
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).UpdateEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.AddEmployee(Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest request) {
+            return base.Channel.AddEmployee(request);
+        }
+        
+        public int AddEmployee(string employeeNumber, string firstname, string lastname) {
+            Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequestBody();
+            inValue.Body.employeeNumber = employeeNumber;
+            inValue.Body.firstname = firstname;
+            inValue.Body.lastname = lastname;
+            Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).AddEmployee(inValue);
+            return retVal.Body.AddEmployeeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.AddEmployeeAsync(Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest request) {
+            return base.Channel.AddEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeResponse> AddEmployeeAsync(string employeeNumber, string firstname, string lastname) {
+            Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.AddEmployeeRequestBody();
+            inValue.Body.employeeNumber = employeeNumber;
+            inValue.Body.firstname = firstname;
+            inValue.Body.lastname = lastname;
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).AddEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponse Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.DeleteEmployee(Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest request) {
+            return base.Channel.DeleteEmployee(request);
+        }
+        
+        public int DeleteEmployee(string employeeNumber) {
+            Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequestBody();
+            inValue.Body.employeeNumber = employeeNumber;
+            Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponse retVal = ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).DeleteEmployee(inValue);
+            return retVal.Body.DeleteEmployeeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponse> Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap.DeleteEmployeeAsync(Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest request) {
+            return base.Channel.DeleteEmployeeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeResponse> DeleteEmployeeAsync(string employeeNumber) {
+            Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest inValue = new Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequest();
+            inValue.Body = new Uppgift3_Forms.Uppgift3_ServiceReference.DeleteEmployeeRequestBody();
+            inValue.Body.employeeNumber = employeeNumber;
+            return ((Uppgift3_Forms.Uppgift3_ServiceReference.ServiceSoap)(this)).DeleteEmployeeAsync(inValue);
         }
     }
 }
