@@ -68,7 +68,7 @@ public static class Dal
                     aUser.BirthDate = dateTime;
             
                 aUser.Profession = dataReader["Profession"].ToString();
-                aUser.Password = "Encrypted"; //We do not present the password, picture or UserLocationPurpose
+                aUser.Password = dataReader["Password"].ToString();
                 aUser.About = dataReader["About"].ToString();
                 aUser.Industry = dataReader["Industry"].ToString();
 
