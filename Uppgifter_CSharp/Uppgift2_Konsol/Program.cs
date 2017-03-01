@@ -29,7 +29,7 @@ namespace Uppgift2_Konsol
                     switch (x)
                     {
                         case ("1"):
-                            Console.WriteLine("\nUSER\n");
+                            Console.WriteLine("\n USER\n");
                             List<User> u = Controller.GetAllUsers();
                             foreach (User i in u)
                             {
@@ -37,7 +37,7 @@ namespace Uppgift2_Konsol
                             }
                             break;
                         case ("2"):
-                            Console.WriteLine("\nLOCATION\n");
+                            Console.WriteLine("\n LOCATION\n");
                             List<Location> l = Controller.GetAllLocations();
                             foreach (Location i in l)
                             {
@@ -45,7 +45,7 @@ namespace Uppgift2_Konsol
                             }
                             break;
                         case ("3"):
-                            Console.WriteLine("\nUSER/LOCATION/PURPOSE\n");
+                            Console.WriteLine("\n USER/LOCATION/PURPOSE\n");
                             List<UserLocationPurpose> ulp = Controller.GetAllUserLocationPurposes();
                             foreach (UserLocationPurpose i in ulp)
                             {
@@ -53,7 +53,7 @@ namespace Uppgift2_Konsol
                             }
                             break;
                         case ("4"):
-                            Console.WriteLine("\nFIELD OF PROFESSION\n");
+                            Console.WriteLine("\n FIELD OF PROFESSION\n");
                             List<FieldOfProfession> f = Controller.GetAllFieldOfProfessions();
                             foreach (FieldOfProfession i in f)
                             {
@@ -69,7 +69,7 @@ namespace Uppgift2_Konsol
                             }
                             break;
                         case ("6"):
-                            Console.WriteLine("\nMESSAGE\n");
+                            Console.WriteLine("\n MESSAGE\n");
                             List<Message> me = Controller.GetAllMessages();
                             foreach (Message i in me)
                             {
@@ -77,7 +77,7 @@ namespace Uppgift2_Konsol
                             }
                             break;
                         case ("7"):
-                            Console.WriteLine("\nPURPOSE\n");
+                            Console.WriteLine("\n PURPOSE\n");
                             List<Purpose> p = Controller.GetAllPurposes();
                             foreach (Purpose i in p)
                             {
