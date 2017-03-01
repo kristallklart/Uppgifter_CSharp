@@ -31,13 +31,13 @@ namespace Uppgift2_Forms.ControllerLayer
         {
             return proxy.GetAllFieldOfProfessions();
         }
-        //public static List<object> GetAllMatches()
-        //{
-        //    return proxy.GetAllMatches();
-        //}
-        //public static List<object> GetAllMessages()
-        //{
-        //    return proxy.GetAllMessages();
-        //}
+        public static List<object> GetAllMatches()
+        {
+            return proxy.GetAllMatches();
+        }
+        public static List<object> GetAllMessages()
+        {
+            return proxy.GetAllMessages();
+        }
     }
 }
