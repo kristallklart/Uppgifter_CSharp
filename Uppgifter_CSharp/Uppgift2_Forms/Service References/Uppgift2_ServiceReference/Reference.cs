@@ -810,6 +810,20 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetAllFieldOfProfessions", ReplyAction="*")]
         System.Threading.Tasks.Task<Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsResponse> GetAllFieldOfProfessionsAsync(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllMessagesResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetAllMessages", ReplyAction="*")]
+        Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponse GetAllMessages(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetAllMessages", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponse> GetAllMessagesAsync(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetAllMatchesResult from namespace Grupp7 is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetAllMatches", ReplyAction="*")]
+        Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponse GetAllMatches(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="Grupp7/GetAllMatches", ReplyAction="*")]
+        System.Threading.Tasks.Task<Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponse> GetAllMatchesAsync(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1117,6 +1131,128 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllMessagesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllMessages", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequestBody Body;
+        
+        public GetAllMessagesRequest() {
+        }
+        
+        public GetAllMessagesRequest(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllMessagesRequestBody {
+        
+        public GetAllMessagesRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllMessagesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllMessagesResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponseBody Body;
+        
+        public GetAllMessagesResponse() {
+        }
+        
+        public GetAllMessagesResponse(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetAllMessagesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Message> GetAllMessagesResult;
+        
+        public GetAllMessagesResponseBody() {
+        }
+        
+        public GetAllMessagesResponseBody(System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Message> GetAllMessagesResult) {
+            this.GetAllMessagesResult = GetAllMessagesResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllMatchesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllMatches", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequestBody Body;
+        
+        public GetAllMatchesRequest() {
+        }
+        
+        public GetAllMatchesRequest(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetAllMatchesRequestBody {
+        
+        public GetAllMatchesRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetAllMatchesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetAllMatchesResponse", Namespace="Grupp7", Order=0)]
+        public Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponseBody Body;
+        
+        public GetAllMatchesResponse() {
+        }
+        
+        public GetAllMatchesResponse(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="Grupp7")]
+    public partial class GetAllMatchesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Match> GetAllMatchesResult;
+        
+        public GetAllMatchesResponseBody() {
+        }
+        
+        public GetAllMatchesResponseBody(System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Match> GetAllMatchesResult) {
+            this.GetAllMatchesResult = GetAllMatchesResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface Uppgift2_ServiceSoapChannel : Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -1257,6 +1393,52 @@ namespace Uppgift2_Forms.Uppgift2_ServiceReference {
             Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsRequest();
             inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllFieldOfProfessionsRequestBody();
             return ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllFieldOfProfessionsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponse Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetAllMessages(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest request) {
+            return base.Channel.GetAllMessages(request);
+        }
+        
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Message> GetAllMessages() {
+            Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest();
+            inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequestBody();
+            Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponse retVal = ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllMessages(inValue);
+            return retVal.Body.GetAllMessagesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponse> Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetAllMessagesAsync(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest request) {
+            return base.Channel.GetAllMessagesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesResponse> GetAllMessagesAsync() {
+            Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequest();
+            inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMessagesRequestBody();
+            return ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllMessagesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponse Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetAllMatches(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest request) {
+            return base.Channel.GetAllMatches(request);
+        }
+        
+        public System.Collections.Generic.List<Uppgift2_Forms.Uppgift2_ServiceReference.Match> GetAllMatches() {
+            Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest();
+            inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequestBody();
+            Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponse retVal = ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllMatches(inValue);
+            return retVal.Body.GetAllMatchesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponse> Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap.GetAllMatchesAsync(Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest request) {
+            return base.Channel.GetAllMatchesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesResponse> GetAllMatchesAsync() {
+            Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest inValue = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequest();
+            inValue.Body = new Uppgift2_Forms.Uppgift2_ServiceReference.GetAllMatchesRequestBody();
+            return ((Uppgift2_Forms.Uppgift2_ServiceReference.Uppgift2_ServiceSoap)(this)).GetAllMatchesAsync(inValue);
         }
     }
 }
