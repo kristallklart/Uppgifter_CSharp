@@ -33,5 +33,51 @@ public class Service : System.Web.Services.WebService
     {
         return Dal.GetEmployeeRelatives();
     }
-    
+
+    [WebMethod]
+    public List<Employee> GetSickleave()
+    {
+        return Dal.GetSickleave();
+    }
+
+    [WebMethod]
+    public List<Employee> GetMostSick()
+    {
+        return Dal.GetMostSick();
+    }
+    [WebMethod]
+    public List<string> GetKeys()
+    {
+        return Dal.GetKeys();
+    }
+    [WebMethod]
+    public List<Index> GetIndices()
+    {
+        return Dal.GetIndices();
+    }
+    [WebMethod]
+    public List<Constraint> GetConstraints()
+    {
+        return Dal.GetConstraints();
+    }
+    [WebMethod]
+    public List<string> GetTablesOne()
+    {
+        return Dal.GetTablesOne();
+    }
+    [WebMethod]
+    public List<string> GetTablesTwo()
+    {
+        return Dal.GetTablesTwo();
+    }
+    [WebMethod]
+    public List<string> GetColumnsOne()
+    {
+        return Dal.GetColumnsOne();
+    }
+    [WebMethod]
+    public List<string> GetColumnsTwo()
+    {
+        return Dal.GetColumnsTwo();
+    }
 }

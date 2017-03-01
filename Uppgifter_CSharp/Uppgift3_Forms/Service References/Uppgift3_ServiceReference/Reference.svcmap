@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f45e3998-8093-4fde-881c-0985a3a1d14b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a03c5afe-a952-4eea-928a-c90391ca9911" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -24,8 +24,8 @@
     <MetadataSource Address="http://localhost:50961/Uppgift3_Service.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Uppgift3_Service.wsdl" MetadataType="Wsdl" ID="5d6176ff-ffc2-439d-888d-52864be4b631" SourceId="1" SourceUrl="http://localhost:50961/Uppgift3_Service.asmx?wsdl" />
-    <MetadataFile FileName="Uppgift3_Service.disco" MetadataType="Disco" ID="9b497709-5ba6-4899-a1a3-5c81c22d1443" SourceId="1" SourceUrl="http://localhost:50961/Uppgift3_Service.asmx?disco" />
+    <MetadataFile FileName="Uppgift3_Service.wsdl" MetadataType="Wsdl" ID="e28c9c51-538e-4208-8c76-e80bbd3ef649" SourceId="1" SourceUrl="http://localhost:50961/Uppgift3_Service.asmx?wsdl" />
+    <MetadataFile FileName="Uppgift3_Service.disco" MetadataType="Disco" ID="ae719495-65b1-4ffc-abbc-8df93bf5e5ea" SourceId="1" SourceUrl="http://localhost:50961/Uppgift3_Service.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
