@@ -80,7 +80,7 @@
             this.buttonShowTable.Margin = new System.Windows.Forms.Padding(2);
             this.buttonShowTable.Name = "buttonShowTable";
             this.buttonShowTable.Size = new System.Drawing.Size(50, 19);
-            this.buttonShowTable.TabIndex = 3;
+            this.buttonShowTable.TabIndex = 1;
             this.buttonShowTable.Text = "Show";
             this.buttonShowTable.UseVisualStyleBackColor = true;
             this.buttonShowTable.Click += new System.EventHandler(this.buttonShowTable_Click);
@@ -126,7 +126,7 @@
             this.buttonShowMetadata.Margin = new System.Windows.Forms.Padding(2);
             this.buttonShowMetadata.Name = "buttonShowMetadata";
             this.buttonShowMetadata.Size = new System.Drawing.Size(50, 19);
-            this.buttonShowMetadata.TabIndex = 4;
+            this.buttonShowMetadata.TabIndex = 3;
             this.buttonShowMetadata.Text = "Show";
             this.buttonShowMetadata.UseVisualStyleBackColor = true;
             this.buttonShowMetadata.Click += new System.EventHandler(this.buttonShowMetadata_Click);
@@ -150,7 +150,7 @@
             this.cueComboBoxShowMetadata.Margin = new System.Windows.Forms.Padding(2);
             this.cueComboBoxShowMetadata.Name = "cueComboBoxShowMetadata";
             this.cueComboBoxShowMetadata.Size = new System.Drawing.Size(159, 21);
-            this.cueComboBoxShowMetadata.TabIndex = 1;
+            this.cueComboBoxShowMetadata.TabIndex = 2;
             // 
             // dataGridViewShowTable
             // 
@@ -161,7 +161,7 @@
             this.dataGridViewShowTable.ReadOnly = true;
             this.dataGridViewShowTable.RowTemplate.Height = 28;
             this.dataGridViewShowTable.Size = new System.Drawing.Size(562, 413);
-            this.dataGridViewShowTable.TabIndex = 4;
+            this.dataGridViewShowTable.TabIndex = 10;
             // 
             // labelFeedback
             // 
@@ -189,7 +189,7 @@
             this.textBoxNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNumber.Name = "textBoxNumber";
             this.textBoxNumber.Size = new System.Drawing.Size(129, 20);
-            this.textBoxNumber.TabIndex = 8;
+            this.textBoxNumber.TabIndex = 4;
             this.textBoxNumber.Validating += new System.ComponentModel.CancelEventHandler(this.textBox_Validating);
             this.textBoxNumber.Validated += new System.EventHandler(this.textBox_Validated);
             // 
@@ -199,7 +199,7 @@
             this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(129, 20);
-            this.textBoxFirstName.TabIndex = 9;
+            this.textBoxFirstName.TabIndex = 5;
             this.textBoxFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.textBox_Validating);
             this.textBoxFirstName.Validated += new System.EventHandler(this.textBox_Validated);
             // 
@@ -296,7 +296,7 @@
             this.buttonDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDeleteEmployee.Name = "buttonDeleteEmployee";
             this.buttonDeleteEmployee.Size = new System.Drawing.Size(65, 34);
-            this.buttonDeleteEmployee.TabIndex = 13;
+            this.buttonDeleteEmployee.TabIndex = 9;
             this.buttonDeleteEmployee.Text = "Delete Employee";
             this.buttonDeleteEmployee.UseVisualStyleBackColor = true;
             this.buttonDeleteEmployee.Click += new System.EventHandler(this.buttonDeleteEmployee_Click);
@@ -307,7 +307,7 @@
             this.buttonUpdateEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdateEmployee.Name = "buttonUpdateEmployee";
             this.buttonUpdateEmployee.Size = new System.Drawing.Size(74, 34);
-            this.buttonUpdateEmployee.TabIndex = 12;
+            this.buttonUpdateEmployee.TabIndex = 8;
             this.buttonUpdateEmployee.Text = "Update Employee";
             this.buttonUpdateEmployee.UseVisualStyleBackColor = true;
             this.buttonUpdateEmployee.Click += new System.EventHandler(this.buttonUpdateEmployee_Click);
@@ -318,7 +318,7 @@
             this.buttonAddEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddEmployee.Name = "buttonAddEmployee";
             this.buttonAddEmployee.Size = new System.Drawing.Size(66, 34);
-            this.buttonAddEmployee.TabIndex = 11;
+            this.buttonAddEmployee.TabIndex = 7;
             this.buttonAddEmployee.Text = "Add Employee";
             this.buttonAddEmployee.UseVisualStyleBackColor = true;
             this.buttonAddEmployee.Click += new System.EventHandler(this.buttonAddEmployee_Click);
