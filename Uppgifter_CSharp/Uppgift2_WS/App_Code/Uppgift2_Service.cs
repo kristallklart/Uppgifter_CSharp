@@ -22,7 +22,7 @@ public class Uppgift2_Service : System.Web.Services.WebService
     public Uppgift2_Service () 
     {
         //Uncomment the following line if using designed components 
-        //InitializeComponent(); 
+        //InitializeComponent();
     }
 
     [WebMethod]

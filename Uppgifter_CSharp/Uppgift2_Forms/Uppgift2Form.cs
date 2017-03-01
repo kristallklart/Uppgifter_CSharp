@@ -56,14 +56,16 @@ namespace Uppgift2_Forms
                         dataGridViewShowTable.DataSource = Controller.GetAllFieldOfProfessions();
                         break;
                     case 4:
-                        dataGridViewShowTable.DataSource = Controller.GetAllPurposes(); ;
+                        dataGridViewShowTable.DataSource = Controller.GetAllPurposes(); 
                         break;
-                    //case 5:
-                    //    dataGridViewShowTable.DataSource = Controller.GetAllMatches();;
-                    //    break;
-                    //case 6:
-                    //    dataGridViewShowTable.DataSource = Controller.GetAllMessages();
-                    //    break;
+                    case 5:
+                        dataGridViewShowTable.DataSource = Controller.GetAllMatches();
+                        dataGridViewShowTable.Columns[2].Visible = false;
+                        break;
+                    case 6:
+                        dataGridViewShowTable.DataSource = Controller.GetAllMessages();
+                        dataGridViewShowTable.Columns[4].Visible = false;
+                        break;
                     default:
                         labelRespons.Text = "Please choose table to show";
                         break;

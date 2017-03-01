@@ -29,120 +29,81 @@ namespace Uppgift2_Konsol
                     switch (x)
                     {
                         case ("1"):
-                            Console.WriteLine("\nUSER\n");
+                            Console.WriteLine("\n USER\n");
                             List<User> u = Controller.GetAllUsers();
                             foreach (User i in u)
                             {
                                 Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}\n", i.UserName, i.FirstName, i.LastName, i.BirthDate, i.Profession, i.Industry);
                             }
-                            on = false;
                             break;
                         case ("2"):
-                            Console.WriteLine("\nLOCATION\n");
+                            Console.WriteLine("\n LOCATION\n");
                             List<Location> l = Controller.GetAllLocations();
                             foreach (Location i in l)
                             {
                                 Console.WriteLine("{0}\n", i.City);
                             }
-                            on = false;
                             break;
                         case ("3"):
-                            Console.WriteLine("\nUSER/LOCATION/PURPOSE\n");
+                            Console.WriteLine("\n USER/LOCATION/PURPOSE\n");
                             List<UserLocationPurpose> ulp = Controller.GetAllUserLocationPurposes();
                             foreach (UserLocationPurpose i in ulp)
                             {
                                 Console.WriteLine("{0}, {1}, {2}, {3}, {4}\n", i.Username, i.City, i.Purposetype, i.FromDate, i.ToDate);
                             }
-                            on = false;
                             break;
                         case ("4"):
-                            Console.WriteLine("\nFIELD OF PROFESSION\n");
+                            Console.WriteLine("\n FIELD OF PROFESSION\n");
                             List<FieldOfProfession> f = Controller.GetAllFieldOfProfessions();
                             foreach (FieldOfProfession i in f)
                             {
                                 Console.WriteLine("{0}\n", i.Industry);
                             }
-                            on = false;
                             break;
                         case ("5"):
-                            Console.WriteLine("Knapp 5");
-                            on = false;
+                            Console.WriteLine("\n MATCH\n");
+                            List<Match> m = Controller.GetAllMatches();
+                            foreach (Match i in m)
+                            {
+                                Console.WriteLine("{0}, {1}\n", i.Username, i.MatchUsername);
+                            }
                             break;
                         case ("6"):
-                            Console.WriteLine("Knapp 6");
-                            on = false;
+                            Console.WriteLine("\n MESSAGE\n");
+                            List<Message> me = Controller.GetAllMessages();
+                            foreach (Message i in me)
+                            {
+                                Console.WriteLine("{0}, {1}, {2}, {3}\n", i.Id, i.Sender, i.Content, i.Reciever);
+                            }
                             break;
                         case ("7"):
-                            Console.WriteLine("\nPURPOSE\n");
+                            Console.WriteLine("\n PURPOSE\n");
                             List<Purpose> p = Controller.GetAllPurposes();
                             foreach (Purpose i in p)
                             {
                                 Console.WriteLine("{0}\n", i.PurposeType);
                             }
-                            on = false;
                             break;
 
                         default:
                             Console.WriteLine("That table doesn't exist, please enter a valid number (1-8).");
                             break;
                     }
+                    Console.WriteLine("Do you want to see another table? Type y for yes, n to exit");
+                    x = Console.ReadLine();
+                    if(x == "n")
+                    {
+                        on = false;
+                    }
+                  
                 }
+                
+
                 catch (FaultException)
                 {
                     Console.WriteLine("The table couldn't be loaded");
                 }
-            }
-            Console.ReadLine();
-
-            /*        //Uppgift2_ServiceReference.Person[] persons = proxy.GetAllPersons();
-            Uppgift2_ServiceSoapClient proxy = new Uppgift2_ServiceSoapClient();
-
-            List<User> users = new List<User>(); 
-            //        Uppgift2_ServiceReference.User[] users = proxy.GetUsers();
-            //        Uppgift2_ServiceReference.Purpose[] purposes = proxy.GetPurposes();
-            //        Uppgift2_ServiceReference.FieldOfProfession[] fieldOfProfessions = proxy.GetFieldOfProfessions();
-            //        Uppgift2_ServiceReference.Location[] locations = proxy.GetLocations();
-            //        Uppgift2_ServiceReference.UserLocationPurpose[] userLocationPurposes = proxy.GetUserLocationPurposes();
-
-            //        Console.WriteLine(users.Length);
-            //        Console.ReadKey();
-            users = proxy.GetAllUsers();
-
-                    foreach(User i in users)
-                    {
-                        Console.WriteLine(i.UserName);
-                        Console.WriteLine(i.FirstName);
-                        Console.WriteLine(i.LastName);
-                        Console.WriteLine(i.About);
-                        Console.WriteLine(i.Profession);
-                        Console.WriteLine(i.Industry);
-                    }
-                    Console.ReadKey();
-
-            //        for (int i = 0; i < purposes.Length; i++)
-            //        {
-            //            Console.WriteLine(purposes[i].PurposeType);
-            //        }
-            //        Console.ReadKey();
-
-            //        for (int i = 0; i < fieldOfProfessions.Length; i++)
-            //        {
-            //            Console.WriteLine(fieldOfProfessions[i].Industry);
-            //        }
-            //        Console.ReadKey();
-
-            //        for (int i = 0; i < locations.Length; i++)
-            //        {
-            //            Console.WriteLine(locations[i].City);
-            //        }
-
-            //        for (int i = 0; i < userLocationPurposes.Length; i++)
-            //        {
-            //            Console.WriteLine(userLocationPurposes[i].City);
-            //            Console.WriteLine(userLocationPurposes[i].Location);
-            //            Console.WriteLine(userLocationPurposes[i].Purposetype);
-            //        }
-            //        Console.ReadKey();*/
+            } 
         }
     }
 }
