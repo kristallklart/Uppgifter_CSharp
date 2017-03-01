@@ -20,5 +20,48 @@ namespace Uppgift3_Forms.ControllerLayer
         {
             return proxy.GetEmployeeRelatives();
         }
+
+        public static List<Employee> GetSickleave()
+        {
+            return proxy.GetSickleave();
+        }
+
+        public static List<Employee> GetMostSick()
+        {
+            return proxy.GetMostSick();
+        }
+
+        public static List<string> GetKeys()
+        {
+            return proxy.GetKeys();
+        }
+
+        public static List<Index> GetIndices()
+        {
+            return proxy.GetIndices();
+        }
+
+        public static List<Constraint> GetConstraints()
+        {
+            return proxy.GetConstraints();
+        }
+
+        public static List<string> GetTablesOne()
+        {
+            return proxy.GetTablesOne();
+        }
+        public static List<string> GetTablesTwo()
+        {
+            return proxy.GetTablesTwo();
+        }
+
+        public static List<string> GetColumnsOne()
+        {
+            return proxy.GetColumnsOne();
+        }
+        public static List<string> GetColumnsTwo()
+        {
+            return proxy.GetColumnsTwo();
+        }
     }
 }

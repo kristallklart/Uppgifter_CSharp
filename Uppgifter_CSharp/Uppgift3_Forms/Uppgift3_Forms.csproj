@@ -86,10 +86,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.Constraint.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.Employee.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.EmployeeRelative.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsOneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetColumnsTwoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetConstraintsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeeRelativesResponse.datasource">
@@ -98,7 +113,28 @@
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetEmployeesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetIndicesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetMostSickResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetSickleaveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesOneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.Index.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Service.wsdl" />

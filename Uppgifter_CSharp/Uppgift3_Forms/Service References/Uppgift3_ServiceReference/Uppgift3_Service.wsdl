@@ -35,6 +35,9 @@
           <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AbsenceCause" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfSickDays" type="s:int" />
         </s:sequence>
       </s:complexType>
       <s:element name="GetEmployeeRelatives">
@@ -59,6 +62,127 @@
           <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
         </s:sequence>
       </s:complexType>
+      <s:element name="GetSickleave">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSickleaveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSickleaveResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMostSick">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMostSickResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMostSickResult" type="tns:ArrayOfEmployee" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKeys">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetKeysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKeysResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetIndices">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetIndicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIndicesResult" type="tns:ArrayOfIndex" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIndex">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Index" nillable="true" type="tns:Index" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Index">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IndexId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetConstraints">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetConstraintsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConstraintsResult" type="tns:ArrayOfConstraint" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConstraint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Constraint" nillable="true" type="tns:Constraint" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Constraint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ConstraintCatalog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TableCatalog" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTablesOne">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTablesOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTablesOneResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTablesTwo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTablesTwoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTablesTwoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetColumnsOne">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetColumnsOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetColumnsOneResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetColumnsTwo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetColumnsTwoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetColumnsTwoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -79,6 +203,60 @@
   <wsdl:message name="GetEmployeeRelativesSoapOut">
     <wsdl:part name="parameters" element="tns:GetEmployeeRelativesResponse" />
   </wsdl:message>
+  <wsdl:message name="GetSickleaveSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSickleave" />
+  </wsdl:message>
+  <wsdl:message name="GetSickleaveSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSickleaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMostSickSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMostSick" />
+  </wsdl:message>
+  <wsdl:message name="GetMostSickSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMostSickResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKeysSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKeys" />
+  </wsdl:message>
+  <wsdl:message name="GetKeysSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIndicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIndices" />
+  </wsdl:message>
+  <wsdl:message name="GetIndicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIndicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConstraintsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConstraints" />
+  </wsdl:message>
+  <wsdl:message name="GetConstraintsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConstraintsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTablesOneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTablesOne" />
+  </wsdl:message>
+  <wsdl:message name="GetTablesOneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTablesOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTablesTwoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTablesTwo" />
+  </wsdl:message>
+  <wsdl:message name="GetTablesTwoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTablesTwoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsOneSoapIn">
+    <wsdl:part name="parameters" element="tns:GetColumnsOne" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsOneSoapOut">
+    <wsdl:part name="parameters" element="tns:GetColumnsOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsTwoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetColumnsTwo" />
+  </wsdl:message>
+  <wsdl:message name="GetColumnsTwoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetColumnsTwoResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServiceSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -91,6 +269,42 @@
     <wsdl:operation name="GetEmployeeRelatives">
       <wsdl:input message="tns:GetEmployeeRelativesSoapIn" />
       <wsdl:output message="tns:GetEmployeeRelativesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSickleave">
+      <wsdl:input message="tns:GetSickleaveSoapIn" />
+      <wsdl:output message="tns:GetSickleaveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMostSick">
+      <wsdl:input message="tns:GetMostSickSoapIn" />
+      <wsdl:output message="tns:GetMostSickSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKeys">
+      <wsdl:input message="tns:GetKeysSoapIn" />
+      <wsdl:output message="tns:GetKeysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndices">
+      <wsdl:input message="tns:GetIndicesSoapIn" />
+      <wsdl:output message="tns:GetIndicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConstraints">
+      <wsdl:input message="tns:GetConstraintsSoapIn" />
+      <wsdl:output message="tns:GetConstraintsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesOne">
+      <wsdl:input message="tns:GetTablesOneSoapIn" />
+      <wsdl:output message="tns:GetTablesOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesTwo">
+      <wsdl:input message="tns:GetTablesTwoSoapIn" />
+      <wsdl:output message="tns:GetTablesTwoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnsOne">
+      <wsdl:input message="tns:GetColumnsOneSoapIn" />
+      <wsdl:output message="tns:GetColumnsOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnsTwo">
+      <wsdl:input message="tns:GetColumnsTwoSoapIn" />
+      <wsdl:output message="tns:GetColumnsTwoSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
@@ -122,6 +336,87 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetSickleave">
+      <soap:operation soapAction="Grupp7/GetSickleave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostSick">
+      <soap:operation soapAction="Grupp7/GetMostSick" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeys">
+      <soap:operation soapAction="Grupp7/GetKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndices">
+      <soap:operation soapAction="Grupp7/GetIndices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstraints">
+      <soap:operation soapAction="Grupp7/GetConstraints" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesOne">
+      <soap:operation soapAction="Grupp7/GetTablesOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesTwo">
+      <soap:operation soapAction="Grupp7/GetTablesTwo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnsOne">
+      <soap:operation soapAction="Grupp7/GetColumnsOne" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnsTwo">
+      <soap:operation soapAction="Grupp7/GetColumnsTwo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -145,6 +440,87 @@
     </wsdl:operation>
     <wsdl:operation name="GetEmployeeRelatives">
       <soap12:operation soapAction="Grupp7/GetEmployeeRelatives" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSickleave">
+      <soap12:operation soapAction="Grupp7/GetSickleave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostSick">
+      <soap12:operation soapAction="Grupp7/GetMostSick" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKeys">
+      <soap12:operation soapAction="Grupp7/GetKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndices">
+      <soap12:operation soapAction="Grupp7/GetIndices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConstraints">
+      <soap12:operation soapAction="Grupp7/GetConstraints" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesOne">
+      <soap12:operation soapAction="Grupp7/GetTablesOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTablesTwo">
+      <soap12:operation soapAction="Grupp7/GetTablesTwo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnsOne">
+      <soap12:operation soapAction="Grupp7/GetColumnsOne" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnsTwo">
+      <soap12:operation soapAction="Grupp7/GetColumnsTwo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
