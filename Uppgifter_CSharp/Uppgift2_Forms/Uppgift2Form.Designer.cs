@@ -48,9 +48,9 @@
             // buttonShowTable
             // 
             this.buttonShowTable.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShowTable.Location = new System.Drawing.Point(274, 8);
+            this.buttonShowTable.Location = new System.Drawing.Point(274, 12);
             this.buttonShowTable.Name = "buttonShowTable";
-            this.buttonShowTable.Size = new System.Drawing.Size(125, 35);
+            this.buttonShowTable.Size = new System.Drawing.Size(125, 32);
             this.buttonShowTable.TabIndex = 2;
             this.buttonShowTable.Text = "Show Table";
             this.buttonShowTable.UseVisualStyleBackColor = true;
