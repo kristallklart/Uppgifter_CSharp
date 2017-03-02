@@ -19,11 +19,9 @@ namespace Uppgift1_Konsol
 
                 Console.WriteLine("\nThank you! Processing request...\n");
                 
-                Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient proxy = new Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient(); //Skapandet av en ny SOAP-klient
-
                 try
                 {
-                    string fileContent = proxy.OpenFile(fileToOpen);
+                    string fileContent = Controller.GetFileContent(fileToOpen);
                     Console.WriteLine("File content");
                     Console.WriteLine("------------");
                     Console.WriteLine(fileContent);
@@ -53,7 +51,6 @@ namespace Uppgift1_Konsol
                     }
                     else
                     {
-
                         Console.WriteLine("\nUnknown input, please try again.\n");
                     }
                 }

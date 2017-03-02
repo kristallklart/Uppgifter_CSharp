@@ -31,7 +31,7 @@
             this.dataGridViewShowTable = new System.Windows.Forms.DataGridView();
             this.buttonShowTable = new System.Windows.Forms.Button();
             this.cueComboBoxChooseTable = new Uppgift2_Forms.Utilities.CueComboBox();
-            this.labelRespons = new System.Windows.Forms.Label();
+            this.labelFeedback = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewShowTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,18 +70,18 @@
             // 
             // labelRespons
             // 
-            this.labelRespons.AutoSize = true;
-            this.labelRespons.Location = new System.Drawing.Point(13, 634);
-            this.labelRespons.Name = "labelRespons";
-            this.labelRespons.Size = new System.Drawing.Size(106, 20);
-            this.labelRespons.TabIndex = 4;
+            this.labelFeedback.AutoSize = true;
+            this.labelFeedback.Location = new System.Drawing.Point(13, 634);
+            this.labelFeedback.Name = "labelRespons";
+            this.labelFeedback.Size = new System.Drawing.Size(106, 20);
+            this.labelFeedback.TabIndex = 4;
             // 
             // Uppgift2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 661);
-            this.Controls.Add(this.labelRespons);
+            this.Controls.Add(this.labelFeedback);
             this.Controls.Add(this.cueComboBoxChooseTable);
             this.Controls.Add(this.buttonShowTable);
             this.Controls.Add(this.dataGridViewShowTable);
@@ -98,7 +98,7 @@
         private System.Windows.Forms.DataGridView dataGridViewShowTable;
         private System.Windows.Forms.Button buttonShowTable;
         private Utilities.CueComboBox cueComboBoxChooseTable;
-        private System.Windows.Forms.Label labelRespons;
+        private System.Windows.Forms.Label labelFeedback;
     }
 }
 

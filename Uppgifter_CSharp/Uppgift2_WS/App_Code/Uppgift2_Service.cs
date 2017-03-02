@@ -9,6 +9,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using DataAccessLayer;
+using Model;
 
 [WebService(Namespace = "Grupp7",
             Description = "This web service has multiple web methods which all takes zero arguments and returns an object " +

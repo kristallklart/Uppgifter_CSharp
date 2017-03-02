@@ -7,28 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ServiceModel;
 
 namespace Uppgift1_Forms
 {
     public partial class Uppgift1Form : Form
     {
         private OpenFileDialog openFile = new OpenFileDialog();
-        //private Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient proxy = new Uppgift1_ServiceReference.Uppgift1_ServiceSoapClient(); //Skapar en ny proxy-referens
 
         public Uppgift1Form()
         {
             InitializeComponent();
-            openFile.Filter = "Text Files|*.txt"; // Gör att openFile enbart filtrerar på textfiler.
+            openFile.Filter = "Text Files|*.txt";
         }
 
         private void button_BrowseFile_Click(object sender, EventArgs e)
         {
-            if (openFile.ShowDialog() == DialogResult.OK) // Ser till att koden inte fortsätter om man inte valt att öppna en fil.
+            try
             {
-                string fileContent;
-                fileContent = Controller.GetFileContent(openFile.FileName);
-                richTextBox_Result.Text = fileContent;
-                textBox_FileName.Text = openFile.SafeFileName;
+                if (openFile.ShowDialog() == DialogResult.OK)
+                {
+                    string fileContent;
+                    fileContent = Controller.GetFileContent(openFile.FileName);
+                    richTextBoxResult.Text = fileContent;
+                    textBoxFileName.Text = openFile.SafeFileName;
+                }
+            }
+            catch (FaultException)
+            {
+                labelFeedback.Text = "Error: Could not open file.";
             }
         }
     }

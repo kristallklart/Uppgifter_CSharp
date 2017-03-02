@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_FileName = new System.Windows.Forms.TextBox();
-            this.richTextBox_Result = new System.Windows.Forms.RichTextBox();
+            this.textBoxFileName = new System.Windows.Forms.TextBox();
+            this.richTextBoxResult = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_BrowseFile = new System.Windows.Forms.Button();
-            this.label_FileName = new System.Windows.Forms.Label();
-            this.groupBox_Result = new System.Windows.Forms.GroupBox();
-            this.label_FileContent = new System.Windows.Forms.Label();
-            this.groupBox_Result.SuspendLayout();
+            this.buttonBrowseFile = new System.Windows.Forms.Button();
+            this.labelFileName = new System.Windows.Forms.Label();
+            this.groupBoxResult = new System.Windows.Forms.GroupBox();
+            this.labelFileContent = new System.Windows.Forms.Label();
+            this.labelFeedback = new System.Windows.Forms.Label();
+            this.groupBoxResult.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox_FileName
+            // textBoxFileName
             // 
-            this.textBox_FileName.Location = new System.Drawing.Point(72, 38);
-            this.textBox_FileName.Name = "textBox_FileName";
-            this.textBox_FileName.ReadOnly = true;
-            this.textBox_FileName.Size = new System.Drawing.Size(258, 20);
-            this.textBox_FileName.TabIndex = 0;
+            this.textBoxFileName.Location = new System.Drawing.Point(72, 38);
+            this.textBoxFileName.Name = "textBoxFileName";
+            this.textBoxFileName.ReadOnly = true;
+            this.textBoxFileName.Size = new System.Drawing.Size(258, 20);
+            this.textBoxFileName.TabIndex = 0;
             // 
-            // richTextBox_Result
+            // richTextBoxResult
             // 
-            this.richTextBox_Result.Location = new System.Drawing.Point(6, 88);
-            this.richTextBox_Result.Name = "richTextBox_Result";
-            this.richTextBox_Result.ReadOnly = true;
-            this.richTextBox_Result.Size = new System.Drawing.Size(324, 89);
-            this.richTextBox_Result.TabIndex = 1;
-            this.richTextBox_Result.Text = "";
+            this.richTextBoxResult.Location = new System.Drawing.Point(6, 83);
+            this.richTextBoxResult.Name = "richTextBoxResult";
+            this.richTextBoxResult.ReadOnly = true;
+            this.richTextBoxResult.Size = new System.Drawing.Size(324, 89);
+            this.richTextBoxResult.TabIndex = 1;
+            this.richTextBoxResult.Text = "";
             // 
             // label1
             // 
@@ -64,59 +65,68 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "File content:";
             // 
-            // button_BrowseFile
+            // buttonBrowseFile
             // 
-            this.button_BrowseFile.Location = new System.Drawing.Point(15, 12);
-            this.button_BrowseFile.Name = "button_BrowseFile";
-            this.button_BrowseFile.Size = new System.Drawing.Size(75, 23);
-            this.button_BrowseFile.TabIndex = 3;
-            this.button_BrowseFile.Text = "Browse file...";
-            this.button_BrowseFile.UseVisualStyleBackColor = true;
-            this.button_BrowseFile.Click += new System.EventHandler(this.button_BrowseFile_Click);
+            this.buttonBrowseFile.Location = new System.Drawing.Point(15, 12);
+            this.buttonBrowseFile.Name = "buttonBrowseFile";
+            this.buttonBrowseFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonBrowseFile.TabIndex = 3;
+            this.buttonBrowseFile.Text = "Browse file...";
+            this.buttonBrowseFile.UseVisualStyleBackColor = true;
+            this.buttonBrowseFile.Click += new System.EventHandler(this.button_BrowseFile_Click);
             // 
-            // label_FileName
+            // labelFileName
             // 
-            this.label_FileName.AutoSize = true;
-            this.label_FileName.Location = new System.Drawing.Point(7, 38);
-            this.label_FileName.Name = "label_FileName";
-            this.label_FileName.Size = new System.Drawing.Size(55, 13);
-            this.label_FileName.TabIndex = 4;
-            this.label_FileName.Text = "File name:";
+            this.labelFileName.AutoSize = true;
+            this.labelFileName.Location = new System.Drawing.Point(7, 38);
+            this.labelFileName.Name = "labelFileName";
+            this.labelFileName.Size = new System.Drawing.Size(55, 13);
+            this.labelFileName.TabIndex = 4;
+            this.labelFileName.Text = "File name:";
             // 
-            // groupBox_Result
+            // groupBoxResult
             // 
-            this.groupBox_Result.Controls.Add(this.label_FileContent);
-            this.groupBox_Result.Controls.Add(this.richTextBox_Result);
-            this.groupBox_Result.Controls.Add(this.textBox_FileName);
-            this.groupBox_Result.Controls.Add(this.label_FileName);
-            this.groupBox_Result.Location = new System.Drawing.Point(15, 55);
-            this.groupBox_Result.Name = "groupBox_Result";
-            this.groupBox_Result.Size = new System.Drawing.Size(336, 184);
-            this.groupBox_Result.TabIndex = 5;
-            this.groupBox_Result.TabStop = false;
-            this.groupBox_Result.Text = "Result";
+            this.groupBoxResult.Controls.Add(this.labelFeedback);
+            this.groupBoxResult.Controls.Add(this.labelFileContent);
+            this.groupBoxResult.Controls.Add(this.richTextBoxResult);
+            this.groupBoxResult.Controls.Add(this.textBoxFileName);
+            this.groupBoxResult.Controls.Add(this.labelFileName);
+            this.groupBoxResult.Location = new System.Drawing.Point(15, 55);
+            this.groupBoxResult.Name = "groupBoxResult";
+            this.groupBoxResult.Size = new System.Drawing.Size(336, 193);
+            this.groupBoxResult.TabIndex = 5;
+            this.groupBoxResult.TabStop = false;
+            this.groupBoxResult.Text = "Result";
             // 
-            // label_FileContent
+            // labelFileContent
             // 
-            this.label_FileContent.AutoSize = true;
-            this.label_FileContent.Location = new System.Drawing.Point(7, 72);
-            this.label_FileContent.Name = "label_FileContent";
-            this.label_FileContent.Size = new System.Drawing.Size(62, 13);
-            this.label_FileContent.TabIndex = 6;
-            this.label_FileContent.Text = "File content";
+            this.labelFileContent.AutoSize = true;
+            this.labelFileContent.Location = new System.Drawing.Point(7, 67);
+            this.labelFileContent.Name = "labelFileContent";
+            this.labelFileContent.Size = new System.Drawing.Size(62, 13);
+            this.labelFileContent.TabIndex = 6;
+            this.labelFileContent.Text = "File content";
             // 
-            // Form_Main
+            // labelFeedback
+            // 
+            this.labelFeedback.AutoSize = true;
+            this.labelFeedback.Location = new System.Drawing.Point(7, 175);
+            this.labelFeedback.Name = "labelFeedback";
+            this.labelFeedback.Size = new System.Drawing.Size(0, 13);
+            this.labelFeedback.TabIndex = 7;
+            // 
+            // Uppgift1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 251);
-            this.Controls.Add(this.groupBox_Result);
-            this.Controls.Add(this.button_BrowseFile);
+            this.ClientSize = new System.Drawing.Size(363, 258);
+            this.Controls.Add(this.groupBoxResult);
+            this.Controls.Add(this.buttonBrowseFile);
             this.Controls.Add(this.label1);
-            this.Name = "Form_Main";
+            this.Name = "Uppgift1Form";
             this.Text = "Open File Application";
-            this.groupBox_Result.ResumeLayout(false);
-            this.groupBox_Result.PerformLayout();
+            this.groupBoxResult.ResumeLayout(false);
+            this.groupBoxResult.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,13 +134,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_FileName;
-        private System.Windows.Forms.RichTextBox richTextBox_Result;
+        private System.Windows.Forms.TextBox textBoxFileName;
+        private System.Windows.Forms.RichTextBox richTextBoxResult;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_BrowseFile;
-        private System.Windows.Forms.Label label_FileName;
-        private System.Windows.Forms.GroupBox groupBox_Result;
-        private System.Windows.Forms.Label label_FileContent;
+        private System.Windows.Forms.Button buttonBrowseFile;
+        private System.Windows.Forms.Label labelFileName;
+        private System.Windows.Forms.GroupBox groupBoxResult;
+        private System.Windows.Forms.Label labelFileContent;
+        private System.Windows.Forms.Label labelFeedback;
     }
 }
 

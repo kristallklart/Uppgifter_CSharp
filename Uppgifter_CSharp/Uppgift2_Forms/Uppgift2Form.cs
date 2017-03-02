@@ -31,8 +31,7 @@ namespace Uppgift2_Forms
             cueComboBoxChooseTable.Items.Add("Match");
             cueComboBoxChooseTable.Items.Add("Message");
         }
-        
-        
+           
         private void buttonShowTable_Click(object sender, EventArgs e)
         {
             try
@@ -67,19 +66,19 @@ namespace Uppgift2_Forms
                         dataGridViewShowTable.Columns[4].Visible = false;
                         break;
                     default:
-                        labelRespons.Text = "Please choose table to show";
+                        labelFeedback.Text = "Please choose table to show.";
                         break;
                 }
             }
-            catch (FaultException f)
+            catch (FaultException)
             {
-                labelRespons.Text = "The table couldn´t be loaded";
+                labelFeedback.Text = "Error: The table could not be loaded.";
             }
         }
 
         private void cueComboBoxChooseTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            labelRespons.Text = "";
+            labelFeedback.Text = "";
         }
     }     
     }
