@@ -6,23 +6,19 @@ using System.Web;
 /// <summary>
 /// Summary description for UserLocationPurpose
 /// </summary>
-public class UserLocationPurpose
+namespace Model
 {
-    public User User { get; set; }
-    public Location Location { get; set; }
-    public Purpose Purpose { get; set; }
+    public class UserLocationPurpose
+    {
+        public User User { get; set; }
+        public Location Location { get; set; }
+        public Purpose Purpose { get; set; }
 
-    public string City { get; set; }
-    public string Username { get; set; }
-    public string Purposetype { get; set; }
+        public string City { get; set; }
+        public string Username { get; set; }
+        public string Purposetype { get; set; }
 
-    public DateTime FromDate { get; set; }
-    public DateTime ToDate { get; set; }
-
-	public UserLocationPurpose()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+        public DateTime FromDate { get; set; }
+        public DateTime ToDate { get; set; }
+    }
 }
