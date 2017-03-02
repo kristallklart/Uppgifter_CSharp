@@ -33,7 +33,7 @@ namespace Uppgift2_Konsol
                             List<User> u = Controller.GetAllUsers();
                             foreach (User i in u)
                             {
-                                Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}\n", i.UserName, i.FirstName, i.LastName, i.BirthDate, i.Profession, i.Industry);
+                                Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}\n", i.UserName, i.FirstName, i.LastName, i.BirthDate, i.Profession, i.Industry, i.Password);
                             }
                             break;
                         case ("2"):
