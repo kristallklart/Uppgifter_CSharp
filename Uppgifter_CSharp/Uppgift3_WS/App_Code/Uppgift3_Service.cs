@@ -20,11 +20,6 @@ public class Service : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public string HelloWorld() {
-        return "Hello World";
-    }
-
-    [WebMethod]
     public List<Employee> GetEmployees()
     {
         return Dal.GetEmployees();

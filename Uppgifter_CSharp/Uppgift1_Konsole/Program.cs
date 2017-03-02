@@ -14,7 +14,7 @@ namespace Uppgift1_Konsol
 
             while (contNewQuery)
             {
-                Console.Write("Please enter a filename: ");
+                Console.Write("Please enter a filename (if the file exists on the server)\nor an absolute path: ");
                 fileToOpen = Console.ReadLine();
 
                 Console.WriteLine("\nThank you! Processing request...\n");
