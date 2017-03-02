@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Grupp7" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="Grupp7" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">bladflkjasdf</wsdl:documentation>
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web service has multiple web methods for retrieving data from the Cronus-database. The web service also has methods for inserting, deleting and updating data in the Employee table, these methods will return an int of value 1 if the query executed succesfully and 0 otherwise. If an error occurs the methods will throw a FaultException for .NET environments and a RemoteException for Java environments. These exceptions must be handled by the client.</wsdl:documentation>
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="Grupp7">
       <s:element name="HelloWorld">
@@ -660,7 +660,7 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service">
-    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">bladflkjasdf</wsdl:documentation>
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This web service has multiple web methods for retrieving data from the Cronus-database. The web service also has methods for inserting, deleting and updating data in the Employee table, these methods will return an int of value 1 if the query executed succesfully and 0 otherwise. If an error occurs the methods will throw a FaultException for .NET environments and a RemoteException for Java environments. These exceptions must be handled by the client.</wsdl:documentation>
     <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
       <soap:address location="http://localhost:50961/Uppgift3_Service.asmx" />
     </wsdl:port>
