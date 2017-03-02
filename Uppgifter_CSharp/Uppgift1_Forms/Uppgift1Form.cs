@@ -25,7 +25,7 @@ namespace Uppgift1_Forms
             {
                 using (OpenFileDialog openFile = new OpenFileDialog())
                 {
-                    openFile.Filter = "Text Files|*.txt";
+                    openFile.Filter = "Text Files|*.txt;";
                     if (openFile.ShowDialog() == DialogResult.OK)
                     {
                         string fileContent;
