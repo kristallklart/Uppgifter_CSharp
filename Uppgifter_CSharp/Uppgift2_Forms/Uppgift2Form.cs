@@ -40,6 +40,7 @@ namespace Uppgift2_Forms
                 {
                     case 0:
                         dataGridViewShowTable.DataSource = Controller.GetAllUsers();
+                        dataGridViewShowTable.Columns[4].Visible = false;
                         dataGridViewShowTable.Columns[9].Visible = false;
                         break;
                     case 1:
