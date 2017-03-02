@@ -50,7 +50,7 @@ namespace DataAccessLayer
                         aUser.BirthDate = dateTime;
 
                     aUser.Profession = dataReader["Profession"].ToString();
-                    aUser.Password = dataReader["Password"].ToString();
+                    aUser.Password = "Encrypted";
                     aUser.About = dataReader["About"].ToString();
                     aUser.Industry = dataReader["Industry"].ToString();
 
