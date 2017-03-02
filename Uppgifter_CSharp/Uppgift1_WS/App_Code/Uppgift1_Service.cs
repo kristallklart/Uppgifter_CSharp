@@ -12,26 +12,21 @@ using System.ServiceModel;
                           "the web method throws a FaultException in .NET environments and a RemoteException in Java " + 
                           "environments. These exceptions must be handled by the client.")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-// To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-// [System.Web.Script.Services.ScriptService]
 
 public class Uppgift1_Service : System.Web.Services.WebService
 {
-    public Uppgift1_Service () {
+    public Uppgift1_Service () 
+    {
 
-        //Uncomment the following line if using designed components 
-        //InitializeComponent(); 
     }
 
     [WebMethod]
     public string OpenFile(string s)
     {
         string openFileResult;
-        //DotNetRevanths exempel på felhantering skapar en egen klass: https://www.youtube.com/watch?v=T4ndBlCpzdk
         using (StreamReader streamReader = new StreamReader(s))
         {
             openFileResult = streamReader.ReadToEnd();
-            //returnContent = streamReader.ReadToEnd();
         }
         return openFileResult;
     }

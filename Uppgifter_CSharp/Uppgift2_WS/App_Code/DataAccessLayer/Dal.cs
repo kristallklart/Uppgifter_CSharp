@@ -25,7 +25,6 @@ namespace DataAccessLayer
 	    static Dal()
 	    {
             conStr = ConfigurationManager.ConnectionStrings["FriendlyDB"].ConnectionString;
-            //conStr = "server=localhost; Trusted_Connection=yes; database=FriendlyDB";
         }
 
         public static List<User> GetAllUsers()
