@@ -9,7 +9,8 @@ using System.ServiceModel;
 [WebService(Namespace = "Grupp7", 
             Description = "This web service has one web method which takes a string filename/filepath as parameter " +
                           "and returns the file content to the caller as a string if successful. If an error occurs, " + 
-                          "the web method throws a FaultException which must be handled by the client.")]
+                          "the web method throws a FaultException in .NET environments and a RemoteException in Java " + 
+                          "environments. These exceptions must be handled by the client.")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
 // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
 // [System.Web.Script.Services.ScriptService]

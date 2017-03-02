@@ -6,16 +6,12 @@ using System.Web;
 /// <summary>
 /// Summary description for Match
 /// </summary>
-public class Match
+namespace Model
 {
-    public string MatchUsername { get; set; }
-    public string Username { get; set; }
-    public User User { get; set; }
-
-	public Match()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public class Match
+    {
+        public string MatchUsername { get; set; }
+        public string Username { get; set; }
+        public User User { get; set; }
+    }
 }

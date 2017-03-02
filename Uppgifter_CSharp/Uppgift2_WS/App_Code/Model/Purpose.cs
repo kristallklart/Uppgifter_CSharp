@@ -6,15 +6,11 @@ using System.Web;
 /// <summary>
 /// Summary description for Purpose
 /// </summary>
-public class Purpose
+namespace Model
 {
-    public string PurposeType { get; set; }
-    public List<UserLocationPurpose> UserLocationPurposes { get; set; }
-
-	public Purpose()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public class Purpose
+    {
+        public string PurposeType { get; set; }
+        public List<UserLocationPurpose> UserLocationPurposes { get; set; }
+    }
 }
