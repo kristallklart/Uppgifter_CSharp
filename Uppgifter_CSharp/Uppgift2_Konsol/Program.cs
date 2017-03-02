@@ -16,9 +16,6 @@ namespace Uppgift2_Konsol
             Console.WriteLine("Welcome to Friendly DB application!\n-----------------------------\n");
             Console.WriteLine("Tables to open:\n"
                 + "1. User\n2. Location\n3. User/location/purpose\n4. Field of Profession\n5. Match\n6. Message\n7. Purpose\n");
-
-
-
             bool on = true;
 
             while (on)
@@ -97,8 +94,6 @@ namespace Uppgift2_Konsol
                     }
                   
                 }
-                
-
                 catch (FaultException)
                 {
                     Console.WriteLine("The table couldn't be loaded");

@@ -82,6 +82,6 @@ namespace Uppgift2_Forms
             labelFeedback.Text = "";
         }
     }     
-    }
+}
 
 
