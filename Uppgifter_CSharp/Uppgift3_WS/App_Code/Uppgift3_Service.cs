@@ -11,15 +11,12 @@ using Models;
                                                 "return an int of value 1 if the query executed succesfully and 0 otherwise. If an error occurs the methods will throw a FaultException for .NET environments " +
                                                 "and a RemoteException for Java environments. These exceptions must be handled by the client.")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-// To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-// [System.Web.Script.Services.ScriptService]
 
 public class Service : System.Web.Services.WebService
 {
-    public Service () {
+    public Service () 
+    {
 
-        //Uncomment the following line if using designed components 
-        //InitializeComponent(); 
     }
 
     [WebMethod]
