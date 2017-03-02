@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
@@ -32,7 +30,6 @@ namespace DataAccessLayer
             try
             {
                 OpenConnection();
-
                 string sqlString = "select * from Users";
                 SqlCommand cmd = new SqlCommand(sqlString, connection);
                 dataReader = cmd.ExecuteReader();
@@ -72,7 +69,6 @@ namespace DataAccessLayer
                 string sqlString = "select * from Purposes";
                 SqlCommand cmd = new SqlCommand(sqlString, connection);
                 dataReader = cmd.ExecuteReader();
-
                 allPurposes = new List<Purpose>();
 
                 while (dataReader.Read())
@@ -97,7 +93,6 @@ namespace DataAccessLayer
                 string sqlString = "select * from Locations";
                 SqlCommand cmd = new SqlCommand(sqlString, connection);
                 dataReader = cmd.ExecuteReader();
-
                 allLocations = new List<Location>();
 
                 while (dataReader.Read())
@@ -123,7 +118,6 @@ namespace DataAccessLayer
                 string sqlString = "select * from User_Location_Purpose";
                 SqlCommand cmd = new SqlCommand(sqlString, connection);
                 dataReader = cmd.ExecuteReader();
-
                 allUserLocationPurposes = new List<UserLocationPurpose>();
 
                 while (dataReader.Read())
@@ -158,7 +152,6 @@ namespace DataAccessLayer
                 string sqlString = "select * from FieldOfProfessions";
                 SqlCommand cmd = new SqlCommand(sqlString, connection);
                 dataReader = cmd.ExecuteReader();
-
                 allFieldOfProfessions = new List<FieldOfProfession>();
 
                 while (dataReader.Read())
@@ -183,7 +176,6 @@ namespace DataAccessLayer
                 string sqlString = "select * from Messages";
                 SqlCommand cmd = new SqlCommand(sqlString, connection);
                 dataReader = cmd.ExecuteReader();
-
                 allMessages = new List<Message>();
 
                 while (dataReader.Read())
@@ -211,7 +203,6 @@ namespace DataAccessLayer
                 string sqlString = "select * from Match";
                 SqlCommand cmd = new SqlCommand(sqlString, connection);
                 dataReader = cmd.ExecuteReader();
-
                 allMatches = new List<Match>();
 
                 while (dataReader.Read())

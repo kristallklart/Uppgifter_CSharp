@@ -134,9 +134,6 @@
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.GetTablesTwoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.HelloWorldResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\Uppgift3_ServiceReference\Uppgift3_Forms.Uppgift3_ServiceReference.Index.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

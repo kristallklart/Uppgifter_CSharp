@@ -9,7 +9,8 @@ namespace Uppgift1_Konsol
 {
     public static class FileHandler
     {
-        private static Uppgift1_ServiceSoapClient proxy = new Uppgift1_ServiceSoapClient(); //Skapar en ny proxy-referens
+        private static Uppgift1_ServiceSoapClient proxy = new Uppgift1_ServiceSoapClient();
+
         public static string GetFileContent(string s)
         {
             return proxy.OpenFile(s);

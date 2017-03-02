@@ -15,26 +15,32 @@ namespace Uppgift2_Konsol.ControllerLayer
         {
             return proxy.GetAllUsers();
         }
+
         public static List<Location> GetAllLocations()
         {
             return proxy.GetAllLocations();
         }
+
         public static List<UserLocationPurpose> GetAllUserLocationPurposes()
         {
             return proxy.GetAllUserLocationPurposes();
         }
+
         public static List<Purpose> GetAllPurposes()
         {
             return proxy.GetAllPurposes();
         }
+
         public static List<FieldOfProfession> GetAllFieldOfProfessions()
         {
             return proxy.GetAllFieldOfProfessions();
         }
+
         public static List<Match> GetAllMatches()
         {
             return proxy.GetAllMatches();
         }
+
         public static List<Message> GetAllMessages()
         {
             return proxy.GetAllMessages();

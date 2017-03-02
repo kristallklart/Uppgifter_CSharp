@@ -129,11 +129,11 @@ namespace Uppgift3_Forms
 
         private void buttonDeleteEmployee_Click(object sender, EventArgs e)
         {
-            if (textBoxNumber.Text.Trim() != "")
+            if (textBoxDeleteNumber.Text.Trim() != "")
             {
                 try
                 {
-                    string employeeNumber = textBoxNumber.Text.Trim();
+                    string employeeNumber = textBoxDeleteNumber.Text.Trim();
                     int result = Controller.DeleteEmployee(employeeNumber);
                     labelFeedback.Text = result.ToString();
                     if (result > 0)
@@ -152,9 +152,10 @@ namespace Uppgift3_Forms
             }
             else
             {
-                errorProviderTextBoxes.SetError(textBoxNumber, "Please enter a employee number.");
+                errorProviderTextBoxes.SetError(textBoxDeleteNumber, "Please enter a employee number.");
                 errorProviderTextBoxes.SetError(textBoxFirstName, string.Empty);
                 errorProviderTextBoxes.SetError(textBoxLastName, string.Empty);
+                errorProviderTextBoxes.SetError(textBoxAddUpdateNumber, string.Empty);
                 labelFeedback.Text = "Please enter an employee number to remove.";
             }
         }
@@ -165,15 +166,28 @@ namespace Uppgift3_Forms
             {
                 try
                 {
-                    string employeeNumber = textBoxNumber.Text.Trim();
+                    string employeeNumber = textBoxAddUpdateNumber.Text.Trim();
                     string firstname = textBoxFirstName.Text.Trim();
                     string lastname = textBoxLastName.Text.Trim();
-                    Controller.AddEmployee(employeeNumber, firstname, lastname);
+                    int result = Controller.AddEmployee(employeeNumber, firstname, lastname);
+                    if (result > 0)
+                    {
+                        labelFeedback.Text = "Successfully added employee with number " + employeeNumber + ".";
+                    }
+                    else
+                    {
+                        labelFeedback.Text = "Could't add employee with number " + employeeNumber +
+                                             ". Please make sure the number exists";
+                    }
                 }
                 catch (FaultException)
                 {
                     DisplayExceptionMessage();
                 }
+            }
+            else
+            {
+                errorProviderTextBoxes.SetError(textBoxDeleteNumber, string.Empty);
             }
         }
 
@@ -183,15 +197,27 @@ namespace Uppgift3_Forms
             {
                 try
                 {
-                    string employeeNumber = textBoxNumber.Text.Trim();
+                    string employeeNumber = textBoxAddUpdateNumber.Text.Trim();
                     string firstname = textBoxFirstName.Text.Trim();
                     string lastname = textBoxLastName.Text.Trim();
-                    Controller.UpdateEmployee(employeeNumber, firstname, lastname);
+                    int result = Controller.UpdateEmployee(employeeNumber, firstname, lastname);
+                    if (result > 0)
+                    {
+                        labelFeedback.Text = "Successfully updated employee with number " + employeeNumber + ".";
+                    }
+                    else
+                    {
+                        labelFeedback.Text = "Could't update employee with number " + employeeNumber + ". Please make sure the number exists";
+                    }
                 }
                 catch (FaultException)
                 {
                     DisplayExceptionMessage();
                 }
+            }
+            else
+            {
+                errorProviderTextBoxes.SetError(textBoxDeleteNumber, string.Empty);
             }
         }
 
