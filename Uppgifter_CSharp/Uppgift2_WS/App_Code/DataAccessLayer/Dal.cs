@@ -49,22 +49,10 @@ namespace DataAccessLayer
                     if(DateTime.TryParse(dataReader["BirthDate"].ToString(), out dateTime))
                         aUser.BirthDate = dateTime;
 
-                    //if (!dataReader["Profession"].Equals(null))
-                        aUser.Profession = dataReader["Profession"].ToString();
-                    //else
-                     //   aUser.Profession = "";
-                    
-                    aUser.Password = dataReader["Password"].ToString();
-
-                   // if (!dataReader["About"].Equals(null))
-                        aUser.About = dataReader["About"].ToString();
-                  //  else
-                   //     aUser.About = "";
-
-                  //  if (!dataReader["Industry"].Equals(null))
-                        aUser.Industry = dataReader["Industry"].ToString();
-                  //  else
-                  //      aUser.Industry = "";
+                    aUser.Profession = dataReader["Profession"].ToString();
+                    aUser.Password = "Encrypted";
+                    aUser.About = dataReader["About"].ToString();
+                    aUser.Industry = dataReader["Industry"].ToString();
 
                     allUsers.Add(aUser);
                 }
