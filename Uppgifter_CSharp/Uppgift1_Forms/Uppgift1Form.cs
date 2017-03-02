@@ -13,24 +13,26 @@ namespace Uppgift1_Forms
 {
     public partial class Uppgift1Form : Form
     {
-        private OpenFileDialog openFile = new OpenFileDialog();
 
         public Uppgift1Form()
         {
             InitializeComponent();
-            openFile.Filter = "Text Files|*.txt";
         }
 
         private void button_BrowseFile_Click(object sender, EventArgs e)
         {
             try
             {
-                if (openFile.ShowDialog() == DialogResult.OK)
+                using (OpenFileDialog openFile = new OpenFileDialog())
                 {
-                    string fileContent;
-                    fileContent = Controller.GetFileContent(openFile.FileName);
-                    richTextBoxResult.Text = fileContent;
-                    textBoxFileName.Text = openFile.SafeFileName;
+                    openFile.Filter = "Text Files|*.txt";
+                    if (openFile.ShowDialog() == DialogResult.OK)
+                    {
+                        string fileContent;
+                        fileContent = Controller.GetFileContent(openFile.FileName);
+                        richTextBoxResult.Text = fileContent;
+                        textBoxFileName.Text = openFile.SafeFileName;
+                    }
                 }
             }
             catch (FaultException)
