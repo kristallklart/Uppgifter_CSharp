@@ -12,19 +12,17 @@ using DataAccessLayer;
 using Model;
 
 [WebService(Namespace = "Grupp7",
-            Description = "This web service has multiple web methods which all takes zero arguments and returns an object " +
+            Description = "This web service has multiple web methods which all takes no arguments and returns an object " +
                           "collection of all the entities in a given table in the Friendly Database if successful. If an error " +
-                          "occurs the methods will throw a FaultException which must be handled by the client.")]
+                          "occurs the methods will throw a FaultException in .NET environemts and a RemoteException in Java. " + 
+                          "These exceptions must be handled by the client.")]
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
-// To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-// [System.Web.Script.Services.ScriptService]
 
 public class Uppgift2_Service : System.Web.Services.WebService
 {
     public Uppgift2_Service () 
     {
-        //Uncomment the following line if using designed components 
-        //InitializeComponent();
+
     }
 
     [WebMethod]
