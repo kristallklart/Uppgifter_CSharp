@@ -14,7 +14,7 @@ namespace Uppgift1_Konsol
 
             while (contNewQuery)
             {
-                Console.Write("Please enter a filename (if the file exists on the server)\nor an absolute path: ");
+                Console.Write("Please enter the filename (if the file exists on the server)\nor the absolute path of a text file (.txt): ");
                 fileToOpen = Console.ReadLine();
 
                 Console.WriteLine("\nThank you! Processing request...\n");
@@ -37,7 +37,7 @@ namespace Uppgift1_Konsol
                 contWrongInput = true;
                 while (contWrongInput)
                 {
-                    Console.Write("Do you wish to open a new file? Enter y for yes or n for no: ");
+                    Console.Write("Do you wish to open a new text file (.txt)? Enter y for yes or n for no: ");
                     string choice = Console.ReadLine();
                     if (choice == "y" || choice == "Y")
                     {
